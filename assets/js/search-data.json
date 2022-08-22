@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "First Post",
-            "content": ". toc: true layout: post description: TT 1.0 Hack Requirments categories: [markdown] title: Tech Talk 1.0 Hacks | Tools &amp; Equipment . Click .",
-            "url": "https://natalie-beckwith.github.io/fastpages/2022/08/22/First-Post.html",
-            "relUrl": "/2022/08/22/First-Post.html",
+            "title": "Tech Talk 1.0 Hacks | Tools & Equipment",
+            "content": "Click .",
+            "url": "https://natalie-beckwith.github.io/fastpages/markdown/2022/08/22/First-Post.html",
+            "relUrl": "/markdown/2022/08/22/First-Post.html",
             "date": " • Aug 22, 2022"
         }
         
