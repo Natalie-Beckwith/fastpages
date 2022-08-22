@@ -6,5 +6,7 @@ categories: [markdown]
 title: Tech Talk 1.0 Hacks | Tools & Equipment
 ---
 
-# [Click](https://tinyurl.com/mt3wm47f)
+# [Best](https://www.youtube.com/watch?v=_qS9l7jh87Q)
+
+##[Click](https://tinyurl.com/mt3wm47f)
 Welcome to my first post! :)
