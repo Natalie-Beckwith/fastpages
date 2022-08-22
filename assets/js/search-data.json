@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "Title",
+            "title": "Python Code",
             "content": "print(&quot;Hello World!&quot;) . Hello World! .",
             "url": "https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookPython.html",
             "relUrl": "/2020/02/20/NatalieNotebookPython.html",
@@ -35,7 +35,7 @@
   
     
         ,"post3": {
-            "title": "Title",
+            "title": "Java Code",
             "content": "System.out.printf(&quot;Hello World!&quot;); . Hello World! . java.io.PrintStream@53902d4a .",
             "url": "https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookJava.html",
             "relUrl": "/2020/02/20/NatalieNotebookJava.html",
