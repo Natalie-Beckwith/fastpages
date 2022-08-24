@@ -1,0 +1,37 @@
+
+---
+toc: true
+layout: post
+description: In-Class Notes
+categories: [markdown]
+title: TPT Notes
+---
+# TPT Notes:
+
+## Week 1 - 8/23 Notes:
+* Python - weakly type language
+* Java - strongly type language
+
+* In Java, you have to declare data types
+* In Python it automatically changes data types
+* Java is OOP
+
+* Primitive Data Types
+   * Boolean
+   * Character
+   * Integer
+   * Double/Float
+   * Long
+   * Short
+   * 
+
+* Non-Primitive: (classes)
+    * String
+    * Array
+    * etc.
+
+* Wrapper class - contains methods (functions)
+* 
+
+* Opening notebook - vs code > apcsa repo > notebooks directory
+
