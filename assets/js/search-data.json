@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Tptnotes",
-            "content": "",
-            "url": "https://natalie-beckwith.github.io/fastpages/2022/08/23/TPTNotes.html",
-            "relUrl": "/2022/08/23/TPTNotes.html",
+            "title": "TPT Notes",
+            "content": "TPT Notes: . Week 1 - 8/23 Notes: . Python - weakly type language | Java - strongly type language . | In Java, you have to declare data types | In Python it automatically changes data types | Java is OOP . | Primitive Data Types Boolean | Character | Integer | Double/Float | Long | Short | | . | Non-Primitive: (classes) String | Array | etc. | . | Wrapper class - contains methods (functions) | | Opening notebook - vs code &gt; apcsa repo &gt; notebooks directory | .",
+            "url": "https://natalie-beckwith.github.io/fastpages/markdown/2022/08/23/TPTNotes.html",
+            "relUrl": "/markdown/2022/08/23/TPTNotes.html",
             "date": " • Aug 23, 2022"
         }
         
@@ -39,6 +39,17 @@
             "content": "print(&quot;Hello World!&quot;) . Hello World! .",
             "url": "https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookPython.html",
             "relUrl": "/2020/02/20/NatalieNotebookPython.html",
+            "date": " • Feb 20, 2020"
+        }
+        
+    
+  
+    
+        ,"post4": {
+            "title": "Java Code",
+            "content": "// public class PrimitivesTest // { // public static void main(String[] Args) // { // System.out.printf(&quot;Test&quot;); // } // } . System.out.printf(&quot;Hello World!&quot;); . Hello World! . java.io.PrintStream@3a161461 .",
+            "url": "https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookJava.html",
+            "relUrl": "/2020/02/20/NatalieNotebookJava.html",
             "date": " • Feb 20, 2020"
         }
         

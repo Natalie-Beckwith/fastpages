@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookJava.html</loc>
+<lastmod>2020-02-20T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookPython.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
@@ -13,7 +17,7 @@
 <lastmod>2022-08-22T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://natalie-beckwith.github.io/fastpages/2022/08/23/TPTNotes.html</loc>
+<loc>https://natalie-beckwith.github.io/fastpages/markdown/2022/08/23/TPTNotes.html</loc>
 <lastmod>2022-08-23T00:00:00-05:00</lastmod>
 </url>
 <url>
