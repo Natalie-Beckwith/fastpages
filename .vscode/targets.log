@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Tue Aug 23 09:03:21 2022
+# Make data base, printed on Wed Aug 24 10:07:55 2022
 
 # Variables
 
@@ -47,7 +47,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.hBcOBUe8Mf/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0BqXbLnKMh/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -71,7 +71,7 @@ VSCODE_CODE_CACHE_PATH = /Users/nataliebeckwith/Library/Application Support/Code
 # environment
 LOGNAME = nataliebeckwith
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 CONDA_PROMPT_MODIFIER = (base) 
 # environment
@@ -89,7 +89,6 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 1
 # default
- 
 MAKE_VERSION := 3.81
 # environment
 USER = nataliebeckwith
@@ -104,7 +103,6 @@ MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
- 
 TMPDIR = /var/folders/sv/bkpy7r410gz7r7fyscqrzm4r0000gn/T/
 # automatic
 *F = $(notdir $*)
@@ -141,7 +139,6 @@ LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /Users/nataliebeckwith/opt/anaconda3/bin/python
 # automatic
- 
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
@@ -154,7 +151,7 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/nataliebeckwith/opt/anaconda3
 # environment
-VSCODE_PID = 26126
+VSCODE_PID = 2782
 # environment
 _CE_CONDA = 
 # environment
@@ -167,9 +164,8 @@ LANG = C
 # No pattern-specific variable values.
 
 # Directories
- 
 
-# . (device 16777234, inode 39976145): 30 files, no impossibilities.
+# . (device 16777233, inode 39976145): 30 files, no impossibilities.
 
 # 30 files, no impossibilities in 1 directories.
 
@@ -228,7 +224,6 @@ Makefile:
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
 
 remove: .FORCE
 #  Implicit rule search has not been done.
@@ -273,7 +268,6 @@ restart-jekyll: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 50):
- 
 	docker-compose restart jekyll
 	
 
@@ -315,7 +309,6 @@ convert: .FORCE
 	chmod -R u+rw .
 	
 
- 
 # files hash-table stats:
 # Load=16/1024=2%, Rehash=0, Collisions=0/38=0%
 # VPATH Search Paths
@@ -329,6 +322,6 @@ convert: .FORCE
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Aug 23 09:03:21 2022
+# Finished Make data base on Wed Aug 24 10:07:55 2022
 
  
