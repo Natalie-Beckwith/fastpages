@@ -47,7 +47,7 @@
     
         ,"post4": {
             "title": "Java Code",
-            "content": "// public class PrimitivesTest // { // public static void main(String[] Args) // { // System.out.printf(&quot;Test&quot;); // } // } . System.out.printf(&quot;Hello World!&quot;); . Hello World! . java.io.PrintStream@3a161461 .",
+            "content": "System.out.printf(&quot;Hello World!&quot;); . Hello World! . java.io.PrintStream@3a161461 .",
             "url": "https://natalie-beckwith.github.io/fastpages/2020/02/20/NatalieNotebookJava.html",
             "relUrl": "/2020/02/20/NatalieNotebookJava.html",
             "date": " • Feb 20, 2020"
