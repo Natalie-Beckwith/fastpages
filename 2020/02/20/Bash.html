@@ -508,22 +508,19 @@ end of README.md
 <a class="anchor" href="#Hacks:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks:<a class="anchor-link" href="#Hacks:"> </a>
 </h1>
 <ul>
-<li>I can check the version of a tool by comparing the version to the expected version of the tool
-```
-text="git version 2.37.2"
-version="$(git version)"</li>
+<li>I can check the version of a tool by comparing the version to the expected version of the tool</li>
 </ul>
-<p>echo $version</p>
-<p>if [ "$version" = "$text" ]; then
-    echo "Right version of Git"
-else
-    echo "Wrong version of Git"
-fi
-```</p>
+<p><code>text="git version 2.37.2"</code></p>
+<p><code>version="$(git version)"</code></p>
+<p><code>echo $version</code></p>
+<p><code>if [ "$version" = "$text" ]; then</code></p>
+<p><code>echo "Right version of Git"</code></p>
+<p><code>else</code></p>
+<p><code>echo "Wrong version of Git"</code></p>
+<p><code>fi</code></p>
 <ul>
 <li>You can type into a terminal window <code>conda -V</code> and you will get the current version</li>
 <li>To update a repo, you need to pull recent changes</li>
-<li>
 </ul>
 
 </div>
