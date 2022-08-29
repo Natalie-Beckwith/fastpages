@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      2 min read
     
 </span></p>
 
@@ -287,14 +287,15 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.InputMismatchException</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        
+<span class="n">PrimitivesTest</span> <span class="n">primitivesTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrimitivesTest</span><span class="p">();</span>
 
-<span class="kt">void</span> <span class="nf">printTest</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="n">primitivesTest</span><span class="p">.</span><span class="na">randomIntFinder</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
+<span class="n">primitivesTest</span><span class="p">.</span><span class="na">doubleAddingCalculator</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
+<span class="n">primitivesTest</span><span class="p">.</span><span class="na">getRomanNumerals</span> <span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
+
+<span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </pre></div>
 
     </div>
@@ -306,16 +307,14 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">PrimitivesTest</span><span class="ansi-black-intense-fg ansi-bold"> primitivesTest = new PrimitivesTest();</span>
-<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
-<span class="ansi-red-intense-fg ansi-bold">  symbol:   class PrimitivesTest</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter 2 numbers and get a random integer between those two numbers!
+Enter the first integer: Enter the next integer: Random number between 1 and 10: 6
 
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    PrimitivesTest primitivesTest = new </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">PrimitivesTest</span><span class="ansi-black-intense-fg ansi-bold">();</span>
-<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
-<span class="ansi-red-intense-fg ansi-bold">  symbol:   class PrimitivesTest</span>
-</pre>
+Enter 2 decimals to get their sum!
+Enter the first double: Enter the next double: Sum: 3.300000
+
+Enter any number: Roman numeral: XVII</pre>
 </div>
 </div>
 
@@ -325,182 +324,19 @@ window.onload = wrap_img;
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.InputMismatchException</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitivesTest</span>
-<span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        
-        <span class="n">PrimitivesTest</span> <span class="n">primitivesTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrimitivesTest</span><span class="p">();</span>
-        
-        <span class="n">primitivesTest</span><span class="p">.</span><span class="na">randomIntFinder</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
-        <span class="n">primitivesTest</span><span class="p">.</span><span class="na">doubleAddingCalculator</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
-        <span class="n">primitivesTest</span><span class="p">.</span><span class="na">getRomanNumerals</span> <span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
-        
-        <span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">randomIntFinder</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">try</span>
-        <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter 2 numbers and get a random "</span> <span class="o">+</span> <span class="s">"integer between those two numbers!\n"</span><span class="p">);</span>
-            <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter the first integer: "</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">intRange1</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter the next integer: "</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">intRange2</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-
-            <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
-            <span class="kt">int</span> <span class="n">randomInt</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">intRange1</span><span class="p">,</span> <span class="n">intRange2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Random number between %d and %d: %d\n\n"</span><span class="p">,</span> <span class="n">intRange1</span><span class="p">,</span> <span class="n">intRange2</span><span class="p">,</span> <span class="n">randomInt</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">catch</span> <span class="p">(</span><span class="n">IllegalArgumentException</span> <span class="n">e</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Error: The last number must be greater than the first!\n"</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">catch</span> <span class="p">(</span><span class="n">InputMismatchException</span> <span class="n">e</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Error: Must be type integer!\n"</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doubleAddingCalculator</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">try</span>
-        <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter 2 decimals to get their sum!\n"</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter the first double: "</span><span class="p">);</span>
-            <span class="kt">double</span> <span class="n">firstDouble</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Enter the next double: "</span><span class="p">);</span>
-            <span class="kt">double</span> <span class="n">lastDouble</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-            
-            <span class="n">firstDouble</span> <span class="o">+=</span> <span class="n">lastDouble</span><span class="p">;</span>
-            
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Sum: %f\n\n"</span><span class="p">,</span> <span class="n">firstDouble</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">catch</span> <span class="p">(</span><span class="n">InputMismatchException</span> <span class="n">e</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Error: Must be type double!\n"</span><span class="p">);</span>  
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">getRomanNumerals</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter any number: "</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-       
-		<span class="n">String</span> <span class="n">numeral</span> <span class="o">=</span> <span class="n">convertRomanNumeral</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-		
-		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Roman numeral: "</span> <span class="o">+</span> <span class="n">numeral</span><span class="p">);</span>
-	<span class="p">}</span>
-	
-	
-	<span class="cm">/*</span>
-<span class="cm">	 * Takes the number passed in and returns a string of the Roman Numeral </span>
-<span class="cm">	 */</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">convertRomanNumeral</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="c1">// calculates number of 1000s</span>
-		<span class="kt">int</span> <span class="n">_1000</span> <span class="o">=</span> <span class="p">(</span><span class="n">number</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
-		<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">numToRN</span><span class="p">(</span><span class="n">_1000</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
-		<span class="n">number</span> <span class="o">-=</span> <span class="n">_1000</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
-		
-		
-		<span class="c1">// calculates number of 100s</span>
-		<span class="kt">int</span> <span class="n">_100</span> <span class="o">=</span> <span class="p">(</span><span class="n">number</span> <span class="o">/</span> <span class="mi">100</span><span class="p">);</span>
-		<span class="n">String</span> <span class="n">value1</span> <span class="o">=</span> <span class="n">numToRN</span><span class="p">(</span><span class="n">_100</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
-		<span class="n">number</span> <span class="o">-=</span> <span class="n">_100</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
-		
-		
-		<span class="c1">// calculates number of 10s</span>
-		<span class="kt">int</span> <span class="n">_10</span> <span class="o">=</span> <span class="p">(</span><span class="n">number</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
-		<span class="n">String</span> <span class="n">value2</span> <span class="o">=</span> <span class="n">numToRN</span><span class="p">(</span><span class="n">_10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
-		<span class="n">number</span> <span class="o">-=</span> <span class="n">_10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-		
-		
-		<span class="c1">// calculates number of 1s</span>
-		<span class="kt">int</span> <span class="n">_1</span> <span class="o">=</span> <span class="n">number</span><span class="p">;</span>
-		<span class="n">String</span> <span class="n">value3</span> <span class="o">=</span> <span class="n">numToRN</span><span class="p">(</span><span class="n">_1</span><span class="p">);</span>
-		<span class="n">number</span> <span class="o">-=</span> <span class="n">_1</span><span class="p">;</span>
-		
-		<span class="k">return</span> <span class="n">value</span> <span class="o">+</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span> <span class="o">+</span> <span class="n">value3</span><span class="p">;</span>
-		
-	
-	
-	<span class="p">}</span>
-	
-	<span class="cm">/*</span>
-<span class="cm">	 * A table of all the </span>
-<span class="cm">	 */</span>
-	<span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">numToRN</span> <span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">switch</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span>
-		<span class="p">{</span>
-		<span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="s">"I"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="s">"II"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">3</span><span class="p">:</span> <span class="k">return</span> <span class="s">"III"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">4</span><span class="p">:</span> <span class="k">return</span> <span class="s">"IV"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">5</span><span class="p">:</span> <span class="k">return</span> <span class="s">"V"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">6</span><span class="p">:</span> <span class="k">return</span> <span class="s">"VI"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">7</span><span class="p">:</span> <span class="k">return</span> <span class="s">"VII"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">8</span><span class="p">:</span> <span class="k">return</span> <span class="s">"VIII"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">9</span><span class="p">:</span> <span class="k">return</span> <span class="s">"IX"</span><span class="p">;</span>
-		
-		<span class="k">case</span> <span class="mi">10</span><span class="p">:</span> <span class="k">return</span> <span class="s">"X"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">20</span><span class="p">:</span> <span class="k">return</span> <span class="s">"XX"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">30</span><span class="p">:</span> <span class="k">return</span> <span class="s">"XXX"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">40</span><span class="p">:</span> <span class="k">return</span> <span class="s">"XL"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">50</span><span class="p">:</span> <span class="k">return</span> <span class="s">"L"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">60</span><span class="p">:</span> <span class="k">return</span> <span class="s">"LX"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">70</span><span class="p">:</span> <span class="k">return</span> <span class="s">"LXX"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">80</span><span class="p">:</span> <span class="k">return</span> <span class="s">"LXXX"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">90</span><span class="p">:</span> <span class="k">return</span> <span class="s">"XC"</span><span class="p">;</span>
-		
-		<span class="k">case</span> <span class="mi">100</span><span class="p">:</span> <span class="k">return</span> <span class="s">"C"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">200</span><span class="p">:</span> <span class="k">return</span> <span class="s">"CC"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">300</span><span class="p">:</span> <span class="k">return</span> <span class="s">"CCC"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">400</span><span class="p">:</span> <span class="k">return</span> <span class="s">"CD"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">500</span><span class="p">:</span> <span class="k">return</span> <span class="s">"D"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">600</span><span class="p">:</span> <span class="k">return</span> <span class="s">"DC"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">700</span><span class="p">:</span> <span class="k">return</span> <span class="s">"DCC"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">800</span><span class="p">:</span> <span class="k">return</span> <span class="s">"DCCC"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">900</span><span class="p">:</span> <span class="k">return</span> <span class="s">"CM"</span><span class="p">;</span>
-		
-		<span class="k">case</span> <span class="mi">1000</span><span class="p">:</span> <span class="k">return</span> <span class="s">"M"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">2000</span><span class="p">:</span> <span class="k">return</span> <span class="s">"MM"</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">3000</span><span class="p">:</span> <span class="k">return</span> <span class="s">"MMM"</span><span class="p">;</span>
-
-		<span class="p">}</span>
-		
-		<span class="k">return</span> <span class="s">""</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
 
-  </div><a class="u-url" href="/fastpages/2020/08/24/PrimitiveTestJava.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Natalie-Beckwith/fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages/2020/08/24/PrimitiveTestJava.html" hidden></a>
 </article>
 
       </div>
