@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Aug 24 10:07:55 2022
+# Make data base, printed on Sun Aug 28 20:40:51 2022
 
 # Variables
 
@@ -151,7 +151,7 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/nataliebeckwith/opt/anaconda3
 # environment
-VSCODE_PID = 2782
+VSCODE_PID = 40561
 # environment
 _CE_CONDA = 
 # environment
@@ -322,6 +322,6 @@ convert: .FORCE
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug 24 10:07:55 2022
+# Finished Make data base on Sun Aug 28 20:40:51 2022
 
  
