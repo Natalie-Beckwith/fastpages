@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      6 min read
     
 </span></p>
 
@@ -130,23 +130,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Documentation-/-Analysis:">
-<a class="anchor" href="#Documentation-/-Analysis:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation / Analysis:<a class="anchor-link" href="#Documentation-/-Analysis:"> </a>
-</h2>
-<ul>
-<li>A class is defined inside of a <code>Java</code> file. Every file has one class.</li>
-<li>Instances of the <code>Menu</code> Class are instantiated inside its constructor.</li>
-<li>An object can call a method by using the <code>.</code> operator. This is equivalent to a pointer in java. For example, in <code>System.out.println()</code> the <code>System</code> Class calls the <code>out</code> method and the <code>println</code> method.</li>
-<li>A mutator variable or also commonly known as a setter, assigns a value to a variable. For example, in <code>public final String DEFAULT = "\u001B[0m";</code> the constant String <code>DEFAULT</code> is assigned a value of <code>"\u001B[0m"</code>.</li>
-<li>In the Console Menu, there are a lot of try/catch blocks to carry out the methods in the menu. The GUI Menu implements the <code>ActionListener</code> Class and also extends the <code>JFrame</code> Class in order to make the menu.</li>
-</ul>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -157,17 +140,10 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * TicTacToePlayer.java</span>
 <span class="cm"> *</span>
-<span class="cm"> * Description</span>
-<span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
- 
 
-<span class="cm">/**</span>
-<span class="cm"> * Main class for TicTacToePlayer.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">TicTacToePlayer</span>
 <span class="p">{</span> 
     <span class="kt">void</span> <span class="nf">init</span> <span class="p">(</span><span class="n">String</span> <span class="n">marker</span><span class="p">);</span> 
@@ -194,16 +170,10 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * TicTacToeThreeInARow.java</span>
 <span class="cm"> *</span>
-<span class="cm"> * Description</span>
-<span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
  
-<span class="cm">/**</span>
-<span class="cm"> * Main class for TicTacToeThreeInARow.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicTacToeThreeInARow</span>
 <span class="p">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">_numRows</span><span class="p">;</span>
@@ -307,19 +277,12 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * TicTacToe.java</span>
-<span class="cm"> *</span>
-<span class="cm"> * Description</span>
+<span class="cm"> * TicTacToeBoard.java</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
- 
 
-<span class="cm">/**</span>
-<span class="cm"> * Main class for TicTacToe.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicTacToeBoard</span>
 <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NUM_COLUMNS</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
@@ -385,9 +348,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * TicTacToe.java</span>
-<span class="cm"> *</span>
-<span class="cm"> * Description</span>
+<span class="cm"> * TicTacToeComputer.java</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
@@ -396,24 +357,12 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-
-<span class="cm">/**</span>
-<span class="cm"> * Main class for TicTacToe.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicTacToeComputer</span> <span class="kd">implements</span> <span class="n">TicTacToePlayer</span>
 <span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">_name</span><span class="p">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">_marker</span><span class="p">;</span>
     <span class="kd">private</span> <span class="n">TicTacToeBoard</span> <span class="n">_board</span><span class="p">;</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     * Constructor for class</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param name</span>
-<span class="cm">     * @param numColumns</span>
-<span class="cm">     * @param numRows</span>
-<span class="cm">     */</span>
     <span class="kd">public</span> <span class="nf">TicTacToeComputer</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span>
                             <span class="kt">int</span> <span class="n">numColumns</span><span class="p">,</span>
                             <span class="kt">int</span> <span class="n">numRows</span><span class="p">,</span>
@@ -494,8 +443,6 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * TicTacToeHuman.java</span>
 <span class="cm"> *</span>
-<span class="cm"> * Description</span>
-<span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
@@ -503,10 +450,6 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">java.util.InputMismatchException</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="cm">/**</span>
-<span class="cm"> * Main class for TicTacToeHuman.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicTacToeHuman</span> <span class="kd">implements</span> <span class="n">TicTacToePlayer</span>
 <span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">_name</span><span class="p">;</span>
@@ -586,18 +529,12 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Play.java</span>
-<span class="cm"> *</span>
-<span class="cm"> * Description</span>
+<span class="cm"> * TicTacToePlay.java</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
- 
-<span class="cm">/**</span>
-<span class="cm"> * Main class for Play.java</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
+
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicTacToePlay</span>
 <span class="p">{</span>
     
@@ -712,33 +649,14 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Menu.java</span>
 <span class="cm"> *</span>
-<span class="cm"> * Description</span>
-<span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
 
-<span class="c1">//imports allow you to use code already written by others.  It is good to explore and learn libraries.  The names around the dots often give you a hint to the originator of the code.</span>
-<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span> <span class="c1">//library for user input</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span>
 <span class="p">{</span>
-    <span class="c1">// Instance Variables</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">"\u001B[0m"</span><span class="p">;</span> <span class="c1">// Default Terminal Color</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[][]</span> <span class="n">COLORS</span> <span class="o">=</span>
-    <span class="p">{</span> <span class="c1">// 2D Array of ANSI Terminal Colors</span>
-            <span class="p">{</span> <span class="s">"Default"</span><span class="p">,</span> <span class="n">DEFAULT</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Red"</span><span class="p">,</span> <span class="s">"\u001B[31m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Green"</span><span class="p">,</span> <span class="s">"\u001B[32m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Yellow"</span><span class="p">,</span> <span class="s">"\u001B[33m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Blue"</span><span class="p">,</span> <span class="s">"\u001B[34m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Purple"</span><span class="p">,</span> <span class="s">"\u001B[35m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Cyan"</span><span class="p">,</span> <span class="s">"\u001B[36m"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"White"</span><span class="p">,</span> <span class="s">"\u001B[37m"</span> <span class="p">},</span> <span class="p">};</span>
-    <span class="c1">// 2D column location for data</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NAME</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ANSI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// ANSI is the "standard" for terminal codes</span>
-
     <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">menuGo</span><span class="p">()</span>
@@ -747,15 +665,15 @@ window.onload = wrap_img;
         <span class="k">do</span>
         <span class="p">{</span>
             <span class="k">try</span>
-            <span class="p">{</span> <span class="c1">// scan for Input</span>
+            <span class="p">{</span>
                 <span class="n">print</span><span class="p">();</span>
-                <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span> <span class="c1">// using method from Java Scanner Object</span>
+                <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">""</span> <span class="o">+</span> <span class="n">choice</span> <span class="o">+</span> <span class="s">": "</span><span class="p">);</span>
-                <span class="n">quit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span> <span class="c1">// take action</span>
+                <span class="n">quit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>
             <span class="p">}</span>
             <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> <span class="c1">// error: clear buffer</span>
+                <span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="s">": Not a number, try again."</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -763,10 +681,8 @@ window.onload = wrap_img;
 
     <span class="p">}</span>
 
-    <span class="c1">// Print the menu options to Terminal</span>
     <span class="kd">private</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="c1">// System.out.println commands below is used to present a Menu to the user.</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------------------------"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"How would you like to play Tic-Tac-Toe?"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------------------------"</span><span class="p">);</span>
@@ -777,7 +693,6 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------------------------\n"</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="c1">// Private method to perform action and return true if action is to quit/exit</span>
     <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">action</span><span class="p">(</span><span class="kt">int</span> <span class="n">selection</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -785,8 +700,7 @@ window.onload = wrap_img;
         <span class="n">TicTacToePlay</span> <span class="n">ticTacToePlay</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TicTacToePlay</span><span class="p">();</span>
 
         <span class="k">switch</span> <span class="p">(</span><span class="n">selection</span><span class="p">)</span>
-        <span class="p">{</span> <span class="c1">// Switch or Switch/Case is Control Flow statement and is used to evaluate the</span>
-          <span class="c1">// user selection</span>
+        <span class="p">{</span>
             <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Goodbye, World!"</span><span class="p">);</span>
                 <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -805,14 +719,11 @@ window.onload = wrap_img;
                 <span class="k">break</span><span class="p">;</span>
 
 <span class="nl">            default:</span>
-                <span class="c1">// Prints error message from console</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Unexpected choice, try again."</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span> <span class="c1">// make sure to reset color and provide new line</span>
         <span class="k">return</span> <span class="n">quit</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// Static driver/tester method</span>
     <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
 
@@ -834,7 +745,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">Menu</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Menu</span><span class="p">();</span> <span class="c1">// starting Menu object</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">Menu</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Menu</span><span class="p">();</span>
 <span class="n">menu</span><span class="p">.</span><span class="na">menuGo</span><span class="p">();</span>
 </pre></div>
 
@@ -868,6 +779,23 @@ How would you like to play Tic-Tac-Toe?
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Documentation-/-Analysis:">
+<a class="anchor" href="#Documentation-/-Analysis:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation / Analysis:<a class="anchor-link" href="#Documentation-/-Analysis:"> </a>
+</h2>
+<ul>
+<li>A class is defined inside of a <code>Java</code> file. Every file has one class.</li>
+<li>Instances of the <code>Menu</code> Class are instantiated inside its constructor.</li>
+<li>An object can call a method by using the <code>.</code> operator. This is equivalent to a pointer in java. For example, in <code>System.out.println()</code> the <code>System</code> Class calls the <code>out</code> method and the <code>println</code> method.</li>
+<li>A mutator variable or also commonly known as a setter, assigns a value to a variable. For example, in <code>public final String DEFAULT = "\u001B[0m";</code> the constant String <code>DEFAULT</code> is assigned a value of <code>"\u001B[0m"</code>.</li>
+<li>In the Console Menu, there are a lot of try/catch blocks to carry out the methods in the menu. The GUI Menu implements the <code>ActionListener</code> Class and also extends the <code>JFrame</code> Class in order to make the menu.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
