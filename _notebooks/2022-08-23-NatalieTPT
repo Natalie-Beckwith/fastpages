@@ -7,6 +7,33 @@ title: TPT Notes
 ---
 # TPT Notes:
 
+## Week 2 - 8/30 Notes:
+* Java can create objects with..
+   * Scanner Class - inputs/outputs
+   * System Class - output to console using static method ```System.out.printf()```
+   * Math Class - call a static method ```Math.random()```
+* Other College Board Topics:
+* 2D Array to store colors
+   * x --> color; y --> color code
+* Control Structure - used to process a Menu
+
+### Front-end
+* Fastpages is front-end
+   * Runs in browser
+   * HTML & CSS
+   * No server to run on
+* GitHub Pages are also front-end
+* ***Find a theme that works other than Minima on fastpages***
+* Challenge: take Liquid/JavaScript and see if you can build Mr. M's schedule
+* Do a time-box of your own schedule
+
+### Human Day
+* must do for review (or else -0.25 to score)
+   * review score at top of review ticket
+   * link to fastpages
+   * tickets are with 4 person group
+
+
 ## Week 1 - 8/23 Notes:
 * Python - weakly type language
 * Java - strongly type language
