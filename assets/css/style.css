@@ -321,6 +321,8 @@ table td { border: 1px solid #e8e8e8; }
 
 /*-----------------------------------*/
 /*--- IMPORT STYLES FOR FASTPAGES ---*/
+body { font-family: 'Nunito', sans-serif; font-size: 1rem; background: #ffffff; background-image: url("https://chillhop.com/wp-content/uploads/2021/12/b3079408b79f0ceed3189d6eb804b448fa0c4068-1024x1024.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
+
 .post img { display: block; vertical-align: top; margin-left: auto; margin-right: auto; }
 
 img.emoji { display: inline !important; vertical-align: baseline !important; }
