@@ -788,8 +788,14 @@ How would you like to play Tic-Tac-Toe?
 <ul>
 <li>A class is defined inside of a <code>Java</code> file. Every file has one class.</li>
 <li>Instances of the <code>Menu</code> Class are instantiated inside its constructor.</li>
-<li>An object can call a method by using the <code>.</code> operator. This is equivalent to a pointer in java. For example, in <code>System.out.println()</code> the <code>System</code> Class calls the <code>out</code> method and the <code>println</code> method.</li>
-<li>A mutator variable or also commonly known as a setter, assigns a value to a variable. For example, in <code>public final String DEFAULT = "\u001B[0m";</code> the constant String <code>DEFAULT</code> is assigned a value of <code>"\u001B[0m"</code>.</li>
+<li>An object can call a method by using the <code>.</code> operator. This is equivalent to a pointer in java. For example, in <code>System.out.println()</code> the <code>System</code> Class calls the <code>out</code> method and the <code>println</code> method.<ul>
+<li>Another example is <code>_board.makeMove(row, column, _marker);</code> The board calls a method in order for the player to make a move</li>
+</ul>
+</li>
+<li>A mutator variable or also commonly known as a setter, assigns a value to a variable. For example, in <code>public final String DEFAULT = "\u001B[0m";</code> the constant String <code>DEFAULT</code> is assigned a value of <code>"\u001B[0m"</code>.<ul>
+<li>Another example is in <code>_board = board;</code> The variable _board is declared as type <code>TicTacToeBoard</code> and then instantiated inside the constructor of the <code>TicTacToeBoard</code> Class. </li>
+</ul>
+</li>
 <li>In the Console Menu, there are a lot of try/catch blocks to carry out the methods in the menu. The GUI Menu implements the <code>ActionListener</code> Class and also extends the <code>JFrame</code> Class in order to make the menu.</li>
 </ul>
 
