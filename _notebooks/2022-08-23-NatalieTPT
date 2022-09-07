@@ -7,6 +7,40 @@ title: TPT Notes
 ---
 # TPT Notes:
 
+## Week 3 - 9/7 Notes:
+### Boolean Expressions and If Statements:
+* Boolean - logical statement that can be evaluated to the values true/false
+* EX: ``` if (true) { System.out.println("True code block"); } ```
+* LOGICAL OPERATORS
+  * && - and
+  * || - or
+  * ! - not
+* Parenthesis matter
+* De Morgan's Law
+   * (A ∪ B)' = A' ∩ B'
+   * "The complement of the union of the two sets A and B will be equal to the intersection of A' (complement of A) and B' (complement of B)."
+   * EX: ```!((false || !true) || (false && true))```
+
+## PBL Tip: have the least amount of logical operators as possible
+
+* Hacks:
+* Build your own Jupyter Notebook lesson on ifs
+   * Explain if, if-else, and if-elseif-else.
+   * Make a markdown block before you sample code
+   * Comment in code to describe each decision
+* Add to lesson switch-case
+   * Create and if-elseif-elseif-elsif-else statement, 5 or more conditions.
+   * Covert the 5 or more decisions to a switch-case-case-case-case-otherwise.
+   * Make a markdown block before each code example
+   * Comment/establish a style of comments for your if-elseif and switch-case code blocks
+* Finish lesson with De Morgan's law
+   * Describe De Morgan's law
+   * Illustrate De Morgan's law
+   * Show some code running that shows understanding
+   * Resources, it is really time to show you can find resources beyond the Teacher
+   * Code/Code/Coding is everywhere, find something that helps
+
+-----
 ## Week 2 - 8/30 Notes:
 * Java can create objects with..
    * Scanner Class - inputs/outputs
@@ -33,7 +67,7 @@ title: TPT Notes
    * link to fastpages
    * tickets are with 4 person group
 
-
+-----
 ## Week 1 - 8/23 Notes:
 * Python - weakly type language
 * Java - strongly type language
