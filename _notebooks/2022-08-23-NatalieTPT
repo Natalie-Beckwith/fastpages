@@ -7,6 +7,12 @@ title: TPT Notes
 ---
 # TPT Notes:
 
+## Week 5 - 9/20 Notes:
+### 
+* Try to abstract init()
+* @Override init()
+* Hacks --> while loop, recursion, see comments in code, 
+
 ## Week 4 - 9/13 Notes:
 ### Iteration with 2D Arrays:
 * Recreate monkey program
