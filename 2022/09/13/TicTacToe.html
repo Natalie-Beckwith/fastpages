@@ -176,22 +176,18 @@ window.onload = wrap_img;
 </h3>
 <ul>
 <li>This program is more Object-Oriented because each Tic-Tac-Toe board and player is an object. Almost every function is non-static</li>
-<li>In each class all varibles are declared locally and are initialized inside the constructor</li>
-<li>
-<p>Inside the class <code>TicTacToeBoard</code>, the constructor initializes the double array <code>board</code>.
-```board = new String [NUM_ROWS][NUM_COLUMNS];</p>
-
-<pre><code>  for (int row = 0; row &lt; NUM_ROWS; row++)
-  {
-      for (int column = 0; column &lt; NUM_COLUMNS; column++)
-      {
-          board[row][column] = new String(" ");
-      }
-  }
-</code></pre>
-<p>```</p>
-</li>
+<li>In each class all variables are declared locally and are initialized inside the constructor</li>
+<li>Inside the class <code>TicTacToeBoard</code>, the constructor initializes the double array <code>board</code>.</li>
 </ul>
+<p><code>board = new String [NUM_ROWS][NUM_COLUMNS];</code></p>
+
+<pre><code>    for (int row = 0; row &lt; NUM_ROWS; row++)
+    {
+        for (int column = 0; column &lt; NUM_COLUMNS; column++)
+        {
+            board[row][column] = new String(" ");
+        }
+    }</code></pre>
 
 </div>
 </div>

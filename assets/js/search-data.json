@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Tic-Tac-Toe",
-            "content": "Iteration with 2D Arrays . Updates: . Now a Replit embed so people can play on fastpages! | Made the computer opponent have an idea of where to play instead of a random place on the board Play towards middle | Block opponent | | . | added ASCII colors :) X and O are now colors | Different moves are also different colors | . | (Optional) Easy/Hard mode for Human vs Computer Sub-menu to select difficulty | OR: Make the computer smart and take out easy mode all together | . | . Hacks: . This program is more Object-Oriented because each Tic-Tac-Toe board and player is an object. Almost every function is non-static | In each class all varibles are declared locally and are initialized inside the constructor | Inside the class TicTacToeBoard, the constructor initializes the double array board. board = new String [NUM_ROWS][NUM_COLUMNS]; . for (int row = 0; row &lt; NUM_ROWS; row++) { for (int column = 0; column &lt; NUM_COLUMNS; column++) { board[row][column] = new String(&quot; &quot;); } } . . | .",
+            "content": "Iteration with 2D Arrays . Updates: . Now a Replit embed so people can play on fastpages! | Made the computer opponent have an idea of where to play instead of a random place on the board Play towards middle | Block opponent | | . | added ASCII colors :) X and O are now colors | Different moves are also different colors | . | (Optional) Easy/Hard mode for Human vs Computer Sub-menu to select difficulty | OR: Make the computer smart and take out easy mode all together | . | . Hacks: . This program is more Object-Oriented because each Tic-Tac-Toe board and player is an object. Almost every function is non-static | In each class all variables are declared locally and are initialized inside the constructor | Inside the class TicTacToeBoard, the constructor initializes the double array board. | . board = new String [NUM_ROWS][NUM_COLUMNS]; . for (int row = 0; row &lt; NUM_ROWS; row++) { for (int column = 0; column &lt; NUM_COLUMNS; column++) { board[row][column] = new String(&quot; &quot;); } } .",
             "url": "https://natalie-beckwith.github.io/fastpages/2022/09/13/TicTacToe.html",
             "relUrl": "/2022/09/13/TicTacToe.html",
             "date": " • Sep 13, 2022"
@@ -150,7 +150,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "External Links: . GitHub Fastpages GitHub Spring Portfolio .",
+          "content": "External Links: . GitHub Fastpages GitHub Individual Spring Portfolio . (GitHub Team)[] .",
           "url": "https://natalie-beckwith.github.io/fastpages/about/",
           "relUrl": "/about/",
           "date": ""
