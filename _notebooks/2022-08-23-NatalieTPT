@@ -18,10 +18,30 @@ title: TPT Notes
 * JavaScript VS Java --> marketing
    * Syntax is a little similar to Java
 * JSON
-* 
+
+### Program Design:
+* Data & Visual
+* Pick something that everyone in the group is interested in
+* Have code base --> brainstorm what you are going to use
+* UML, how to separate things to-do into parts for each person to do
+* Think about key technical algorithmic problems
+* Testing --> debugging, unit testing, main method
+   * Without testing methods, code will break
+#### Teacher Ideas:
+* redo college board
+   * Redo it for different AP classes
+   * Way for you to study
+* Classroom management
+   * Databases
+   * Finding GitHub usernames and repos
+#### Project Plan
+* Find project plan by next week
+* Frontend & Backend
+   * Visuals
+   * Java
+* Add arrays + arrayLists
 
 -----
-
 ## Week 4 - 9/13 Notes:
 ### Iteration with 2D Arrays:
 * Recreate monkey program
