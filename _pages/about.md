@@ -5,9 +5,8 @@ permalink: /about/
 ---
 
 ## External Links:
-[GitHub Fastpages](https://github.com/Natalie-Beckwith/fastpages)
-[GitHub Individual Spring Portfolio](https://github.com/Natalie-Beckwith/Natalie_Beckwith)
-
-(GitHub Team)[]
+[GitHub Fastpages](https://github.com/Natalie-Beckwith/fastpages)<br>
+[GitHub Individual Spring Portfolio](https://github.com/Natalie-Beckwith/Natalie_Beckwith)<br>
+[GitHub Team](https://github.com/NinjaBreadLord/didactic-bassoon)
 
 
