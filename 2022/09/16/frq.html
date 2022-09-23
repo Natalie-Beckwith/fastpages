@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Primitive Data Types | Natalie’s Fastpages</title>
+<title>FRQ 2021 | Natalie’s Fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Primitive Data Types" />
+<meta property="og:title" content="FRQ 2021" />
 <meta name="author" content="Natalie Beckwith" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -17,9 +17,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-16T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Primitive Data Types" />
+<meta property="twitter:title" content="FRQ 2021" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Natalie Beckwith"},"dateModified":"2022-09-16T00:00:00-05:00","datePublished":"2022-09-16T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Primitive Data Types","mainEntityOfPage":{"@type":"WebPage","@id":"https://natalie-beckwith.github.io/fastpages/2022/09/16/frq.html"},"url":"https://natalie-beckwith.github.io/fastpages/2022/09/16/frq.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Natalie Beckwith"},"dateModified":"2022-09-16T00:00:00-05:00","datePublished":"2022-09-16T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"FRQ 2021","mainEntityOfPage":{"@type":"WebPage","@id":"https://natalie-beckwith.github.io/fastpages/2022/09/16/frq.html"},"url":"https://natalie-beckwith.github.io/fastpages/2022/09/16/frq.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://natalie-beckwith.github.io/fastpages/feed.xml" title="Natalie's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,7 +74,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Primitive Data Types</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-16T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">FRQ 2021</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-16T00:00:00-05:00" itemprop="datePublished">
         Sep 16, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -120,7 +120,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#FRQ-2021:">FRQ 2021: </a></li>
 <li class="toc-entry toc-h2"><a href="#Full-Code:">Full Code: </a></li>
 </ul><!--
 #################################################
@@ -134,48 +133,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="FRQ-2021:">
-<a class="anchor" href="#FRQ-2021:" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 2021:<a class="anchor-link" href="#FRQ-2021:"> </a>
-</h2>
-<p>1)
+<p>1)<br>
 a. Write the <code>WordMatch</code> method <code>scoreGuess</code>. To determine the score the returned, <code>scoreGuess</code> finds the number of times that <code>guess</code> occurs as a substring of <code>secret</code> and then multiplies that number by the square of the length of <code>guess</code>. Occurrences of <code>guess</code> may overlap within <code>secret</code>.</p>
 
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">lastIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    
-    <span class="k">while</span> <span class="p">(</span><span class="n">lastIndex</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">lastIndex</span> <span class="o">=</span> <span class="n">secret</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">lastIndex</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lastIndex</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-            <span class="n">lastIndex</span> <span class="o">+=</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
-    
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -184,37 +147,6 @@ a. Write the <code>WordMatch</code> method <code>scoreGuess</code>. To determine
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">findBetterGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess1</span><span class="p">,</span> <span class="n">String</span> <span class="n">guess2</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="kt">int</span> <span class="n">guessA</span> <span class="o">=</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess1</span><span class="p">);</span>
-      <span class="kt">int</span> <span class="n">guessB</span> <span class="o">=</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess2</span><span class="p">);</span>
-
-      <span class="k">if</span><span class="p">(</span><span class="n">guessA</span> <span class="o">&gt;</span> <span class="n">guessB</span><span class="p">)</span> <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
-      
-      <span class="k">if</span><span class="p">(</span><span class="n">guessB</span> <span class="o">&gt;</span> <span class="n">guessA</span><span class="p">)</span> <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
-
-      <span class="k">if</span><span class="p">((</span><span class="n">guess1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">guess2</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-      <span class="p">{</span>
-        <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
-    <span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -281,6 +213,11 @@ a. Write the <code>WordMatch</code> method <code>scoreGuess</code>. To determine
       <span class="p">}</span>
       <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+      
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -339,7 +276,7 @@ Score: 36
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>java.io.PrintStream@20014fe2</pre>
+<pre>java.io.PrintStream@219f40c8</pre>
 </div>
 
 </div>
