@@ -4,15 +4,32 @@ title: TPT Notes
 permalink: /notes/
 ---
 
-## Week 6 - 9/26 Notes:
+## Week 6 - 9/27 Notes:
 * Points:
    * Friday --> closing gradebook, fix issues w/ points by Friday
 * Images for Java
 * Rapid API
 * Review for project
 * Interest by each individual
-* 
 
+* Make abstract class: define init() for extending
+* you do not inherit constructors
+   * must use ```super()```
+* Telescoping - one constructor goes into another constructor
+* polymorphic behavior --> two methods that the same name, but one has it's own instances, and the other does not
+* Override --> doesn't need but prefer to see
+* User can see clearly that the class is extended
+* Protected --> only inherited classes can access
+* Public --> can access it in other classes
+* Private --> cannot access outside class
+
+* **Minimize lines of code >:)))**
+* For loop with arrays:
+* each element is assigned to 2 values (0 & 1)
+* decrement operator: ```--```
+* change ```super()``` name
+
+-----
 ## Week 5 - 9/20 Notes: 
 * Try to abstract init()
 * @Override init()
@@ -78,7 +95,6 @@ permalink: /notes/
    * Pair-programming
 * Test Driven Development - test towards criteria
 * Small details or broad details
-* 
 
 -----
 ## Week 3 - 9/7 Notes:
