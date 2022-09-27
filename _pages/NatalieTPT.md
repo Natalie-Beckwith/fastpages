@@ -1,9 +1,7 @@
 ---
-toc: true
-layout: post
-description: In-Class Notes
-categories: [markdown]
+layout: page
 title: TPT Notes
+permalink: /notes/
 ---
 # TPT Notes:
 
