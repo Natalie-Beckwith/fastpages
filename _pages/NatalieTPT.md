@@ -3,7 +3,6 @@ layout: page
 title: TPT Notes
 permalink: /notes/
 ---
-# TPT Notes:
 
 ## Week 6 - 9/26 Notes:
 * Points:
