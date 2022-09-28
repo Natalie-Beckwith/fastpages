@@ -3,6 +3,7 @@ layout: page
 title: Music Recs
 permalink: /music/
 ---
+# Music Recommendations
 
 <html>
     <button id="music" onclick="testClick()">PLAY</button>
