@@ -1,7 +1,7 @@
 ---
-- layout: page
-- title: Music Recs
-- permalink: /music/
+layout: page
+title: Music Recs
+permalink: /music/
 ---
 # Music Recommendations
 

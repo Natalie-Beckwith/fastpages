@@ -1,7 +1,7 @@
 ---
-- layout: page
-- title: TPT Notes
-- permalink: /notes/
+layout: page
+title: TPT Notes
+permalink: /notes/
 ---
 
 ## Week 6 - 9/27 Notes
