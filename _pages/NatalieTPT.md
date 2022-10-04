@@ -12,7 +12,20 @@ permalink: /notes/
 ### Jokes
 * Deployment:
    * AWS
-   * 
+* POJO (**P**lain **O**ld **J**ava **O**bject)
+   * Simple --> ex: class, methods(functions), and attributes(varibles/arguments)
+* Setters --> set values to attributes
+* Constructors are automattically made
+* Zero argument constructor --> ```public ClassName()```
+* All argument constructor --><br>
+```public ClassName()```<br>
+```{```<br>
+```this.attributes = attributes;```<br>
+```}```<br>
+* Code first database --> build an entity with and SQL database
+* CRUD (**C**reate **R**ead **U**pdate **D**elete)
+* ```init()``` --> runs independently
+* 
 
 -----
 ## Week 6 - 9/27 Notes
