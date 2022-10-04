@@ -4,8 +4,17 @@ title: TPT Notes
 permalink: /notes/
 ---
 
-## Week 7 - 10/4 Notes:
+## Week 7 - 10/4 Notes
+
+### ArrayLists
 * 
+
+### Jokes
+* Deployment:
+   * AWS
+   * 
+
+-----
 ## Week 6 - 9/27 Notes
 
 * Points:
