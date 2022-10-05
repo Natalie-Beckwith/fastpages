@@ -5,9 +5,15 @@ permalink: /notes/
 ---
 
 ## Week 7 - 10/4 Notes
+* Fetch --> JavaScript
+* Different ways to process an API
+* 
 
 ### ArrayLists
 * 
+
+### Extends/Implements
+* Use extends as an alternate way to copy/paste
 
 ### Jokes
 * Deployment:
@@ -25,7 +31,12 @@ permalink: /notes/
 * Code first database --> build an entity with and SQL database
 * CRUD (**C**reate **R**ead **U**pdate **D**elete)
 * ```init()``` --> runs independently
-* 
+
+#### TO-DO Individual
+* .
+
+#### TO-DO Team
+* Make a poster of a concept
 
 -----
 ## Week 6 - 9/27 Notes
