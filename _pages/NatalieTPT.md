@@ -7,7 +7,9 @@ permalink: /notes/
 ## Week 7 - 10/4 Notes
 * Fetch --> JavaScript
 * Different ways to process an API
-* 
+* Every attribute --> 1 setter and 1 getter
+  * 4 attributes --> constructor has 4 attributes
+* Postman: git --> put --> tool for backend
 
 ### ArrayLists
 * 
@@ -23,7 +25,7 @@ permalink: /notes/
 * Setters --> set values to attributes
 * Constructors are automattically made
 * Zero argument constructor --> ```public ClassName()```
-* All argument constructor --><br>
+* All argument constructor:<br>
 ```public ClassName()```<br>
 ```{```<br>
 ```this.attributes = attributes;```<br>
@@ -32,11 +34,13 @@ permalink: /notes/
 * CRUD (**C**reate **R**ead **U**pdate **D**elete)
 * ```init()``` --> runs independently
 
-#### TO-DO Individual
-* .
-
-#### TO-DO Team
-* Make a poster of a concept
+#### TO-DO
+* ArrayLists
+* Frontend/Backend
+* Integration w/ crossover team about project
+* Create a poster for the classroom
+* Work on College Board Presentations (Arrays)
+* 
 
 -----
 ## Week 6 - 9/27 Notes
