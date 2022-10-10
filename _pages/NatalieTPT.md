@@ -12,7 +12,9 @@ permalink: /notes/
 * Postman: git --> put --> tool for backend
 
 ### ArrayLists
-* 
+* Uses generic data types
+* Defined in ```< >```
+* Enter any **object** into "```ArrayList```"
 
 ### Extends/Implements
 * Use extends as an alternate way to copy/paste
