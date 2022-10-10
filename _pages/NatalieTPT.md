@@ -4,6 +4,19 @@ title: TPT Notes
 permalink: /notes/
 ---
 
+
+## Week 8 - 10/11 Notes
+* Project planning for website
+* [Requirements](https://nighthawkcoders.github.io/APCSA//points/8)
+* Explain process --> succuss/failures
+* When program is ran, should have some sort output
+* Minimul amount of code as possible
+   * extends
+   * re-using code
+* Coding is never done ;)
+* 
+
+-----
 ## Week 7 - 10/4 Notes
 * Fetch --> JavaScript
 * Different ways to process an API
@@ -42,7 +55,6 @@ permalink: /notes/
 * Integration w/ crossover team about project
 * Create a poster for the classroom
 * Work on College Board Presentations (Arrays)
-* 
 
 -----
 ## Week 6 - 9/27 Notes
