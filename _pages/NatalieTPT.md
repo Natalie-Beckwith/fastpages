@@ -4,6 +4,38 @@ title: TPT Notes
 permalink: /notes/
 ---
 
+## Class Lessions
+
+### Primitives
+* Why Java?
+   * More flexible OOP
+   * Run an any platform
+   * Garbage collection --> memory management, when a variable is no longer used it's 
+   * Multi-threading: able to acces different
+
+* Primitives
+   * Predefined
+   * lovercase
+   * ex: boolean, int, double, char, long, short
+* Non-Primitives
+   * Strings
+   * capital
+* How to name
+   * letters, numbers, or underscores
+   * ```final``` makes variable constant
+   * Casting --> changing data types
+      * int to a double
+      * Narrowing is going from bigger data to smaller
+* Operators
+   * +, -, *, /, %, ++, --, +=, -=, *=, /=, %=
+   * Mod returns the remainder
+   * overflow errors --> left to right (PEMDAS)
+   * Incremet and decrement operators --> adds 1 and subract 1
+* Coding Challenge
+* Scanner
+   * import ```Scanner``` class
+   * 
+
 
 ## Week 8 - 10/11 Notes
 * Project planning for website
@@ -14,7 +46,6 @@ permalink: /notes/
    * extends
    * re-using code
 * Coding is never done ;)
-* 
 
 -----
 ## Week 7 - 10/4 Notes
