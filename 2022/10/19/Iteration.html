@@ -142,11 +142,17 @@ window.onload = wrap_img;
 <span class="cm"> * and same for if they guess a number that is too low.</span>
 <span class="cm"> * The loop must iterate until the number is guessed correctly.</span>
 <span class="cm"> */</span>
+
+ 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">RandomGuess</span>
 <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">magicNumber</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">guess</span><span class="p">;</span>
     
+    <span class="cm">/*</span>
+<span class="cm">     * </span>
+<span class="cm">     * </span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">magicNumber</span> <span class="o">=</span> <span class="n">getRandomNumber</span><span class="p">();</span>
@@ -178,6 +184,9 @@ window.onload = wrap_img;
         <span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
     <span class="p">}</span>
     
+    <span class="cm">/*</span>
+<span class="cm">     * @return the random number</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getRandomNumber</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">Random</span> <span class="n">number</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
@@ -190,6 +199,53 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">arrayA</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="s">&quot;Apple&quot;</span><span class="p">,</span> <span class="s">&quot;Banana&quot;</span><span class="p">,</span> <span class="s">&quot;Orange&quot;</span><span class="p">,</span> <span class="s">&quot;Kiwi&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Lemon&quot;</span><span class="p">,</span> <span class="s">&quot;Melon&quot;</span><span class="p">,</span> <span class="s">&quot;Watermelon&quot;</span><span class="p">,</span> <span class="s">&quot;Blackberry&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Blueberry&quot;</span><span class="p">,</span><span class="s">&quot;Strawberry&quot;</span><span class="p">,</span> <span class="s">&quot;Rasberry&quot;</span>
+<span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="n">arrayA</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Blackberry</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@427bdd84</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
