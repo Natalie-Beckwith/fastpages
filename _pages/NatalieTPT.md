@@ -6,6 +6,33 @@ permalink: /notes/
 
 ## Class Lessions
 
+Definition
+Signature
+Method Body
+
+camelCase - start with lowercase, then every word is uppercase to separate word
+
+return void - returns nothing, code just executes
+
+* static --> do not require an object to access the methods in the class
+* non-static --> requires an object to acces methods in class
+
+* ```.this```
+
+* private: 
+* public: 
+* protected: 
+
+```public static void main (String[] Args)``` --> what you need for a method
+
+* Accessor: methods access to variable methods
+return statement
+* Autator: classes ability to change value of variable
+
+* Local: only call within method
+* Global: all methods can access variable
+* 
+
 ### Primitives
 * Why Java?
    * More flexible OOP
