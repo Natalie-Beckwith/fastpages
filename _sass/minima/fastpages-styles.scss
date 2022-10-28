@@ -23,11 +23,15 @@ img.emoji{
 
 .page-content
 {
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-    url(https://static.vecteezy.com/system/resources/previews/005/993/672/non_2x/hand-painted-watercolour-background-free-vector.jpg);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/005/993/672/non_2x/hand-painted-watercolour-background-free-vector.jpg);
      -webkit-font-smoothing: antialiased !important;
+  background-position: center;
+  background-size: cover;
+  position: relative;
   text-rendering: optimizeLegibility !important;
   font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+  color: #613b69;
+
 }
 
 // make non-headings slightly lighter
