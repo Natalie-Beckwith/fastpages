@@ -4,9 +4,9 @@
         "post0": {
             "title": "ArrayLists Practice",
             "content": "import java.util.ArrayList; import java.util.Scanner; /** * Allows user to input as many song titles as they want * Terminates when a return character is entered twice * */ public class AddSongs { public static void main(String[] args) { ArrayList&lt;String&gt; songs = new ArrayList&lt;String&gt;(); Scanner scanner = new Scanner(System.in); String line; System.out.printf(&quot;Enter song titles here: n&quot;); do { line = scanner.nextLine(); songs.add(line); } while(!line.equals(&quot;&quot;)); scanner.close(); } } . . Future Plans . Integrate this feature futher | Use this simple feature for the user to add their own songs and have others like/dislike them | .",
-            "url": "https://natalie-beckwith.github.io/fastpages/2022/10/31/ArrayListsPractice.html",
-            "relUrl": "/2022/10/31/ArrayListsPractice.html",
-            "date": " • Oct 31, 2022"
+            "url": "https://natalie-beckwith.github.io/fastpages/2022/11/07/ArrayListsPractice.html",
+            "relUrl": "/2022/11/07/ArrayListsPractice.html",
+            "date": " • Nov 7, 2022"
         }
         
     
