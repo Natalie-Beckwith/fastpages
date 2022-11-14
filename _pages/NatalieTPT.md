@@ -9,7 +9,7 @@ permalink: /notes/
 * Spring, APIs, and JPAs are easy to use with Java
 * Learn why people love Java
 * Should memorize 10 units and 4 FRQ types
-* **FRQ #1** due ***FRIDAY***
+* **FRQ #1** due ***FRIDAY***, **FRQ #2** due ***MONDAY AFTER BREAK***
 * Required for team project
   * Build off of previous projects
   * Avoid starting from scratch
@@ -22,7 +22,7 @@ permalink: /notes/
   * Classes - 5
   * Array/ArrayList - 6/7
   * 2D Array - 8
-* .
+* Talk with team
 
 ### FRQ 1 Explanation
 * .
@@ -87,7 +87,6 @@ return statement
 * Coding Challenge
 * Scanner
    * import ```Scanner``` class
-   * 
 
 
 ## Week 8 - 10/11 Notes
