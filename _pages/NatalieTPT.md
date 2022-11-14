@@ -4,6 +4,32 @@ title: TPT Notes
 permalink: /notes/
 ---
 
+## Week 13 - 11/14 Notes
+* 4 types of FRQs
+* Spring, APIs, and JPAs are easy to use with Java
+* Learn why people love Java
+* Should memorize 10 units and 4 FRQ types
+* **FRQ #1** due ***FRIDAY***
+* Required for team project
+  * Build off of previous projects
+  * Avoid starting from scratch
+  * See if teacher likes it
+  * Find something with use
+  * Be interested in it
+
+* 4 Types of FRQs
+  * Methods and Control Structures - 2
+  * Classes - 5
+  * Array/ArrayList - 6/7
+  * 2D Array - 8
+* .
+
+### FRQ 1 Explanation
+* .
+
+
+# TRI 1
+
 ## Class Lessions
 
 Definition
@@ -19,9 +45,9 @@ return void - returns nothing, code just executes
 
 * ```.this```
 
-* private: 
-* public: 
-* protected: 
+* private
+* public
+* protected
 
 ```public static void main (String[] Args)``` --> what you need for a method
 
