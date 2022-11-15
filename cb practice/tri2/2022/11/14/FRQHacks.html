@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -311,10 +311,149 @@ There are 7 leap years between 2000 and 2024</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// code code code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns the value representing the day of the week for</span>
+<span class="cm"> * the first day of year, where 0 denotes Sunday, 1 denotes</span>
+<span class="cm"> * Monday, ..., and 6 denotes Saturday </span>
+<span class="cm"> * </span>
+<span class="cm"> * @param month</span>
+<span class="cm"> * @param day</span>
+<span class="cm"> * @param year</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">firstDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns n, where month, day, and year specify the nth</span>
+<span class="cm"> * day of the year. Returns 1 for January 1 (Monday = 1,</span>
+<span class="cm"> * day = 1) of any year </span>
+<span class="cm"> * </span>
+<span class="cm"> * @param month</span>
+<span class="cm"> * @param day</span>
+<span class="cm"> * @param year</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns the value representing the day of the week for</span>
+<span class="cm"> * the given date, (month, day, year) where 0 denotes Sunday,</span>
+<span class="cm"> * 1 denotes Monday, ..., and 6 denotes Saturday</span>
+<span class="cm"> * </span>
+<span class="cm"> * @param month</span>
+<span class="cm"> * @param day</span>
+<span class="cm"> * @param year</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayofWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">firstDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">numDays</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+    
+    <span class="c1">// subtract 1 so days of year start at 0</span>
+    <span class="kt">int</span> <span class="n">addDays</span> <span class="o">=</span> <span class="p">(</span><span class="n">firstDay</span> <span class="o">+</span> <span class="n">numDays</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="kt">int</span> <span class="n">dayOfWeek</span> <span class="o">=</span> <span class="n">addDays</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
+    
+    <span class="k">return</span> <span class="n">dayOfWeek</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * main </span>
+<span class="cm"> * </span>
+<span class="cm"> * @param Args</span>
+<span class="cm"> */</span>
+
+<span class="c1">// array of week</span>
+<span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">DAYS</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Sunday"</span><span class="p">,</span> <span class="s">"Monday"</span><span class="p">,</span> <span class="s">"Tuesday"</span><span class="p">,</span>
+<span class="s">"Wednesday"</span><span class="p">,</span> <span class="s">"Thursday"</span><span class="p">,</span> <span class="s">"Friday"</span><span class="p">,</span> <span class="s">"Saturday"</span><span class="p">};</span>
+
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">MONTH</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">DAY</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">YEAR</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"PART B:\n"</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayofWeek</span><span class="p">(</span><span class="n">MONTH</span><span class="p">,</span> <span class="n">DAY</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d/%d/%d is on a %s\n"</span><span class="p">,</span> <span class="n">MONTH</span><span class="p">,</span> <span class="n">DAY</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">,</span> <span class="n">DAYS</span><span class="o">[</span><span class="n">day</span><span class="o">]</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>PART B:
+11/14/2022 is on a Monday
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@161734e</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
