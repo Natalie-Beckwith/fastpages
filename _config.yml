@@ -38,9 +38,10 @@ baseurl: "/fastpages" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
+  #  social_links:
+  #    github: nighthawkcoders
   social_links:
-    twitter: fastdotai
-    github: fastai
+    - { platform: github, user_url: “https://github.com/Natalie-Beckwith/fastpages.git”}
 
 # Set this to true to get LaTeX math equation support
 use_math: 
