@@ -2,6 +2,7 @@
 layout: page
 title: TPT Notes
 permalink: /notes/
+categories: notes
 ---
 
 ## Week 13 - 11/14 Notes
@@ -10,22 +11,29 @@ permalink: /notes/
 * Learn why people love Java
 * Should memorize 10 units and 4 FRQ types
 * **FRQ #1** due ***FRIDAY***, **FRQ #2** due ***MONDAY AFTER BREAK***
+  * Show some sort of testing using screenshots
 * Required for team project
   * Build off of previous projects
   * Avoid starting from scratch
   * See if teacher likes it
   * Find something with use
   * Be interested in it
+* Talk with team
+* ```.toString``` --> must be pre-defined
+* **Everything in Java is passed by reference**
 
 * 4 Types of FRQs
   * Methods and Control Structures - 2
   * Classes - 5
   * Array/ArrayList - 6/7
   * 2D Array - 8
-* Talk with team
 
-### FRQ 1 Explanation
-* .
+### Degugging
+* click the **debug** button on VS Code instead of **run**
+* 
+
+### FRQ 1 - Methods and Control Structures
+* 
 
 
 # TRI 1
@@ -57,7 +65,6 @@ return statement
 
 * Local: only call within method
 * Global: all methods can access variable
-* 
 
 ### Primitives
 * Why Java?
