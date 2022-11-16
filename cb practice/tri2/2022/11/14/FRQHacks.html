@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -179,12 +179,13 @@ window.onload = wrap_img;
 <span class="cm">     */</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLeapYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="c1">// must occur every 4th year</span>
+                <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="c1">// must be divisible by 100</span>
+                <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span> <span class="c1">// must be divisible by 400</span>
         <span class="p">{</span>
             <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">else</span> 
-            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>   
+        <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>   
     <span class="p">}</span>
 </pre></div>
 
@@ -216,12 +217,13 @@ window.onload = wrap_img;
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">leapYear</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         
-        <span class="c1">// </span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">loop</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">loop</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">loop</span><span class="o">++</span><span class="p">)</span> 
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">loop</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">loop</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">loop</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">loop</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// leap year occurs every 4 years</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">loop</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="c1">// must occur every 4th year</span>
+                <span class="p">(</span><span class="n">loop</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="c1">// must be divisible by 100</span>
+                <span class="p">(</span><span class="n">loop</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span> <span class="c1">// must be divisible by 400</span>
             <span class="p">{</span>
-                <span class="n">leapYear</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">leapYear</span><span class="o">++</span><span class="p">;</span> <span class="c1">// increases number of leap years</span>
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">leapYear</span><span class="p">;</span>
@@ -249,20 +251,14 @@ window.onload = wrap_img;
 <span class="kd">final</span> <span class="kt">int</span> <span class="n">YEAR</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">;</span>
         <span class="kd">final</span> <span class="kt">int</span> <span class="n">YEAR_1</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
         <span class="kd">final</span> <span class="kt">int</span> <span class="n">YEAR_2</span> <span class="o">=</span> <span class="mi">2024</span><span class="p">;</span>
-        
-        
-        <span class="cm">/*</span>
-<span class="cm">         * write static method that returns number of leap years</span>
-<span class="cm">         * between year1 and year2</span>
-<span class="cm">         * </span>
-<span class="cm">         * isLeapYear(year);</span>
-<span class="cm">         */</span>
+
+        <span class="c1">// PART A</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"PART A:\n"</span><span class="p">);</span>
         <span class="kt">boolean</span> <span class="n">isLeapYear</span> <span class="o">=</span> <span class="n">isLeapYear</span><span class="p">(</span><span class="n">YEAR</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d: %b\n"</span><span class="p">,</span><span class="n">YEAR</span><span class="p">,</span> <span class="n">isLeapYear</span><span class="p">);</span>
         
         <span class="kt">int</span> <span class="n">numLeapYears</span> <span class="o">=</span> <span class="n">numberofLeapYears</span><span class="p">(</span><span class="n">YEAR_1</span><span class="p">,</span> <span class="n">YEAR_2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"There are %d leap years between %d and %d"</span><span class="p">,</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"There are %d leap years between %d and %d\n\n"</span><span class="p">,</span>
                 <span class="n">numLeapYears</span><span class="p">,</span> <span class="n">YEAR_1</span><span class="p">,</span> <span class="n">YEAR_2</span><span class="p">);</span>
 </pre></div>
 
@@ -378,20 +374,23 @@ There are 7 leap years between 2000 and 2024</pre>
 <span class="cm"> * the given date, (month, day, year) where 0 denotes Sunday,</span>
 <span class="cm"> * 1 denotes Monday, ..., and 6 denotes Saturday</span>
 <span class="cm"> * </span>
-<span class="cm"> * @param month</span>
-<span class="cm"> * @param day</span>
-<span class="cm"> * @param year</span>
-<span class="cm"> * @return</span>
+<span class="cm"> * @param the given month</span>
+<span class="cm"> * @param the given day</span>
+<span class="cm"> * @param the given year</span>
+<span class="cm"> * @return dayOfWeek</span>
 <span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayofWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">firstDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span> <span class="c1">// assuming that firstDayOfYear is functional</span>
-    <span class="kt">int</span> <span class="n">numDays</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span> <span class="c1">// assuming that dayOfYear is functional</span>
+    <span class="c1">// assuming that firstDayOfYear() is implemented</span>
+    <span class="kt">int</span> <span class="n">firstDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+    <span class="c1">// assuming that dayOfYear() is implemented</span>
+    <span class="kt">int</span> <span class="n">numDays</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
     
     <span class="c1">// subtract 1 so days of year start at 0</span>
     <span class="kt">int</span> <span class="n">addDays</span> <span class="o">=</span> <span class="p">(</span><span class="n">firstDay</span> <span class="o">+</span> <span class="n">numDays</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
     
-    <span class="kt">int</span> <span class="n">dayOfWeek</span> <span class="o">=</span> <span class="n">addDays</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 7 represents the number of days in a week</span>
+    <span class="c1">// 7 represents the number of days in a week</span>
+    <span class="kt">int</span> <span class="n">dayOfWeek</span> <span class="o">=</span> <span class="n">addDays</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
     
     <span class="k">return</span> <span class="n">dayOfWeek</span><span class="p">;</span>
 <span class="p">}</span>
@@ -425,9 +424,10 @@ There are 7 leap years between 2000 and 2024</pre>
 <span class="kd">final</span> <span class="kt">int</span> <span class="n">DAY</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
 <span class="kd">final</span> <span class="kt">int</span> <span class="n">YEAR</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">;</span>
 
+<span class="c1">// PART B</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"PART B:\n"</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayofWeek</span><span class="p">(</span><span class="n">MONTH</span><span class="p">,</span> <span class="n">DAY</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d/%d/%d is on a %s\n"</span><span class="p">,</span> <span class="n">MONTH</span><span class="p">,</span> <span class="n">DAY</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">,</span> <span class="n">DAYS</span><span class="o">[</span><span class="n">day</span><span class="o">]</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayofWeek</span><span class="p">(</span><span class="n">THE_MONTH</span><span class="p">,</span> <span class="n">THE_DAY</span><span class="p">,</span> <span class="n">THE_YEAR</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d/%d/%d is on a %s\n"</span><span class="p">,</span> <span class="n">THE_MONTH</span><span class="p">,</span> <span class="n">THE_DAY</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">,</span> <span class="n">DAYS</span><span class="o">[</span><span class="n">day</span><span class="o">]</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -601,7 +601,19 @@ There are 7 leap years between 2000 and 2024</pre>
 <a class="anchor" href="#Testing-Process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing Process<a class="anchor-link" href="#Testing-Process"> </a>
 </h2>
 <ul>
-<li>I used JUnit Testing to test my code</li>
+<li>I used <strong>JUnit Testing</strong> to test my code</li>
+</ul>
+<p><img src="https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/part%201a.png?raw=true" alt="image"></p>
+<ul>
+<li>I tested <code>numberOfLeapYears()</code> by using the years 2010 to 2018. In those range of years, the expected output should be 2 leap years, which is the output of the test code</li>
+</ul>
+<p><img src="https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/part%201b.png?raw=true" alt="image"></p>
+<ul>
+<li>I tested <code>dayOfWeek()</code> by using the date 11/14/22. The expected output should be 1, which is what the test code outputs</li>
+</ul>
+<p><img src="https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/output.png?raw=true" alt="image"></p>
+<ul>
+<li>After I ran my test code, the output showed a green bar which means that there are no errors</li>
 </ul>
 
 </div>
