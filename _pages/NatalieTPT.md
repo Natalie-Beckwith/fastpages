@@ -27,14 +27,18 @@ categories: notes
   * Classes - 5
   * Array/ArrayList - 6/7
   * 2D Array - 8
-
 ### Degugging
 * click the **debug** button on VS Code instead of **run**
-* 
 
 ### FRQ 1 - Methods and Control Structures
-* 
-
+### FRQ 2 - Classes
+* POJO
+* Add name, birthday, and email
+* **Hacks:**
+  * Tester method on POJO
+  * fix bug - overrides and sets a new DOB
+    * We need to add data, not replace it
+    * New method to add data
 
 # TRI 1
 
