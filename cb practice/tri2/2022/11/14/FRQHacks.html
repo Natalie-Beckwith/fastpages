@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      6 min read
     
 </span></p>
 
@@ -480,10 +480,210 @@ There are 7 leap years between 2000 and 2024
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// code code code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * StepTracker.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * FRQ 2019 #2</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for StepTracker.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StepTracker</span>
+<span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_stepsToBeActive</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_activeDays</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_steps</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_daysTracked</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_stepsToday</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">StepTracker</span><span class="p">(</span><span class="kt">int</span> <span class="n">stepsToBeActive</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">stepsToBeActive</span> <span class="o">=</span> <span class="n">_stepsToBeActive</span><span class="p">;</span>
+        <span class="n">_activeDays</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">_steps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">_daysTracked</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">_stepsToday</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * number of active days</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return the number of active days</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">activeDays</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">_daysTracked</span><span class="o">++</span><span class="p">;</span>
+
+        <span class="c1">// days with at least 10,000 steps are an active day</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">_stepsToday</span> <span class="o">&gt;=</span> <span class="mi">10000</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_activeDays</span><span class="o">++</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="n">_activeDays</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">_activeDays</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * takes the average steps by dividing the number of steps taken by the number of</span>
+<span class="cm">     * days tracked</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return the average number of steps per day</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">averageSteps</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">_daysTracked</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// number of steps divided by days tracked</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">_steps</span> <span class="o">/</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">_daysTracked</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * accumulates information about steps, in readings taken once per day</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param steps</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">addDailySteps</span><span class="p">(</span><span class="kt">int</span> <span class="n">steps</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_stepsToday</span> <span class="o">=</span> <span class="n">steps</span><span class="p">;</span>
+
+        <span class="n">_steps</span> <span class="o">+=</span> <span class="n">_stepsToday</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="n">_steps</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * prints the total number of steps</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param steps</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printSteps</span><span class="p">(</span><span class="kt">int</span> <span class="n">steps</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Number of steps: %d\n"</span><span class="p">,</span> <span class="n">steps</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * prints the number of active days</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param days</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printActiveDays</span><span class="p">(</span><span class="kt">int</span> <span class="n">days</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Number of active days: %d\n"</span><span class="p">,</span> <span class="n">days</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * print the average number of steps</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param average</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printAverage</span><span class="p">(</span><span class="kt">double</span> <span class="n">average</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average number of steps: %.1f\n\n"</span><span class="p">,</span> <span class="n">average</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * main</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param Args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// days with at least 10,000 steps are considered</span>
+        <span class="c1">// active, days must be positive</span>
+        <span class="n">StepTracker</span> <span class="n">tr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StepTracker</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+
+        <span class="kt">int</span> <span class="n">numSteps</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">numActiveDays</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">numAverageSteps</span><span class="p">;</span>
+
+        <span class="n">numSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">9000</span><span class="p">);</span>
+        <span class="n">numActiveDays</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+        <span class="n">numAverageSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+
+        <span class="n">printSteps</span><span class="p">(</span><span class="n">numSteps</span><span class="p">);</span>
+        <span class="n">printActiveDays</span><span class="p">(</span><span class="n">numActiveDays</span><span class="p">);</span>
+        <span class="n">printAverage</span><span class="p">(</span><span class="n">numAverageSteps</span><span class="p">);</span>
+
+        <span class="n">numSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+        <span class="n">numActiveDays</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+        <span class="n">numAverageSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+
+        <span class="n">printSteps</span><span class="p">(</span><span class="n">numSteps</span><span class="p">);</span>
+        <span class="n">printActiveDays</span><span class="p">(</span><span class="n">numActiveDays</span><span class="p">);</span>
+        <span class="n">printAverage</span><span class="p">(</span><span class="n">numAverageSteps</span><span class="p">);</span>
+
+        <span class="n">numSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">13000</span><span class="p">);</span>
+        <span class="n">numActiveDays</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+        <span class="n">numAverageSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+
+        <span class="n">printSteps</span><span class="p">(</span><span class="n">numSteps</span><span class="p">);</span>
+        <span class="n">printActiveDays</span><span class="p">(</span><span class="n">numActiveDays</span><span class="p">);</span>
+        <span class="n">printAverage</span><span class="p">(</span><span class="n">numAverageSteps</span><span class="p">);</span>
+
+        <span class="n">numSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">23000</span><span class="p">);</span>
+        <span class="n">numActiveDays</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+        <span class="n">numAverageSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+
+        <span class="n">printSteps</span><span class="p">(</span><span class="n">numSteps</span><span class="p">);</span>
+        <span class="n">printActiveDays</span><span class="p">(</span><span class="n">numActiveDays</span><span class="p">);</span>
+        <span class="n">printAverage</span><span class="p">(</span><span class="n">numAverageSteps</span><span class="p">);</span>
+
+        <span class="n">numSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">1111</span><span class="p">);</span>
+        <span class="n">numActiveDays</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+        <span class="n">numAverageSteps</span> <span class="o">=</span> <span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+
+        <span class="n">printSteps</span><span class="p">(</span><span class="n">numSteps</span><span class="p">);</span>
+        <span class="n">printActiveDays</span><span class="p">(</span><span class="n">numActiveDays</span><span class="p">);</span>
+        <span class="n">printAverage</span><span class="p">(</span><span class="n">numAverageSteps</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">StepTracker</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of steps: 9000
+Number of active days: 0
+Average number of steps: 9000.0
+
+Number of steps: 14000
+Number of active days: 0
+Average number of steps: 7000.0
+
+Number of steps: 27000
+Number of active days: 1
+Average number of steps: 9000.0
+
+Number of steps: 50000
+Number of active days: 2
+Average number of steps: 12500.0
+
+Number of steps: 51111
+Number of active days: 2
+Average number of steps: 10222.2
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
