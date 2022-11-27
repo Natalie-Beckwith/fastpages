@@ -5,7 +5,7 @@ toc: true
 badges: true
 comments: true
 author: Natalie Beckwith
-categories: 
+categories: TRI1
 nb_path: _notebooks/2022-09-13-TicTacToe.ipynb
 layout: notebook
 ---

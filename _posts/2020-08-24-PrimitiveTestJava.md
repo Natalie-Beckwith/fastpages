@@ -5,7 +5,7 @@ toc: true
 badges: true
 comments: true
 author: Natalie Beckwith
-categories: 
+categories: TRI1
 nb_path: _notebooks/2020-08-24-PrimitiveTestJava.ipynb
 layout: notebook
 ---

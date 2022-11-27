@@ -5,7 +5,7 @@ toc: true
 badges: true
 comments: false
 author: Natalie Beckwith
-categories: 
+categories: TRI1
 nb_path: _notebooks/2022-08-26-AnatomyOfJava.ipynb
 layout: notebook
 ---

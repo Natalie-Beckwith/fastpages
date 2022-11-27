@@ -5,7 +5,7 @@ toc: true
 badges: true
 comments: true
 author: Natalie Beckwith
-categories: 
+categories: TRI1
 nb_path: _notebooks/2022-08-28-NatalieNotebookJava.ipynb
 layout: notebook
 ---
@@ -27,7 +27,6 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
