@@ -5,6 +5,15 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 114 - 11/28 Notes
+* Palm files
+  * palm.xml: versions of dependency should be left out
+  * System will automatically fill in version
+* Debugging: post in postman, git in postman
+  * executing code from Spring Portfolio
+* Ask yourself question: "Why am I doing this?"
+* 
+
 ## Week 13 - 11/14 Notes
 * 4 types of FRQs
 * Spring, APIs, and JPAs are easy to use with Java
