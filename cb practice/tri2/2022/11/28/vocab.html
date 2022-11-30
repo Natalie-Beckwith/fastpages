@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -134,7 +134,9 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h3"><a href="#Casting">Casting </a></li>
 <li class="toc-entry toc-h3"><a href="#Wrapper-classes">Wrapper classes </a></li>
+<li class="toc-entry toc-h3"><a href="#Concatenation">Concatenation </a></li>
 <li class="toc-entry toc-h3"><a href="#Math-Class">Math Class </a></li>
+<li class="toc-entry toc-h3"><a href="#Boolean-Expressions">Boolean Expressions </a></li>
 <li class="toc-entry toc-h3"><a href="#Truth-Tables-and-De-Morgan's-Law">Truth Tables and De Morgan&#39;s Law </a></li>
 <li class="toc-entry toc-h3"><a href="#Static-VS-Non-Static-Methods">Static VS Non Static Methods </a></li>
 <li class="toc-entry toc-h3"><a href="#.this-Keyword">.this Keyword </a></li>
@@ -154,7 +156,7 @@ window.onload = wrap_img;
 <li>Casting, specifically for Division X</li>
 <li>Casting, specifically for Truncating or Rounding X</li>
 <li>Wrapper Classes, why wrap int, double. Show examples</li>
-<li>Concatenation, explain or illustrate rules on mixed type Concatenation</li>
+<li>Concatenation, explain or illustrate rules on mixed type Concatenation X</li>
 <li>Math class, specifically Random usage X</li>
 <li>Compound Boolean Expression</li>
 <li>Truth Tables X</li>
@@ -270,6 +272,78 @@ Without casting: 1.00</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenation">
+<a class="anchor" href="#Concatenation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concatenation<a class="anchor-link" href="#Concatenation"> </a>
+</h3>
+<ul>
+<li>Combining two strings into one</li>
+<li>In the code example, <code>message1</code> is being added to <code>message2</code>
+</li>
+<li>
+<code>num</code> is an integer, so when it is concatenated to <code>finalMessage2</code>, it is turned into type <code>String</code>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">message1</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">message2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">finalMessage</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">finalMessage2</span><span class="p">;</span>
+
+<span class="n">message1</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="p">;</span>
+<span class="n">message2</span> <span class="o">=</span> <span class="s">"World"</span><span class="p">;</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="n">finalMessage</span> <span class="o">=</span> <span class="n">message1</span> <span class="o">+</span> <span class="n">message2</span><span class="p">;</span>
+<span class="n">finalMessage2</span> <span class="o">=</span> <span class="n">message1</span> <span class="o">+</span> <span class="n">message2</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n%s"</span><span class="p">,</span> <span class="n">finalMessage</span><span class="p">,</span> <span class="n">finalMessage2</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HelloWorld
+HelloWorld5</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@1238da</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Math-Class">
 <a class="anchor" href="#Math-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math Class<a class="anchor-link" href="#Math-Class"> </a>
 </h3>
@@ -325,6 +399,104 @@ Without casting: 1.00</pre>
 <pre>java.io.PrintStream@32478ad1</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Boolean-Expressions">
+<a class="anchor" href="#Boolean-Expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Expressions<a class="anchor-link" href="#Boolean-Expressions"> </a>
+</h3>
+<ul>
+<li>
+<code>AND</code>, <code>OR</code>, <code>NOT</code>, etc.</li>
+<li>In the class <code>GreatestNumber</code> below, 3 numbers are being compared to see which one is the largest</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreatestNumber</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">num1Largest</span><span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// num1 is the greatest</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">num2</span> <span class="o">&gt;</span> <span class="n">num3</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">num2Largest</span><span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// num2 is the greatest</span>
+        <span class="k">if</span> <span class="p">(((</span><span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num3</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num2</span> <span class="o">&gt;</span> <span class="n">num1</span><span class="p">))</span> <span class="o">||</span> <span class="p">((</span><span class="n">num3</span> <span class="o">&gt;</span> <span class="n">num1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num3</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">)))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">num3Largest</span><span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// num3 is the greatest</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num2</span> <span class="o">&lt;</span> <span class="n">num3</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">num1Largest</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">num2Largest</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">num3Largest</span><span class="p">;</span>
+
+        <span class="n">num1Largest</span> <span class="o">=</span> <span class="n">num1Largest</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+        <span class="n">num2Largest</span> <span class="o">=</span> <span class="n">num2Largest</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+        <span class="n">num3Largest</span> <span class="o">=</span> <span class="n">num3Largest</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d, %d, %d\nnum1 is the largest: %b\nnum2 is the largest: %b\nnum3 is the largest: %b\n"</span><span class="p">,</span>
+        <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num1Largest</span><span class="p">,</span> <span class="n">num2Largest</span><span class="p">,</span> <span class="n">num3Largest</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">GreatestNumber</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10, 15, 5
+num1 is the largest: false
+num2 is the largest: true
+num3 is the largest: false
+</pre>
+</div>
 </div>
 
 </div>
