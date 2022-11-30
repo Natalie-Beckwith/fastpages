@@ -12,6 +12,9 @@ categories: notes
 * Debugging: post in postman, git in postman
   * executing code from Spring Portfolio
 * Ask yourself question: "Why am I doing this?"
+
+
+### Unit 7 - `ArrayLists`
 * 
 
 ## Week 13 - 11/14 Notes
