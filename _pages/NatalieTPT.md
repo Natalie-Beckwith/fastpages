@@ -15,6 +15,23 @@ categories: notes
 
 
 ### Unit 7 - `ArrayLists`
+* A reference type
+* Change size dynamically
+* methods:
+  * `add(int index, element)`
+  * `size()`
+  * `clear()`
+  * `remove()`
+  * `get(int index)`
+* Enhanced for loops
+  * iterate through every element in a list
+* Searching - locating data within linear structures (arrays, lists, queue, stack, etc.)
+* For loops are very important for linear searching because it needs to be specified sequentially
+* No need to track index after execution
+* Order matters in seaching
+  * 5 rubber ducks with an individual number (green, pink, pink, blue, green)
+  * Removing 1 pink duck - move through each duck to see if its pink
+* Sort in ascending and descending order
 * 
 
 ## Week 13 - 11/14 Notes
