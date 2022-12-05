@@ -169,19 +169,27 @@ window.onload = wrap_img;
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span><span class="p">();</span>
 
+    <span class="c1">// prints letters before the swap and sort</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">getLetters</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="sc">'X'</span><span class="p">);</span>
+        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="sc">'A'</span><span class="p">);</span>
+        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="sc">'F'</span><span class="p">);</span>
+        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="sc">'O'</span><span class="p">);</span>
 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letters</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// sorts letters in descending order and prints them</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sortDescending</span> <span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="sc">'B'</span><span class="p">);</span>
-        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="sc">'A'</span><span class="p">);</span>
-        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="sc">'C'</span><span class="p">);</span>
-        <span class="n">letters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="sc">'D'</span><span class="p">);</span>
 
         <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letters</span><span class="p">);</span>
 
     <span class="p">}</span>
 
+    <span class="c1">// swaps first and last elements of letters</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="kt">char</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">letters</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -191,31 +199,37 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letters</span><span class="p">);</span>
     <span class="p">}</span>
 
+    <span class="c1">// prints before the numbers list is sorted into ascendign order and after</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeAndAfterSort</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
         <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">37</span><span class="p">);</span>
         <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
         <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>
-        
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Before sort:"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
 
         <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
         
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"After sort:"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
     <span class="p">}</span>
 
+    <span class="c1">// main/tester method</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">ArrayListHomework</span> <span class="n">arrayListHomework</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayListHomework</span><span class="p">();</span>
 
         <span class="n">arrayListHomework</span><span class="p">.</span><span class="na">beforeAndAfterSort</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n"</span><span class="p">);</span>
 
-
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Before sort:"</span><span class="p">);</span>
+        <span class="n">arrayListHomework</span><span class="p">.</span><span class="na">getLetters</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Descending order sort:"</span><span class="p">);</span>
         <span class="n">arrayListHomework</span><span class="p">.</span><span class="na">sortDescending</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"First and last elements swapped:"</span><span class="p">);</span>
         <span class="n">arrayListHomework</span><span class="p">.</span><span class="na">swap</span><span class="p">();</span>
-
-
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">ArrayListHomework</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -231,10 +245,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[4, 37, 2, -5]
-[-5, 2, 4, 37]
-[D, C, B, A]
-[A, C, B, D]
+<pre>Before sort:[4, 37, 2, -5]
+After sort:[-5, 2, 4, 37]
+
+Before sort:[X, A, F, O]
+Descending order sort:[X, O, F, A]
+First and last elements swapped:[A, O, F, X]
 </pre>
 </div>
 </div>
