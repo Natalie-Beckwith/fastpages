@@ -29,6 +29,7 @@ public class Calculator
         OPERATORS.put("+", 4);
         OPERATORS.put("-", 4);
         OPERATORS.put("^", 4);
+        OPERATORS.put("SQRT", 4);
     }
     private final Map<Character, Integer> NUMBERS = new HashMap<>();
     {
@@ -188,6 +189,7 @@ public class Calculator
                 case "*":
                 case "/":
                 case "^":
+                case "SQRT":
                 case "%":
                     // While stack
                     // not empty AND stack top element
@@ -243,6 +245,17 @@ public class Calculator
             // If the token is an operator, calculate
             if (isOperator(token))
             {
+                if(token.equals("SQRT"))
+                {
+                    Double x1 = calcStack.pop();
+                    
+                    result = calcStack.push(Math.sqrt(x1));
+                        
+                }
+                else
+                {
+
+                
                 // Pop the two top entries
                 Double x1  = calcStack.pop();
                 Double x2 = calcStack.pop();
@@ -271,7 +284,7 @@ public class Calculator
                     result = calcStack.push(Math.pow(x2, x1));
                     break;
                 }
-
+            }
                 // Push intermediate result back onto the stack
                 calcStack.push(result);
             }
@@ -327,6 +340,11 @@ public class Calculator
 
         Calculator exponentMath = new Calculator("2^3");
         System.out.println("Exponent Math\n" + exponentMath);
+
+        System.out.println();
+
+        Calculator sqrtMath = new Calculator("SQRT(9)");
+        System.out.println("Exponent Math\n" + sqrtMath);
 
         System.out.println();
         
