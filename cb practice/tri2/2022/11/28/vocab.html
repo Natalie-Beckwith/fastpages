@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -137,7 +137,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Concatenation">Concatenation </a></li>
 <li class="toc-entry toc-h3"><a href="#Math-Class">Math Class </a></li>
 <li class="toc-entry toc-h3"><a href="#Boolean-Expressions">Boolean Expressions </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Numbers">Comparing Numbers </a></li>
 <li class="toc-entry toc-h3"><a href="#Truth-Tables-and-De-Morgan's-Law">Truth Tables and De Morgan&#39;s Law </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Strings-&-Comparing-Objects">Comparing Strings &amp; Comparing Objects </a></li>
+<li class="toc-entry toc-h3"><a href="#For-Loop-&-Enhanced-For-Loop">For Loop &amp; Enhanced For Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#While-Loops-VS-Do-While-Loops">While Loops VS Do-While Loops </a></li>
+<li class="toc-entry toc-h3"><a href="#Nested-Loops">Nested Loops </a></li>
+<li class="toc-entry toc-h3"><a href="#Creating-Classes">Creating Classes </a></li>
 <li class="toc-entry toc-h3"><a href="#Static-VS-Non-Static-Methods">Static VS Non Static Methods </a></li>
 <li class="toc-entry toc-h3"><a href="#.this-Keyword">.this Keyword </a></li>
 </ul><!--
@@ -155,19 +161,19 @@ window.onload = wrap_img;
 <ul>
 <li>Casting, specifically for Division X</li>
 <li>Casting, specifically for Truncating or Rounding X</li>
-<li>Wrapper Classes, why wrap int, double. Show examples</li>
+<li>Wrapper Classes, why wrap int, double. Show examples X</li>
 <li>Concatenation, explain or illustrate rules on mixed type Concatenation X</li>
 <li>Math class, specifically Random usage X</li>
-<li>Compound Boolean Expression</li>
+<li>Compound Boolean Expression X</li>
 <li>Truth Tables X</li>
 <li>De Morgan’s Law X</li>
-<li>Comparing Numbers</li>
-<li>Comparing Strings</li>
-<li>Comparing Objects</li>
-<li>for loop, enhanced for loop</li>
-<li>while loop versus do while loop</li>
-<li>nested loops</li>
-<li>Creating a Class, describe Naming Conventions</li>
+<li>Comparing Numbers X</li>
+<li>Comparing Strings X</li>
+<li>Comparing Objects X</li>
+<li>for loop, enhanced for loop X</li>
+<li>while loop versus do while loop X</li>
+<li>nested loops X</li>
+<li>Creating a Class, describe Naming Conventions </li>
 <li>Constructor, describe why there is no return</li>
 <li>Accessor methods, relationship to getter</li>
 <li>Mutator methods, relationship to setter, describe void return type</li>
@@ -266,9 +272,63 @@ Without casting: 1.00</pre>
 <h3 id="Wrapper-classes">
 <a class="anchor" href="#Wrapper-classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper classes<a class="anchor-link" href="#Wrapper-classes"> </a>
 </h3>
+<ul>
+<li>In this code example, the value of <code>num</code> is wrapped to type <code>Integer</code> which allows for addition methods that wouldn't be possible with type <code>int</code>
+</li>
+<li>
+<code>num</code> is now an object</li>
+</ul>
+
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Integer</span> <span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"int: %d\n"</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+
+<span class="n">num</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"string: \"%s\""</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>int: 5
+string: "5"</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@67888624</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -422,6 +482,19 @@ HelloWorld5</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Numbers">
+<a class="anchor" href="#Comparing-Numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Numbers<a class="anchor-link" href="#Comparing-Numbers"> </a>
+</h3>
+<ul>
+<li>when comparing <code>int</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, and <code>!=</code> can be used</li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -512,6 +585,135 @@ num3 is the largest: false
 <a class="anchor" href="#Truth-Tables-and-De-Morgan's-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Tables and De Morgan's Law<a class="anchor-link" href="#Truth-Tables-and-De-Morgan's-Law"> </a>
 </h3>
 <p><a href="https://natalie-beckwith.github.io/fastpages/tri1/2022/09/07/BooleanExpressionsAndIfStatements.html">LINK</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Strings-&amp;-Comparing-Objects">
+<a class="anchor" href="#Comparing-Strings-&amp;-Comparing-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing <code>Strings</code> &amp; Comparing Objects<a class="anchor-link" href="#Comparing-Strings-&amp;-Comparing-Objects"> </a>
+</h3>
+<ul>
+<li>you must use <code>.equals()</code> method to compare <code>Strings</code>
+</li>
+<li>If you use <code>==</code>, you are comparing if two <code>String</code> instances/objects are the same</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loop-&amp;-Enhanced-For-Loop">
+<a class="anchor" href="#For-Loop-&amp;-Enhanced-For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop &amp; Enhanced For Loop<a class="anchor-link" href="#For-Loop-&amp;-Enhanced-For-Loop"> </a>
+</h3>
+<ul>
+<li>In this code example, the regular for loop iterates through every even element of <code>nums</code> and prints it</li>
+<li>Int the enhanced for loop, i is iterating through every element in <code>nums</code>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
+
+<span class="c1">// regular</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\n"</span><span class="p">,</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n"</span><span class="p">);</span>
+
+<span class="c1">// enhanced</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\n"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+2
+4
+6
+8
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While-Loops-VS-Do-While-Loops">
+<a class="anchor" href="#While-Loops-VS-Do-While-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loops VS Do-While Loops<a class="anchor-link" href="#While-Loops-VS-Do-While-Loops"> </a>
+</h3>
+<ul>
+<li>Do-While loops executes code at least once</li>
+<li>While loops checks condition before code is executed</li>
+</ul>
+<p><a href="https://natalie-beckwith.github.io/fastpages/tri1/2022/09/13/TicTacToe.html">LINK</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Nested-Loops">
+<a class="anchor" href="#Nested-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loops<a class="anchor-link" href="#Nested-Loops"> </a>
+</h3>
+<ul>
+<li>In <a href="https://natalie-beckwith.github.io/fastpages/tri1/2022/09/13/TicTacToe.html">Tic-Tac-Toe</a>, the board is a 2D-Array which is initialized by two for loops iterating through each column and each row</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-Classes">
+<a class="anchor" href="#Creating-Classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating Classes<a class="anchor-link" href="#Creating-Classes"> </a>
+</h3>
+<p>*</p>
 
 </div>
 </div>
