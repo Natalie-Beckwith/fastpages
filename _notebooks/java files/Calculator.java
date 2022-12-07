@@ -317,7 +317,6 @@ public class Calculator
 
         System.out.println();
 
-        
         Calculator parenthesisMath = new Calculator("((100 + 200)  * 3)");
         System.out.println("Parenthesis Math\n" + parenthesisMath);
 
@@ -347,13 +346,10 @@ public class Calculator
         System.out.println("Exponent Math\n" + sqrtMath);
 
         System.out.println();
-        
         }
         catch (Exception e) // catches errors
         {
             System.out.printf("Error in calculation\n%s\n", e.getMessage());
         }
-        
-
     }
 }
