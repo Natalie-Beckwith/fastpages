@@ -211,8 +211,9 @@ window.onload = wrap_img;
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span> <span class="o">=</span>
         <span class="p">{</span>
             <span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span> <span class="p">}</span>
+            <span class="p">{</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span> <span class="p">}</span>
         <span class="p">};</span>
 
         <span class="k">return</span> <span class="n">array</span><span class="p">;</span>
@@ -288,16 +289,16 @@ window.onload = wrap_img;
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">product</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="kt">int</span><span class="o">[][]</span> <span class="n">nums</span><span class="p">;</span>
-
         <span class="c1">// iterates through each column</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"["</span><span class="p">);</span>
 
             <span class="c1">// iterates through each row</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
             <span class="p">{</span>
+                <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span> <span class="o">*=</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="o">][</span><span class="n">column</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+
                 <span class="c1">// prints values in array</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">" %d "</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
             <span class="p">}</span>
@@ -347,13 +348,19 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Part #1:
-[ 4  8  1 ] [ 0  2  3 ] [ 7  5  6 ] 
-Part #2:
-[ 6  5  7 ] [ 3  2  0 ] [ 1  8  4 ] 
-Part #3:
+[ 4  8  1  10 ] [ 0  11  3  2 ] [ 7  5  6  9 ] [</pre>
+</div>
+</div>
 
-Part #4:
-[ 4  8  1 ] [ 0  2  3 ] [ 7  5  6 ] </pre>
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3</span>
+<span class="ansi-red-intense-fg ansi-bold">	at DoubleArrayLearning.printArray(#13:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at DoubleArrayLearning.main(#13:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#20:1)</span></pre>
 </div>
 </div>
 
