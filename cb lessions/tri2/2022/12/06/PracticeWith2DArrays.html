@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -190,55 +190,82 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoubleArrayLearning</span>
-<span class="p">{</span>
-    
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * 2D Array Lesson HW</span>
+<span class="cm"> * </span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
 
-    <span class="cm">/*</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoubleArrayLearning</span>
+<span class="p">{</span>
+    <span class="cm">/**</span>
 <span class="cm">     * Creates an array and sets values to the array</span>
-<span class="cm">     * Returns the whole array</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return the array with assigned values</span>
 <span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">int</span><span class="o">[][]</span> <span class="nf">getArray</span><span class="p">()</span>
+    <span class="kd">private</span> <span class="kt">int</span><span class="o">[][]</span> <span class="nf">getArray</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">}};</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span> <span class="o">=</span>
+        <span class="p">{</span>
+            <span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span> <span class="p">}</span>
+        <span class="p">};</span>
 
         <span class="k">return</span> <span class="n">array</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="cm">/*</span>
+    <span class="cm">/**</span>
 <span class="cm">     * Prints the array</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param array</span>
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
+        <span class="c1">// iterates through each column</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"["</span><span class="p">);</span>
+
+            <span class="c1">// iterates through each row</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
             <span class="p">{</span>
+                <span class="c1">// prints value in the array</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">" %d "</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
-                
             <span class="p">}</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"] "</span><span class="p">);</span>
-
         <span class="p">}</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * Prints the array in reverse order</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param array</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reverseArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
-
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">column</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span><span class="o">--</span><span class="p">)</span>
+        <span class="c1">// iterates backwards starting at the last column</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">column</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span><span class="o">--</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"["</span><span class="p">);</span>
+
+            <span class="c1">// iterates through each row starting at the last element</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">row</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span><span class="o">--</span><span class="p">)</span>
             <span class="p">{</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">" %d "</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
-                
             <span class="p">}</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"] "</span><span class="p">);</span>
-
         <span class="p">}</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * userArray</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param array</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">userArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
@@ -248,53 +275,64 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nEnter a column: "</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nThe element you entered was [%d],[%d], which has the value: %d\n"</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nThe element you entered was [%d],[%d], which has the value: %d\n"</span><span class="p">,</span>
+                <span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+        
+        <span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * Multiplies each value in a row and adds all products together</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param array</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">product</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">nums</span><span class="p">;</span>
+
+        <span class="c1">// iterates through each column</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"["</span><span class="p">);</span>
 
+            <span class="c1">// iterates through each row</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="n">nums</span> <span class="o">=</span> <span class="p">;</span>
-                
+                <span class="c1">// prints values in array</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">" %d "</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
             <span class="p">}</span>
-
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"] "</span><span class="p">);</span>
         <span class="p">}</span>
-        
     <span class="p">}</span>
 
-    <span class="cm">/*</span>
+    <span class="cm">/**</span>
 <span class="cm">     * Main/Tester method</span>
 <span class="cm">     * </span>
-<span class="cm">     * Makes a new object for each method</span>
+<span class="cm">     * @param Args</span>
 <span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
     <span class="p">{</span>
-
         <span class="n">DoubleArrayLearning</span> <span class="n">doubleArrayLearning</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DoubleArrayLearning</span><span class="p">();</span>
-
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">nums</span> <span class="o">=</span> <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">getArray</span><span class="p">();</span>
 
+        <span class="c1">// prints the original array</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Part #1:\n"</span><span class="p">);</span>
         <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">printArray</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
 
+        <span class="c1">// reverses the order of the array</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nPart #2:\n"</span><span class="p">);</span>
         <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">reverseArray</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
 
+        <span class="c1">// prompts the user to enter a row and column</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nPart #3:\n"</span><span class="p">);</span>
-        <span class="c1">//doubleArrayLearning.userArray(nums);</span>
+        <span class="c1">// doubleArrayLearning.userArray(nums);</span>
 
+        <span class="c1">// </span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nPart #4:\n"</span><span class="p">);</span>
         <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">product</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
 <span class="n">DoubleArrayLearning</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
@@ -315,7 +353,7 @@ Part #2:
 Part #3:
 
 Part #4:
-[ 0  0  0 ] [ 0  1  2 ] [ 0  2  4 ] </pre>
+[ 4  8  1 ] [ 0  2  3 ] [ 7  5  6 ] </pre>
 </div>
 </div>
 
