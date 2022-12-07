@@ -249,7 +249,26 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nEnter a column: "</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nThe element you entered was [%d],[%d], which is value: %d\n"</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nThe element you entered was [%d],[%d], which has the value: %d\n"</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">product</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">nums</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"["</span><span class="p">);</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">nums</span> <span class="o">=</span> <span class="p">;</span>
+                
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">" %d "</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"] "</span><span class="p">);</span>
+        <span class="p">}</span>
+        
     <span class="p">}</span>
 
     <span class="cm">/*</span>
@@ -271,7 +290,10 @@ window.onload = wrap_img;
         <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">reverseArray</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nPart #3:\n"</span><span class="p">);</span>
-        <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">userArray</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
+        <span class="c1">//doubleArrayLearning.userArray(nums);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nPart #4:\n"</span><span class="p">);</span>
+        <span class="n">doubleArrayLearning</span><span class="p">.</span><span class="na">product</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">DoubleArrayLearning</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -292,10 +314,9 @@ window.onload = wrap_img;
 Part #2:
 [ 6  5  7 ] [ 3  2  0 ] [ 1  8  4 ] 
 Part #3:
-Enter a row: 
-Enter a column: 
-The element you entered was [2],[1], which is value: 3
-</pre>
+
+Part #4:
+[ 0  0  0 ] [ 0  1  2 ] [ 0  2  4 ] </pre>
 </div>
 </div>
 
