@@ -289,17 +289,17 @@ window.onload = wrap_img;
         <span class="kt">int</span> <span class="n">sums</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         
         <span class="c1">// iterates through each row</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">NUM_ROWS</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">NUM_ROWS</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="kt">int</span> <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
             
             <span class="c1">// iterates through each column</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">NUM_COLUMNS</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">NUM_COLUMNS</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span>
             <span class="p">{</span>
                 <span class="n">product</span> <span class="o">*=</span> <span class="n">array</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">;</span>
-                
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">product</span><span class="p">);</span>
             <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\n"</span><span class="p">,</span> <span class="n">product</span><span class="p">);</span>
+            
             <span class="n">sums</span> <span class="o">+=</span> <span class="n">product</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="c1">// prints values in array</span>
@@ -365,8 +365,12 @@ Enter a column:
 The element you entered was [2],[1], which has the value: 3
 
 Part #4:
-4 0 0 8 88 440 13 39 234 
-Sum of products: 674</pre>
+0
+3960
+234
+4200
+
+Sum of products: 8394</pre>
 </div>
 </div>
 
