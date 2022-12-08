@@ -5,6 +5,23 @@ permalink: /notes/
 categories: notes
 ---
 
+
+## Week 15 - 12/5 Notes
+* 2D Array is an array of arrays
+* Kind of like a grid, have as many as columns and rows
+* Declaring a 2D Array:
+   * `int[][] numbers;`
+   * `String[][] names;`
+* to initialize a 2D array, you have to iterate through each row and each column
+   * have a nested for loop
+* Display values backwards/upside down
+
+### FRQ 4 - 2D Arrays
+* Hacks:
+  * Create API
+  * 
+
+---
 ## Week 114 - 11/28 Notes
 * Palm files
   * palm.xml: versions of dependency should be left out
