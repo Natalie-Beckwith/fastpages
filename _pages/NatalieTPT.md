@@ -19,7 +19,9 @@ categories: notes
 ### FRQ 4 - 2D Arrays
 * Hacks:
   * Create API
-  * 
+  * Look through actual FRQ 4
+  * **due: 12/12 @11:59**
+
 
 ---
 ## Week 114 - 11/28 Notes
@@ -49,7 +51,6 @@ categories: notes
   * 5 rubber ducks with an individual number (green, pink, pink, blue, green)
   * Removing 1 pink duck - move through each duck to see if its pink
 * Sort in ascending and descending order
-* 
 
 ## Week 13 - 11/14 Notes
 * 4 types of FRQs
@@ -389,7 +390,6 @@ return statement
   * Double/Float
   * Long
   * Short
-  *
 
 * Non-Primitive: (classes)
   * String
