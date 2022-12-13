@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -202,8 +202,8 @@ window.onload = wrap_img;
 <a class="anchor" href="#Part-1:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 1:<a class="anchor-link" href="#Part-1:"> </a>
 </h3>
 <ul>
-<li>[ ] Create a world cup superclass with properties of your choice and subclasses for five teams which inherits those properties</li>
-<li>[ ] Write a constructor for one of those subclasses</li>
+<li>[X] Create a world cup superclass with properties of your choice and subclasses for five teams which inherits those properties</li>
+<li>[X] Write a constructor for one of those subclasses</li>
 </ul>
 
 </div>
@@ -341,7 +341,7 @@ Next Game: 12/13/22
 <ul>
 <li>[ ] Add a getAge method in the Person super class</li>
 <li>[ ] Create a new subclass Student with additional members of your choice to personalize the Student class</li>
-<li>[ ] Create a new subclass Teacher with additiona members of your choice</li>
+<li>[ ] Create a new subclass Teacher with additional members of your choice</li>
 <li>[ ] Override the toString method using the @Override to print a Student and teacher object with new members
 Print the student and teacher.</li>
 </ul>
@@ -349,6 +349,68 @@ Print the student and teacher.</li>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">_name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">_birthday</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_age</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span>
+    <span class="p">{</span>
+       <span class="n">_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="n">_birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+       <span class="n">_age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+       <span class="k">return</span> <span class="n">_name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="n">_age</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+ 
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span>
+ <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">_gpa</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span>
+    <span class="p">{</span>
+       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
+       <span class="n">_grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+       <span class="n">_gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">()</span>
+    <span class="p">{</span>
+       <span class="k">return</span> <span class="n">_grade</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
