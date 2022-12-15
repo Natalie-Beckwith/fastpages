@@ -5,6 +5,10 @@ permalink: /notes/
 categories: notes
 ---
 
+## Extra Credit Reflections
+* Don't write bullet points - take advice personally
+* Write about things that inspire you
+* 
 
 ## Week 15 - 12/5 Notes
 * 2D Array is an array of arrays
