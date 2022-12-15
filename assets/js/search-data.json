@@ -24,8 +24,8 @@
   
     
         ,"post2": {
-            "title": "Unit 9 - Inheritance",
-            "content": "Notes . Recursive method is a method that calls itself | Has its own local variables | Can be used to traverse Strings, Arrays, ArrayList | Binary search - splitting an array in half | Merge sort - copy original elements and works from left to right | Recursive blocks do not call themselves Must have a special case which they no longer call themselves | . | . public class Fib { public static void main (String[] Args) { System.out.println(fib(8)); } private static int fib (int a) { if (a &lt;= 5) { return 12; } return fib(a - 2) * fib(a-1); } } Fib.main(null); . 248832 .",
+            "title": "Unit 10 - Recursion",
+            "content": "Notes . Recursive method is a method that calls itself | Has its own local variables | Can be used to traverse Strings, Arrays, ArrayList | Binary search - splitting an array in half | Merge sort - copy original elements and works from left to right | Recursive blocks do not call themselves Must have a special case which they no longer call themselves | . | . Homework . Recursion MC Practice .",
             "url": "https://natalie-beckwith.github.io/fastpages/cb%20lessions/tri2/2022/12/13/Recursion.html",
             "relUrl": "/cb%20lessions/tri2/2022/12/13/Recursion.html",
             "date": " • Dec 13, 2022"
