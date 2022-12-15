@@ -339,11 +339,11 @@ Next Game: 12/13/22
 <a class="anchor" href="#Part-2:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 2:<a class="anchor-link" href="#Part-2:"> </a>
 </h3>
 <ul>
-<li>[ ] Add a getAge method in the Person super class</li>
-<li>[ ] Create a new subclass Student with additional members of your choice to personalize the Student class</li>
-<li>[ ] Create a new subclass Teacher with additional members of your choice</li>
-<li>[ ] Override the toString method using the @Override to print a Student and teacher object with new members
-Print the student and teacher.</li>
+<li>[X] Add a getAge method in the Person super class</li>
+<li>[X] Create a new subclass Student with additional members of your choice to personalize the Student class</li>
+<li>[X] Create a new subclass Teacher with additional members of your choice</li>
+<li>[X] Override the toString method using the @Override to print a Student and teacher object with new members</li>
+<li>[X] Print the student and teacher.</li>
 </ul>
 
 </div>
@@ -359,52 +359,115 @@ Print the student and teacher.</li>
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span>
 <span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">_name</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">_birthday</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">_age</span><span class="p">;</span>
  
-    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span>
     <span class="p">{</span>
-       <span class="n">_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-       <span class="n">_birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
-       <span class="n">_age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+      <span class="n">_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
     <span class="p">}</span>
  
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span>
     <span class="p">{</span>
        <span class="k">return</span> <span class="n">_name</span><span class="p">;</span>
     <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">return</span> <span class="n">_age</span><span class="p">;</span>
-    <span class="p">}</span>
  <span class="p">}</span>
- 
- <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span>
  <span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_grade</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">double</span> <span class="n">_gpa</span><span class="p">;</span>
  
-    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span>
     <span class="p">{</span>
-       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
-       <span class="n">_grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
-       <span class="n">_gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+      <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+      <span class="n">_gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
     <span class="p">}</span>
  
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">()</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getGPA</span><span class="p">()</span>
     <span class="p">{</span>
-       <span class="k">return</span> <span class="n">_grade</span><span class="p">;</span>
+      <span class="k">return</span> <span class="n">_gpa</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
     <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+      <span class="k">return</span> <span class="s">"code code code"</span><span class="p">;</span>
     <span class="p">}</span>
  <span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span>
+ <span class="p">{</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">_className</span><span class="p">;</span>
+
+   <span class="kd">public</span> <span class="nf">Teacher</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">className</span><span class="p">)</span>
+   <span class="p">{</span>
+      <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+      <span class="n">_className</span> <span class="o">=</span> <span class="n">className</span><span class="p">;</span>
+   <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getClassName</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="n">_className</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="s">"code code code"</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span>
+ <span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Person:\n"</span><span class="p">);</span>
+      <span class="n">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Natalie"</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n\n"</span><span class="p">,</span> <span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Student:\n"</span><span class="p">);</span>
+      <span class="n">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Natalie"</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%.2f\n"</span><span class="p">,</span> <span class="n">student</span><span class="p">.</span><span class="na">getGPA</span><span class="p">());</span>
+
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n\n"</span><span class="p">,</span> <span class="n">student</span><span class="p">);</span>
+
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Teacher:\n"</span><span class="p">);</span>
+      <span class="n">Teacher</span> <span class="n">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"Mr. M"</span><span class="p">,</span> <span class="s">"Computer Science"</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n"</span><span class="p">,</span> <span class="n">teacher</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n"</span><span class="p">,</span> <span class="n">teacher</span><span class="p">.</span><span class="na">getClassName</span><span class="p">());</span>
+
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n\n"</span><span class="p">,</span> <span class="n">teacher</span><span class="p">);</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Person:
+Natalie
+
+Student:
+3.90
+code code code
+
+Teacher:
+Mr. M
+Computer Science
+code code code
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
