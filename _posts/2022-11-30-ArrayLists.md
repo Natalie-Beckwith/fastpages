@@ -21,7 +21,38 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h3><ul>
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
+<li>A reference type</li>
+<li>Change size dynamically</li>
+<li>methods:<ul>
+<li><code>add(int index, element)</code></li>
+<li><code>size()</code></li>
+<li><code>clear()</code></li>
+<li><code>remove()</code></li>
+<li><code>get(int index)</code></li>
+</ul>
+</li>
+<li>Enhanced for loops<ul>
+<li>iterate through every element in a list</li>
+</ul>
+</li>
+<li>Searching - locating data within linear structures (arrays, lists, queue, stack, etc.)</li>
+<li>For loops are very important for linear searching because it needs to be specified sequentially</li>
+<li>No need to track index after execution</li>
+<li>Order matters in seaching<ul>
+<li>5 rubber ducks with an individual number (green, pink, pink, blue, green)</li>
+<li>Removing 1 pink duck - move through each duck to see if its pink</li>
+</ul>
+</li>
+<li>Sort in ascending and descending order</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2><ul>
 <li><p>Sophie and I pair-coded this homework
 <br></p>
 </li>
@@ -62,10 +93,8 @@ layout: notebook
     <span class="c1">// sorts letters in descending order and prints them</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sortDescending</span> <span class="p">()</span>
     <span class="p">{</span>
-
         <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letters</span><span class="p">);</span>
-
     <span class="p">}</span>
 
     <span class="c1">// swaps first and last elements of letters</span>
@@ -93,6 +122,34 @@ layout: notebook
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;After sort:&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">checkSort</span><span class="p">(</span><span class="n">list</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">checkSort</span><span class="p">(</span><span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">ascending</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">descending</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">ascending</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">descending</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">ascending</span> <span class="o">&gt;=</span> <span class="n">array</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&quot;Ascending&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">descending</span> <span class="o">&gt;=</span> <span class="n">array</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&quot;Descending&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="s">&quot;Error&quot;</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="c1">// main/tester method</span>
@@ -126,6 +183,7 @@ layout: notebook
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Before sort:[4, 37, 2, -5]
 After sort:[-5, 2, 4, 37]
+Ascending
 
 Before sort:[X, A, F, O]
 Descending order sort:[X, O, F, A]

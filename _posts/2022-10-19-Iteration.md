@@ -21,6 +21,37 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
+<li>Repeated sequences to simplify code of advanced algorithms</li>
+<li><code>++</code> and <code>--</code> increase or decrease a value by 1</li>
+<li>While Loops<ul>
+<li>Runs code inside loop as long as the specified condition is true</li>
+</ul>
+</li>
+<li>For Loops<ul>
+<li>Executes code inside loop as long as a condition is met</li>
+</ul>
+</li>
+<li>Recursion Loop<ul>
+<li>A function calls itself to repeat</li>
+</ul>
+</li>
+<li>Nested Iteration<ul>
+<li>When you have multiple loops inside each other</li>
+<li>2D and 3D Arrays are a good example of this<ul>
+<li>2D Arrays require 2 loops</li>
+<li>3D Arrays require 3 loops</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Homework:">Homework:<a class="anchor-link" href="#Homework:"> </a></h2><ul>
 <li>Write a program where a random number is generated. Then the user tries to guess the number. If they guess too high display something to let them know, and same for if they guess a number that is too low. The loop must iterate until the number is guessed correctly.</li>
 </ul>

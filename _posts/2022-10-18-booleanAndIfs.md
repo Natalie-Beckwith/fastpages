@@ -21,6 +21,29 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h3><ul>
+<li>Boolean - logical statement that can be evaluated to the values true/false</li>
+<li>EX: <code>if (true) { System.out.println("True code block"); }</code></li>
+<li>LOGICAL OPERATORS<ul>
+<li>&amp;&amp; - and</li>
+<li>|| - or</li>
+<li>! - not</li>
+</ul>
+</li>
+<li>Parenthesis matter</li>
+<li>De Morgan's Law<ul>
+<li>(A ∪ B)' = A' ∩ B'</li>
+<li>"The complement of the union of the two sets A and B will be equal to the intersection of A' (complement of A) and B' (complement of B)."</li>
+<li>EX: <code>!((false || !true) || (false &amp;&amp; true))</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2><h3 id="2009-FRQ-3B">2009 FRQ 3B<a class="anchor-link" href="#2009-FRQ-3B"> </a></h3>
 </div>
 </div>

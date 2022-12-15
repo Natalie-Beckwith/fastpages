@@ -21,6 +21,56 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
+<li><p>Why Java?</p>
+<ul>
+<li>More flexible OOP</li>
+<li>Run an any platform</li>
+<li>Garbage collection --&gt; memory management, when a variable is no longer used it's </li>
+<li>Multi-threading: able to acces different</li>
+</ul>
+</li>
+<li><p>Primitives</p>
+<ul>
+<li>Predefined</li>
+<li>lovercase</li>
+<li>ex: boolean, int, double, char, long, short</li>
+</ul>
+</li>
+<li>Non-Primitives<ul>
+<li>Strings</li>
+<li>capital</li>
+</ul>
+</li>
+<li>How to name<ul>
+<li>letters, numbers, or underscores</li>
+<li><code>final</code> makes variable constant</li>
+<li>Casting --&gt; changing data types<ul>
+<li>int to a double</li>
+<li>Narrowing is going from bigger data to smaller</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Operators<ul>
+<li>+, -, <em>, /, %, ++, --, +=, -=, </em>=, /=, %=</li>
+<li>Mod returns the remainder</li>
+<li>overflow errors --&gt; left to right (PEMDAS)</li>
+<li>Incremet and decrement operators --&gt; adds 1 and subract 1</li>
+</ul>
+</li>
+<li>Coding Challenge</li>
+<li>Scanner<ul>
+<li>import <code>Scanner</code> class</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2><h3 id="2006-FRQ">2006 FRQ<a class="anchor-link" href="#2006-FRQ"> </a></h3><p><a href="https://secure-media.collegeboard.org/apc/_ap06_frq_computer_sc_51649.pdf">Link to questions</a> <br><br>
 1)<br>
 a.</p>
