@@ -1,0 +1,122 @@
+$yellow: #E2D699;
+$brown: #857568; //Noicee
+$green: #97c192;
+$pink: #E89C8F;
+$back-ground: #C1C1C9;
+$top: #9D8F97;
+
+$overlay: rgba(255, 255, 255, 0.6);
+$overlay-light:  rgba(255, 255, 255, 0.4);
+
+html, body
+{   
+  color: $yellow !important;
+  background-color: $brown !important;
+  opacity: 1;
+}
+
+input, textarea, select, button
+{
+    background-color: $back-ground !important;
+    color: $top !important;
+}
+
+a
+{
+    color: $pink !important;
+}
+
+a:hover
+{
+    color:$yellow !important;
+}
+
+.site-title, .site-title:visited, .page-link
+{
+    color: $green !important;
+}
+
+.site-nav
+{
+    color: $pink !important;
+    background-color: $brown;
+    border-color: $green;
+}
+
+*
+{
+    scrollbar-color: $yellow !important;
+}
+
+pre, code
+{
+    // BVas a lighter colour to better highlight short code words
+    border-color: $pink;
+    background-color: $back-ground;
+    color: $top;
+}
+
+.page-description
+{
+    color: $pink;
+}
+
+.post-meta
+{
+    color: $green;
+}
+
+.post-content p, .post-content li
+{
+    color: $brown;
+}
+
+.btn
+{
+    background-color: $back-ground !important;
+    color: $top !important;
+    border-color: $overlay-light !important;
+}
+
+.btn:hover
+{
+    background-color: $top !important;
+    color: $back-ground;
+}
+
+table th
+{
+    background-color: $top;
+    border-color: $yellow;
+    color: $back-ground;
+}
+
+table td
+{
+    background-color: $back-ground;
+    border-color: $yellow;
+    color: $top;
+}
+
+.flash
+{
+    color: $pink !important;
+    filter: brightness(80%);
+}
+
+canvas
+{
+    filter: invert(100%);
+}
+
+.post-list > li > div
+{
+    box-shadow: none !important;
+    background-color: $overlay;
+    border: none !important;
+}
+
+li .post-meta-description
+{
+    color: $yellow !important;
+}

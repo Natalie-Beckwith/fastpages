@@ -1,3 +1,10 @@
+$yellow: #E2D699;
+$brown: #857568; //Noicee
+$green: #97c192;
+$pink: #E89C8F;
+$back-ground: #C1C1C9;
+$top: #9D8F97;
+
 //Default Overrides For Styles In Minima 
 // If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
 
@@ -14,30 +21,34 @@ img.emoji{
       vertical-align: baseline !important;
 }
 
-.post figcaption {
+.post figcaption
+{
   text-align: center;
   font-size: .8rem;
   font-style: italic;
-  color: #613b69;
+  color: $green;
 }
 
 .page-content
 {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/005/993/672/non_2x/hand-painted-watercolour-background-free-vector.jpg);
+  //background-image: url(https://static.vecteezy.com/system/resources/previews/005/993/672/non_2x/hand-painted-watercolour-background-free-vector.jpg);
+  //background-image: url(  https://cdn.hovia.com/app/uploads/painted-mushroom-repeat-pattern-wallpaper-Plain.jpg); https://wallpapercave.com/wp/wp9653704.jpg
+  
+  background-image: url(https://img.as-creation.com/app/items/s/358651.jpg);
   -webkit-font-smoothing: antialiased !important;
-        text-rendering: optimizeLegibility !important;
-        margin: 0;
-        height: 100%;
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-        background-position:100% 100%;
-        min-height:100%;
-        min-width:100%;
-        background-size:cover;
-        margin: 0;
-        height: 100%;
   text-rendering: optimizeLegibility !important;
-  color: #613b69;
+  margin: 0;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:100% 100%;
+  min-height:100%;
+  min-width:100%;
+  background-size:cover;
+  margin: 0;
+  height: 100%;
+  
+  color: $top;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
@@ -45,7 +56,7 @@ img.emoji{
 // make non-headings slightly lighter
 .post-content p, .post-content li {
    font-size: 20px;
-   color: #585ca3;
+   color: $yellow;
 }
 
 .post-link
@@ -54,8 +65,10 @@ img.emoji{
 }
 
 // change padding of headings
-h1 {
+h1
+{
     margin-top:2.5rem !important;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h2 {
@@ -74,7 +87,8 @@ p {
 h1, h2, h3, h4 {
     font-weight: normal !important;
     margin-bottom:0.5rem !important;  
-    code {
+    code
+    {
       font-size: 100%;
     }
 }
@@ -92,7 +106,7 @@ li {
   margin-bottom:.05rem !important;
   }
   .post-meta-description {
-    color: #613b69;
+    color: $yellow;
     font-size: 15px;
     margin-top:.05rem !important;
     margin-bottom:.05rem !important;
@@ -116,7 +130,9 @@ details.description:not([open]) summary::after {
 }
 
 // Adjust font size for footnotes.
-.footnotes {
+.footnotes
+{
+  color: $green;
   font-size: 12px !important;
   p, li{
     font-size: 12px !important;
@@ -124,7 +140,9 @@ details.description:not([open]) summary::after {
 }
 
 // Adjust with of social media icons were getting cut off
-.social-media-list{
+.social-media-list
+{
+  color: $green;
   .svg-icon {
     width: 25px !important;
     height: 23px !important;
@@ -133,7 +151,8 @@ details.description:not([open]) summary::after {
 
 // Make Anchor Links Appear Only on Hover
 
-.anchor-link {
+.anchor-link
+{
   opacity: 0;
   padding-left: 0.375em;
   \-webkit-text-stroke: 1.75px white;
@@ -169,7 +188,7 @@ h6:hover .anchor-link {
 .page-description {
   margin-top: .5rem !important;
   margin-bottom: .5rem !important;
-  color: #585858;
+  color: $green;
   font-size: 115%;
 }
 
@@ -177,10 +196,10 @@ h6:hover .anchor-link {
 .category-tags-icon {
   font-size: 75% !important;
   padding-left: 0.375em;
-  opacity: 35%;
+  color: $back-ground;
 }
 .category-tags-link {
-  color:rgb(187, 129, 129) !important;
+  color: $top !important;
   font-size: 13px !important;
 }
 
@@ -189,30 +208,33 @@ h6:hover .anchor-link {
 .search-results-list-item {padding-bottom: 1rem;}
 .search-results-list-item .search-result-title {
   font-size: 16px;
-  color: #d9230f;
+  color: $pink;
 }
-.search-result-rel-url {color: silver;}
-.search-results-list-item a {display: block; color: #777;}
+.search-result-rel-url {color: $pink;}
+.search-results-list-item a {display: block; color: $green;}
 .search-results-list-item a:hover, .search-results-list-item a:focus {text-decoration: none;}
 .search-results-list-item a:hover .search-result-title {text-decoration: underline;}
 
 .search-result-rel-date {
-  color: rgb(109, 120, 138);
+  color: $green;
   font-size: 14px;
 }
 
-.search-result-preview {
-  color: #777;
+.search-result-preview
+{
+  color: $top;
   font-size: 16px;
   margin-top:.02rem !important;
   margin-bottom:.02rem !important;
 }
-.search-result-highlight {
-  color: #2e0137;
+.search-result-highlight
+{
+  color: $brown;
   font-weight:bold;
 }
 
-table {
+table
+{
   white-space: normal;
   max-width: 100%;
   font-size: 100%;
@@ -223,16 +245,18 @@ table {
 }
 
 // customize scrollbars
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
   width: 14px;
   height: 18px;
 }
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb
+{
   height: 6px;
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   -webkit-border-radius: 7px;
-  background-color: #9D9D9D;
+  background-color: $yellow;
   -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
 ::-webkit-scrollbar-button {
@@ -269,7 +293,8 @@ table {
   margin: 1.5rem 0px !important;
 }
 
-pre code {
+pre code
+{
   font-size: 15px !important;
 }
 
