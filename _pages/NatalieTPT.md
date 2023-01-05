@@ -5,10 +5,24 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 17 - 1/3 Notes
+### Creative, Collaborative, and Quality Culture
+* What would you code given absolute freedom?
+   * I want to code a to-do/reminders list or a game involving machine learning
+* What would motivate you to be productive each day given the freedom to code what you want?
+   * I want to have a to-do list that works the best for me. I think that if I design my own to-do list, I can use it more.
+   * I have always found machine learning to be really interesting and it's something that I want to learn and improve on. 
+* In a project, most students are more motivated if the project seems useful, unique, and has an interested consumer. How will you maintain motivation?
+   * I will try to find something that my group is really interested in and passionate about. It should also be something that others might also have interes in.
+
+* Provide summary in comment on why information is this blog is important?
+   * 
+
+
+---
 ## Extra Credit Reflections
 * Don't write bullet points - take advice personally
 * Write about things that inspire you
-* 
 
 ## Week 15 - 12/5 Notes
 * 2D Array is an array of arrays
