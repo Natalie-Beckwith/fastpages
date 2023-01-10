@@ -10,13 +10,19 @@ categories: notes
 * What would you code given absolute freedom?
    * I want to code a to-do/reminders list or a game involving machine learning
 * What would motivate you to be productive each day given the freedom to code what you want?
-   * I want to have a to-do list that works the best for me. I think that if I design my own to-do list, I can use it more.
-   * I have always found machine learning to be really interesting and it's something that I want to learn and improve on. 
+   * I want to have a to-do list that works the best for me. I think that if I design my own to-do list, I can use it more. I have always found machine learning to be really interesting and it's something that I want to learn and improve on. 
 * In a project, most students are more motivated if the project seems useful, unique, and has an interested consumer. How will you maintain motivation?
-   * I will try to find something that my group is really interested in and passionate about. It should also be something that others might also have interes in.
+   * I will try to find something that my group is really interested in and passionate about. It should also be something that others might also have interes in. I can also talk with my group and see what ideas we have for our project. We can build off different ideas and see what each person is interested in.
 
 * Provide summary in comment on why information is this blog is important?
-   * 
+   * I think it's important to colaborate and make sure everyone in the group is on the same page. It's important to track team progress and see who is behind. I want my team to be comfortable together and help each other with problems that others do not understant
+
+* Would you rather work on PBL project, or or do assigned free-response coding questions (aka FRQs)? Which would be easier to meet class standards?
+   * I would rather do assigned FRQs because in PBL projects I feel like I have never fully understood the concept we are learning. I often feel overwhelmed by the amount of topics we learn in PBL and it's easier for me to focus on just a few topics. In FRQs, there is just one topic we focus on and there are multiple parts to that FRQ that use the topic in different ways. I feel like PBL is great for colaboration, but FRQs can also implement colaboration within them. I liked the FRQs we did before break because we had the freedom to add something to make the FRQ unique.
+* Trust and Freedom are often earned. How will you show your passion and ability to succeed in your work?
+   * I will show what I know by making sure I measure my progess each deay in my review ticket. I often feel like I am constantly spending a lot of time on my work, even though I don't make a lot of progress. I constantly undo and redo parts and it's very time consuming for me. Tracking my progress each day will allow me to see what I have accomplished 
+* What key learnings and focusses are a priority for you?
+   * I want to improve my ability on backend development. I feel like I focus too much on the frontend and the styling.
 
 
 ---
