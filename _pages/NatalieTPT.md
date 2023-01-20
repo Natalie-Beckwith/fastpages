@@ -5,6 +5,20 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 18 - 1/9 Notes
+
+### View and Frontend Coding
+
+* GitHub pages that show what your are doing, but not yet implemented
+* Think about what you are going to design, before you implement features
+* Make a site theme
+* `layouts/default.html` imports SASS locally
+   * has menu across top
+* Observing what happens in `_site`
+* CRUD concepts
+* `html 5` - if you type something that is incorrect, there will be multiple errors
+
+---
 ## Week 17 - 1/3 Notes
 ### Creative, Collaborative, and Quality Culture
 * What would you code given absolute freedom?
