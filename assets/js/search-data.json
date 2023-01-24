@@ -4,9 +4,9 @@
         "post0": {
             "title": "CB MCQ Corrections & Reflection",
             "content": "Overall Reflection . Score: 32/40 | I think I definitely could have done better. Some of the problems I got wrong were simple mistakes that could have been avoided if I wrote down each problem on paper to organize my thoughts. In the future I will make sure to write down each step so I can visualize what the code is actually doing rather than keeping each step in my head. Another thing that I want to work is trying to determine what amount of time is enough for each question. I often spend thinking about questions that I am unsure about. Next time, I will try to avoid spending a large portion of my time on questions that I don&#39;t know the answer to, and go back to them when I have finished all of the other questions that I know. | . Questions . Question 20 . Corrections: Since k is decremented, the last element is only used in the first iteration of the while loop. This method uses a swapping algorithm to swap elements in nums. | . Question 23 . Corrections: List is an interface, which an ArrayList implements. This would be the result if when words that started with “b” were found, they were added to the end instead of inserted at index animals.size() – k such as if the statement in the for loop was animals.add(animals.remove(k));. | . Question 30 . Corrections: Since the two parameter substring method returns the substring beginning at the first parameter and ending at the second parameter – 1, no IndexOutOfBoundsException will be thrown. The indices 4, 7 (in the first call to substring), 0 and 2 (in the second call to substring) are all valid indices in &quot;compiler&quot;. | . Question 34 . Corrections: Choice III uses the default Point constructor to assign center a new Point with x and y both equal to 0. It attempts to update x and y, however since they are private instance variables in Point, they are not able to be accessed directly in Circle. This code will cause a compile time error. | . Question 37 . Corrections: Choice I works. Choice III works also, as it will cause the while loop to iterate while x is less than 7. The variable x is assigned 1 to start and then incremented by 2. It will be assigned the values 1, 3, 5 and then 7. When x has the value 7, the loop will terminate. The output will be 1, 3, 5. | . Question 38 . Corrections: This expression will evaluate to false whenever y is less than 10000 regardless of whether x is in the correct range between 1000 and 1500. | . Question 39 . Corrections: The value of recur(6) is 12. However, this call was made within another recursive call and is not the final return value. | . Question 40 . Corrections: When whatsItDo(“W”) is called, nothing is printed since the print occurs in the if statement which does not execute. All previous recursive method calls print a substring of str and not str. | .",
-            "url": "https://natalie-beckwith.github.io/fastpages/cb%20practice/tri1/2023/01/19/MCQCorrections.html",
-            "relUrl": "/cb%20practice/tri1/2023/01/19/MCQCorrections.html",
-            "date": " • Jan 19, 2023"
+            "url": "https://natalie-beckwith.github.io/fastpages/cb%20practice/tri1/2023/01/23/MCQCorrections.html",
+            "relUrl": "/cb%20practice/tri1/2023/01/23/MCQCorrections.html",
+            "date": " • Jan 23, 2023"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "ArrayLists Practice",
             "content": "import java.util.ArrayList; import java.util.Scanner; /** * Allows user to input as many song titles as they want * Terminates when a return character is entered twice * */ public class AddSongs { public static void main(String[] args) { ArrayList&lt;String&gt; songs = new ArrayList&lt;String&gt;(); Scanner scanner = new Scanner(System.in); String line; System.out.printf(&quot;Enter song titles here: n&quot;); do { line = scanner.nextLine(); songs.add(line); } while(!line.equals(&quot;&quot;)); scanner.close(); } } . . Future Plans . Integrate this feature futher | Use this simple feature for the user to add their own songs and have others like/dislike them | .",
-            "url": "https://natalie-beckwith.github.io/fastpages/tri1/2023/01/19/ArrayListsPractice.html",
-            "relUrl": "/tri1/2023/01/19/ArrayListsPractice.html",
-            "date": " • Jan 19, 2023"
+            "url": "https://natalie-beckwith.github.io/fastpages/tri1/2023/01/23/ArrayListsPractice.html",
+            "relUrl": "/tri1/2023/01/23/ArrayListsPractice.html",
+            "date": " • Jan 23, 2023"
         }
         
     
