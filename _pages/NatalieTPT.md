@@ -5,6 +5,35 @@ permalink: /notes/
 categories: notes
 ---
 
+# TPT Notes
+
+
+## Week 25 - 3/6 Notes
+
+### Data Types, Methods, Control Structures
+* **Goals for tri** - prepare for AP test & create a project for Mr. M
+* When we return from spring break - 2 weeks until AP exam
+* **Midterm Project** - teaching 15-25 min lesson (w/ hacks)
+  * focusing on FRQ types
+  * must be unique
+* prepare ahead for tech-talk
+
+
+### To-Do
+* **Monday:** Form teams and work, review Tech Talk. Start quiz.
+* **Tuesday:** Early Seed award check. Tech Talk on Data Types
+* **Wednesday:** Plan and work out key objectives ‘till Midterm Final’, you should plan Individual and Team criteria.
+* **Thursday:** Work Day. Data Types, Plans, Quiz
+* **Friday:** Work Day
+
+### Data Types Notes (Tech Talk)
+* Before tech-talk:
+  * Write a sample [binary addition](/_notebooks/2023-06-03-BinaryAddition.ipynb) 1 + 1 = 10
+  * Have Java Code cell on screen at start of lecture
+
+
+-----
+
 ## Week 18 - 1/9 Notes
 
 ### View and Frontend Coding
