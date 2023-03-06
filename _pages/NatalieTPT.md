@@ -5,9 +5,6 @@ permalink: /notes/
 categories: notes
 ---
 
-# TPT Notes
-
-
 ## Week 25 - 3/6 Notes
 
 ### Data Types, Methods, Control Structures
