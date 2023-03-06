@@ -13,8 +13,7 @@ categories: notes
 * **Midterm Project** - teaching 15-25 min lesson (w/ hacks)
   * focusing on FRQ types
   * must be unique
-* prepare ahead for tech-talk
-
+* ***Prepare ahead for tech-talk!!***
 
 ### To-Do
 * **Monday:** Form teams and work, review Tech Talk. Start quiz.
@@ -25,9 +24,9 @@ categories: notes
 
 ### Data Types Notes (Tech Talk)
 * Before tech-talk:
-  * Write a sample [binary addition](/_notebooks/2023-06-03-BinaryAddition.ipynb) 1 + 1 = 10
+  * Write a sample binary addition 1 + 1 = 10
   * Have Java Code cell on screen at start of lecture
-
+* 
 
 -----
 
