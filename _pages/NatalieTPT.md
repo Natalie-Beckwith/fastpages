@@ -26,6 +26,38 @@ categories: notes
 * Before tech-talk:
   * Write a sample binary addition 1 + 1 = 10
   * Have Java Code cell on screen at start of lecture
+
+* Data types for AP Exam
+  * int
+  * float
+  * double
+  * char
+  * boolean
+  * objects (reference)
+  * arrays (reference)
+* Other data types
+  * long
+  * short
+  * byte
+* Primitive data types - basic building blocks of data that holds a single data type
+  * **they are not objects**
+  * stored directly in memory and are passed by value
+* Reference data types - object is passed as a parameter to a method, and the object is passed as a class
+  * pointer - `.`
+  * EX: `n.hashcode()`
+* `int` VS `Integer`
+  * `int`
+    * data type that stores 32-bit signed two's complement integer
+    * a primitive data type
+    * helps store integer values in memory
+  * `Integer`
+    * class that wraps a primitive type int in an object
+    * a wrapper class
+    * helps to convert in into objects and to convert an object into int
+* Complex data types
+  * Array VS Class
+    * class has methods and data, which can have different data types
+    * arrays must be the same data type
 * 
 
 -----
