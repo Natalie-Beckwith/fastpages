@@ -58,7 +58,6 @@ categories: notes
   * Array VS Class
     * class has methods and data, which can have different data types
     * arrays must be the same data type
-* 
 
 -----
 
