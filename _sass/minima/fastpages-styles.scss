@@ -3,7 +3,7 @@ $brown: #857568; //Noicee
 $green: #97c192;
 $pink: #E89C8F;
 $back-ground: #C1C1C9;
-$top: #9D8F97;
+$top: #8a7d84;
 
 //Default Overrides For Styles In Minima 
 // If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
@@ -100,7 +100,9 @@ pre {
 }
 
 // make sure the post title doesn't have too much spacing
-.post-title { margin-top: .5rem !important; }
+.post-title {
+  margin-top: .5rem !important;
+}
 
 li {
   h3, h4 {
@@ -267,7 +269,7 @@ table
   display: none;
 }
 ::-webkit-scrollbar-corner {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 // Wrap text outputs instead of horizontal scroll
