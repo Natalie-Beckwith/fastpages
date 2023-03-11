@@ -327,7 +327,7 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .post figcaption { text-align: center; font-size: .8rem; font-style: italic; color: #97c192; }
 
-.page-content { background-color: #f0f0df; -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; margin: 0; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: 100% 100%; min-height: 100%; min-width: 100%; background-size: cover; margin: 0; height: 100%; color: #8a7d84; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+.page-content { background-color: #f0f0df; -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; margin: 0; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: 100% 100%; min-height: 100%; min-width: 100%; background-size: cover; margin: 0; height: 100%; color: #9D8F97; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
 
 .post-content p, .post-content li { font-size: 20px; color: #E2D699; }
 
@@ -379,7 +379,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 
 .category-tags-icon { font-size: 75% !important; padding-left: 0.375em; color: #C1C1C9; }
 
-.category-tags-link { color: #8a7d84 !important; font-size: 13px !important; }
+.category-tags-link { color: #9D8F97 !important; font-size: 13px !important; }
 
 .js-search-results { padding-top: 0.2rem; }
 
@@ -397,7 +397,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 
 .search-result-rel-date { color: #97c192; font-size: 14px; }
 
-.search-result-preview { color: #8a7d84; font-size: 16px; margin-top: .02rem !important; margin-bottom: .02rem !important; }
+.search-result-preview { color: #9D8F97; font-size: 16px; margin-top: .02rem !important; margin-bottom: .02rem !important; }
 
 .search-result-highlight { color: #857568; font-weight: bold; }
 
@@ -411,7 +411,7 @@ table th { text-align: center !important; }
 
 ::-webkit-scrollbar-button { width: 0; height: 0; display: none; }
 
-::-webkit-scrollbar-corner { background-color: transparent !important; }
+::-webkit-scrollbar-corner { background-color: transparent; }
 
 .output_text.output_execute_result pre { white-space: pre-wrap; }
 
