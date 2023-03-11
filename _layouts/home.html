@@ -15,17 +15,20 @@ layout: base
   {
     color: #C1C1C9;
     background-color: #9D8F97;
-    border-radius: 5px !important;
-    width: 55px !important;
+    border-radius: 25px !important;
+    padding: 7px !important;
     border-color: #E89C8F !important;
+    border-width: medium !important;
   }
 
   .previous-page, .next-page
   {
     color: #9D8F97 !important;
     background-color: #C1C1C9;
-    border-radius: 5px !important;
+    border-radius: 25px !important;
+    padding: 7px !important;
     border-color: #E2D699 !important;
+    border-width: medium !important;
   }
 </style>
 
@@ -76,7 +79,7 @@ layout: base
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
+      <li class="post-item">
         {%- if site.show_image -%}
             {%- include post_list_image_card.html -%}
         {% else %}
