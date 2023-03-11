@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Binary Addition | Natalie’s Fastpages</title>
+<title>Data Types | Natalie’s Fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Binary Addition" />
+<meta property="og:title" content="Data Types" />
 <meta name="author" content="Natalie Beckwith" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -19,9 +19,9 @@
 <meta property="article:published_time" content="2023-03-06T00:00:00-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/pending-loop.gif?raw=true" />
-<meta property="twitter:title" content="Binary Addition" />
+<meta property="twitter:title" content="Data Types" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Natalie Beckwith"},"dateModified":"2023-03-06T00:00:00-06:00","datePublished":"2023-03-06T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Binary Addition","image":"https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/pending-loop.gif?raw=true","mainEntityOfPage":{"@type":"WebPage","@id":"https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html"},"url":"https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Natalie Beckwith"},"dateModified":"2023-03-06T00:00:00-06:00","datePublished":"2023-03-06T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Data Types","image":"https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/pending-loop.gif?raw=true","mainEntityOfPage":{"@type":"WebPage","@id":"https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html"},"url":"https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://natalie-beckwith.github.io/fastpages/feed.xml" title="Natalie's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -76,7 +76,7 @@ window.onload = wrap_img;
         <article class="post-h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Binary Addition</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-06T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Data Types</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-06T00:00:00-06:00" itemprop="datePublished">
         Mar 6, 2023
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -141,13 +141,28 @@ window.onload = wrap_img;
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Instructions">Instructions </a>
+<li class="toc-entry toc-h2"><a href="#Notes">Notes </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Early-Seed">Early Seed </a></li>
 <li class="toc-entry toc-h3"><a href="#Small-Code-Excercises">Small Code Excercises </a></li>
-<li class="toc-entry toc-h3"><a href="#Key-Concepts">Key Concepts </a></li>
+<li class="toc-entry toc-h3"><a href="#Key-Concepts">Key Concepts </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Methods">Methods </a></li>
+<li class="toc-entry toc-h4"><a href="#Control-Structures">Control Structures </a></li>
+<li class="toc-entry toc-h4"><a href="#Teacher's-Code-Examples">Teacher&#39;s Code Examples </a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#DiverseArray-Example">DiverseArray Example </a></li>
+<li class="toc-entry toc-h5"><a href="#Matrix-Example">Matrix Example </a></li>
+<li class="toc-entry toc-h5"><a href="#Number-Example">Number Example </a></li>
+<li class="toc-entry toc-h5"><a href="#Menu-Example">Menu Example </a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#College-Board-FRQ">College Board FRQ </a></li>
 <li class="toc-entry toc-h2"><a href="#Code">Code </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Binary-Addition">Binary Addition </a></li>
@@ -187,19 +202,16 @@ window.onload = wrap_img;
 <a class="anchor" href="#13)" aria-hidden="true"><span class="octicon octicon-link"></span></a>13)<a class="anchor-link" href="#13)"> </a>
 </h4>
 <p>C is incorrect because <code>{17, 37, 21, 42, 18, 69, 48, 28, 39}</code> would be the result if the code segment in the for loop was changed to <code>numbers[k] = numbers[k] + 3</code>.</p>
-<p><br></p>
 <p>A is the correct answer because the values of the loop control variable <code>k</code> starts at <code>1</code> and is incremented by <code>3</code> as long as <code>k</code> is less than <code>numbers.length</code>. As a result, <code>k</code> will have the values <code>1</code>, <code>4</code>, <code>7</code> and then when it becomes <code>10</code>, the loop will end. Only the values in <code>numbers</code> at indexes <code>1</code>, <code>4</code>, and <code>7</code> will be updated to the value of the sum of the element at the index that is one less than <code>k</code> (the element before the one being updated) and <code>3</code>. So, <code>numbers[1]</code> will be assigned the value of <code>numbers[0] + 3</code> or <code>20</code>, <code>numbers[4]</code> will be assigned the value of <code>numbers[3] + 3</code> or <code>45</code>, and <code>numbers[7]</code> will be assigned the value of <code>numbers[6] + 3</code> or <code>51</code>. All other values will be unchanged.</p>
 <h4 id="18)">
 <a class="anchor" href="#18)" aria-hidden="true"><span class="octicon octicon-link"></span></a>18)<a class="anchor-link" href="#18)"> </a>
 </h4>
 <p>E is incorrect because this would be the result if the division used was floating point division instead of integer division and the result was cast to an int, as in <code>(int)(404.0 / 10 * 10 + 1)</code>.</p>
-<p><br></p>
 <p>D is the correct answer because the first operation that is executed is <code>404 / 10</code>. Since both <code>404</code> and <code>10</code> are integers, integer division is used resulting in <code>40</code>. The value <code>40</code> is then multiplied by <code>10</code>, resulting in <code>400</code>, and finally <code>1</code> is added, meaning <code>401</code> is printed.</p>
 <h4 id="29)">
 <a class="anchor" href="#29)" aria-hidden="true"><span class="octicon octicon-link"></span></a>29)<a class="anchor-link" href="#29)"> </a>
 </h4>
 <p>D is incorrect because the value <code>1</code> is only returned when <code>num</code> is a single digit number.</p>
-<p><br></p>
 <p>A is the correct answer because each recursive call is made with the value <code>num  / 10</code>. The expression <code>num / 10</code> uses integer division and evaluates to an integer that is <code>num</code> with the right most digit removed. For example, <code>258 / 10 = 25</code>. Each time the recursive call is made, what is returned is <code>1</code> plus the result of the recursive call. For example, <code>what(258) = 1 + what(25)</code> and <code>what(25) = 1 + what(2)</code> and <code>what(2) = 1</code>. Therefore <code>what(258) = 1 + 1 + 1</code> or <code>3</code>, which is the number of digits in <code>258</code>.</p>
 <hr>
 
@@ -209,8 +221,13 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Instructions">
-<a class="anchor" href="#Instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instructions<a class="anchor-link" href="#Instructions"> </a>
+<h2 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
+</h2>
+<p>See weekly notes <a href="https://natalie-beckwith.github.io/fastpages/notes/#Week%2025%20-%203/6%20Notes">here</a></p>
+<hr>
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h2>
 <h3 id="Early-Seed">
 <a class="anchor" href="#Early-Seed" aria-hidden="true"><span class="octicon octicon-link"></span></a>Early Seed<a class="anchor-link" href="#Early-Seed"> </a>
@@ -219,46 +236,121 @@ window.onload = wrap_img;
 <li>Write a sample binary addition 1 + 1 = 10</li>
 <li>Have Java Code cell on screen at start of lecture</li>
 </ul>
+<p>See code <a href="https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html#Binary-Addition">here</a></p>
+<hr>
 <h3 id="Small-Code-Excercises">
 <a class="anchor" href="#Small-Code-Excercises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Code Excercises<a class="anchor-link" href="#Small-Code-Excercises"> </a>
 </h3>
 <ul>
-<li>Write a Jupyter notebook on the primitive data types
-Write a Jupyter notebook code example on the following primitive types with a code example (4 to 5 lines)<ul>
-<li>preference would be using <code>array</code> and methods like <code>substring</code> and <code>random</code> as applicable: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>
+<li>Write a Jupyter notebook on the primitive data types. Use <code>array</code> and methods like <code>substring</code> and <code>random</code> as applicable: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>
 </li>
+<li>Next, convert each of the examples to corresponding Wrapper classes, using arrays</li>
 </ul>
-</li>
-<li>Now convert each of the examples to corresponding Wrapper classes, using arrays<ul>
-<li>expression of these in Class or PBL forms is an option. But the review must be easy for me to see work</li>
-</ul>
-</li>
-</ul>
+<p>See code <a href="https://natalie-beckwith.github.io/fastpages/tri3/2023/03/06/BinaryAddition.html#Primitive-Data-Types">here</a></p>
+<hr>
 <h3 id="Key-Concepts">
 <a class="anchor" href="#Key-Concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Concepts<a class="anchor-link" href="#Key-Concepts"> </a>
 </h3>
+<h4 id="Methods">
+<a class="anchor" href="#Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods<a class="anchor-link" href="#Methods"> </a>
+</h4>
 <ul>
+<li>A <strong>method</strong> is a block of code which only runs when it's called<ul>
 <li>
-<p>Make a Jupyter Notebook that goes over key concepts in Teacher code and uses background from ChatGPT and from AP Classroom.</p>
-<ul>
-<li>What are Methods and Control Structures? (See College Board)</li>
+<strong>Parameters</strong>, or data can be passed into a method</li>
 </ul>
-<p><br></p>
+</li>
+<li>Methods are used to perform certain actions. Another word for them is a <strong>function</strong>
+</li>
+<li>See more information on methods <a href="https://www.w3schools.com/java/java_methods.asp">here</a>
+</li>
+</ul>
+<h4 id="Control-Structures">
+<a class="anchor" href="#Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Structures<a class="anchor-link" href="#Control-Structures"> </a>
+</h4>
 <ul>
-<li>Look at <code>Diverse Arrays</code> and <code>Matrix</code> in Teacher's code. Do they have Methods and Control structures?</li>
-<li>Look at <code>Diverse Arrays</code> and <code>Matrix</code> in Teacher's code. Do they fit the data types?</li>
 <li>
-<code>Math.random</code> is covered in <code>Number</code>, this Teacher code associated with random is critical knowledge when taking the AP Exam. Random numbers in range like 7 to 9 is very important.</li>
-<li>What does <code>DoNothingByValue</code> do?</li>
-<li>What does <code>IntByReference</code> do?</li>
+<strong>Control structure</strong> are blocks of code that can change the path of execution. There are 3 kinds of control structures:<ol>
+<li>
+<strong>Condiditional Branches</strong> - used for choosing between 2+ paths (<code>if/else</code> statements)</li>
+<li>
+<strong>Loops</strong> - used it iterate through multiple values/objects and repeatedly run specific code blocks (<code>for</code>, <code>while</code>, and <code>do while</code> loops)</li>
+<li>
+<strong>Branching Statements</strong> - used to break the flow of control in loops (<code>break</code> and <code>continue</code>)</li>
+</ol>
+</li>
+<li>See more information on control structures <a href="https://www.baeldung.com/java-control-structures">here</a>
+</li>
+</ul>
+<h4 id="Teacher's-Code-Examples">
+<a class="anchor" href="#Teacher's-Code-Examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Teacher's Code Examples<a class="anchor-link" href="#Teacher's-Code-Examples"> </a>
+</h4>
+<h5 id="DiverseArray-Example">
+<a class="anchor" href="#DiverseArray-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>DiverseArray</code> Example<a class="anchor-link" href="#DiverseArray-Example"> </a>
+</h5>
+<ul>
+<li>Methods?<ul>
+<li>Yes, <code>DiverseArray</code> does contain methods. Examples of this are: <code>arraySum()</code>, <code>rowSums()</code>, and <code>isDiverse()</code>.</li>
+</ul>
+</li>
+<li>Control Structures?<ul>
+<li>Yes, <code>DiverseArray</code> does contain control stuctures. There are examples of <code>for</code> loops and <code>if</code> statements.</li>
+</ul>
+</li>
+<li>Fit data types?<ul>
+<li>Yes, <code>DiverseArray</code> has data types of <code>int</code> and <code>boolean</code>. It also has <code>int[]</code> and <code>int[][]</code>.</li>
 </ul>
 </li>
 </ul>
-<p><br></p>
+<h5 id="Matrix-Example">
+<a class="anchor" href="#Matrix-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>Matrix</code> Example<a class="anchor-link" href="#Matrix-Example"> </a>
+</h5>
 <ul>
-<li>Review <code>Menu</code> code. <code>Try</code>, <code>Catch</code>, and <code>Runnable</code> are used to control program execution. Find a way to make <code>Menu</code> work on a Jupyter Notebook.</li>
-<li>Are instances of <code>MenuRow</code> and <code>Runnable</code> data types, control structures?</li>
+<li>Methods?
+* </li>
+<li>Control Structures?
+* </li>
+<li>Fit data types?
+* </li>
+</ul>
+<h5 id="Number-Example">
+<a class="anchor" href="#Number-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>Number</code> Example<a class="anchor-link" href="#Number-Example"> </a>
+</h5>
+<ul>
+<li>What does <code>DoNothingByValue</code> do?
+* </li>
+<li>What does <code>IntByReference</code> do?
+* </li>
+</ul>
+<h5 id="Menu-Example">
+<a class="anchor" href="#Menu-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>Menu</code> Example<a class="anchor-link" href="#Menu-Example"> </a>
+</h5>
+<ul>
+<li>Find a way to make <code>Menu</code> work on a Jupyter Notebook.<ul>
+<li>View code <a href="">here</a>
+</li>
+</ul>
+</li>
+<li>Are instances of <code>MenuRow</code> and <code>Runnable</code> data types, control structures?
+* </li>
 <li>Does Driver have control structures? If so, list all the control Structures.</li>
+</ul>
+<hr>
+<h2 id="College-Board-FRQ">
+<a class="anchor" href="#College-Board-FRQ" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board FRQ<a class="anchor-link" href="#College-Board-FRQ"> </a>
+</h2>
+<ul>
+<li>Look at 1 unique FRQ per pair/treo on AP Classroom that goes over Methods and Control Structures</li>
+<li>Provide teacher a Jupyter Notebook, Video, and/or Code that cover key concepts<ul>
+<li>Make this better than AP Classroom, specifically trying to get these reviews to cover key parts in under Five minutes</li>
+<li>This option could use your PBL project and concepts if they were tailored to Teaching.</li>
+</ul>
+</li>
+<li>Explore Testing requirements in AP Classroom Video</li>
+<li>Explore AP FRQ that teaches us about Methods and Control Structures FRQ, 18:10</li>
+<li>Make sure that code runs completely, complete any portion of FRQ that is undone. Complete FRQs in a Jupyter notebook with markdown description and comments is a requirement</li>
+<li>Integrate Data Types into the discussion as this is import concept when studying early materials</li>
+<li>Integrate Definition of Methods and Control Structures in comments and definitions.</li>
 </ul>
 <hr>
 <h2 id="Code">
