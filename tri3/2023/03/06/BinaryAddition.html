@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -129,6 +129,18 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#College-Board-MC-Quiz">College Board MC Quiz </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Score">Score </a></li>
+<li class="toc-entry toc-h3"><a href="#Corrections">Corrections </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#13)">13) </a></li>
+<li class="toc-entry toc-h4"><a href="#18)">18) </a></li>
+<li class="toc-entry toc-h4"><a href="#29)">29) </a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Instructions">Instructions </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Early-Seed">Early Seed </a></li>
@@ -141,10 +153,10 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Binary-Addition">Binary Addition </a></li>
 <li class="toc-entry toc-h3"><a href="#Primitive-Data-Types">Primitive Data Types </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#int">int </a></li>
-<li class="toc-entry toc-h4"><a href="#double">double </a></li>
-<li class="toc-entry toc-h4"><a href="#boolean">boolean </a></li>
-<li class="toc-entry toc-h4"><a href="#char">char </a></li>
+<li class="toc-entry toc-h4"><a href="#int-Practice">int Practice </a></li>
+<li class="toc-entry toc-h4"><a href="#double-Practice">double Practice </a></li>
+<li class="toc-entry toc-h4"><a href="#boolean-Practice">boolean Practice </a></li>
+<li class="toc-entry toc-h4"><a href="#char-Practice">char Practice </a></li>
 </ul>
 </li>
 </ul>
@@ -158,6 +170,42 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="College-Board-MC-Quiz">
+<a class="anchor" href="#College-Board-MC-Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board MC Quiz<a class="anchor-link" href="#College-Board-MC-Quiz"> </a>
+</h2>
+<h3 id="Score">
+<a class="anchor" href="#Score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Score<a class="anchor-link" href="#Score"> </a>
+</h3>
+<p><img src="https://github.com/Natalie-Beckwith/fastpages/blob/master/_notebooks/ghtop_images/Screen%20Shot%202023-03-11%20at%2012.48.14%20PM.png?raw=true" alt="img"></p>
+<h3 id="Corrections">
+<a class="anchor" href="#Corrections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Corrections<a class="anchor-link" href="#Corrections"> </a>
+</h3>
+<h4 id="13)">
+<a class="anchor" href="#13)" aria-hidden="true"><span class="octicon octicon-link"></span></a>13)<a class="anchor-link" href="#13)"> </a>
+</h4>
+<p>C is incorrect because <code>{17, 37, 21, 42, 18, 69, 48, 28, 39}</code> would be the result if the code segment in the for loop was changed to <code>numbers[k] = numbers[k] + 3</code>.</p>
+<p><br></p>
+<p>A is the correct answer because the values of the loop control variable <code>k</code> starts at <code>1</code> and is incremented by <code>3</code> as long as <code>k</code> is less than <code>numbers.length</code>. As a result, <code>k</code> will have the values <code>1</code>, <code>4</code>, <code>7</code> and then when it becomes <code>10</code>, the loop will end. Only the values in <code>numbers</code> at indexes <code>1</code>, <code>4</code>, and <code>7</code> will be updated to the value of the sum of the element at the index that is one less than <code>k</code> (the element before the one being updated) and <code>3</code>. So, <code>numbers[1]</code> will be assigned the value of <code>numbers[0] + 3</code> or <code>20</code>, <code>numbers[4]</code> will be assigned the value of <code>numbers[3] + 3</code> or <code>45</code>, and <code>numbers[7]</code> will be assigned the value of <code>numbers[6] + 3</code> or <code>51</code>. All other values will be unchanged.</p>
+<h4 id="18)">
+<a class="anchor" href="#18)" aria-hidden="true"><span class="octicon octicon-link"></span></a>18)<a class="anchor-link" href="#18)"> </a>
+</h4>
+<p>E is incorrect because this would be the result if the division used was floating point division instead of integer division and the result was cast to an int, as in <code>(int)(404.0 / 10 * 10 + 1)</code>.</p>
+<p><br></p>
+<p>D is the correct answer because the first operation that is executed is <code>404 / 10</code>. Since both <code>404</code> and <code>10</code> are integers, integer division is used resulting in <code>40</code>. The value <code>40</code> is then multiplied by <code>10</code>, resulting in <code>400</code>, and finally <code>1</code> is added, meaning <code>401</code> is printed.</p>
+<h4 id="29)">
+<a class="anchor" href="#29)" aria-hidden="true"><span class="octicon octicon-link"></span></a>29)<a class="anchor-link" href="#29)"> </a>
+</h4>
+<p>D is incorrect because the value <code>1</code> is only returned when <code>num</code> is a single digit number.</p>
+<p><br></p>
+<p>A is the correct answer because each recursive call is made with the value <code>num  / 10</code>. The expression <code>num / 10</code> uses integer division and evaluates to an integer that is <code>num</code> with the right most digit removed. For example, <code>258 / 10 = 25</code>. Each time the recursive call is made, what is returned is <code>1</code> plus the result of the recursive call. For example, <code>what(258) = 1 + what(25)</code> and <code>what(25) = 1 + what(2)</code> and <code>what(2) = 1</code>. Therefore <code>what(258) = 1 + 1 + 1</code> or <code>3</code>, which is the number of digits in <code>258</code>.</p>
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -310,8 +358,8 @@ sum in binary: 10001</pre>
 <h3 id="Primitive-Data-Types">
 <a class="anchor" href="#Primitive-Data-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primitive Data Types<a class="anchor-link" href="#Primitive-Data-Types"> </a>
 </h3>
-<h4 id="int">
-<a class="anchor" href="#int" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>int</code><a class="anchor-link" href="#int"> </a>
+<h4 id="int-Practice">
+<a class="anchor" href="#int-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>int</code> Practice<a class="anchor-link" href="#int-Practice"> </a>
 </h4>
 </div>
 </div>
@@ -360,8 +408,8 @@ sum in binary: 10001</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="double">
-<a class="anchor" href="#double" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>double</code><a class="anchor-link" href="#double"> </a>
+<h4 id="double-Practice">
+<a class="anchor" href="#double-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>double</code> Practice<a class="anchor-link" href="#double-Practice"> </a>
 </h4>
 </div>
 </div>
@@ -421,8 +469,8 @@ Without casting: 1.00</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="boolean">
-<a class="anchor" href="#boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>boolean</code><a class="anchor-link" href="#boolean"> </a>
+<h4 id="boolean-Practice">
+<a class="anchor" href="#boolean-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>boolean</code> Practice<a class="anchor-link" href="#boolean-Practice"> </a>
 </h4>
 </div>
 </div>
@@ -477,8 +525,8 @@ false</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="char">
-<a class="anchor" href="#char" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>char</code><a class="anchor-link" href="#char"> </a>
+<h4 id="char-Practice">
+<a class="anchor" href="#char-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>char</code> Practice<a class="anchor-link" href="#char-Practice"> </a>
 </h4>
 </div>
 </div>
