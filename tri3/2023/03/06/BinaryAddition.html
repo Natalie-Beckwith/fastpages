@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -139,7 +139,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Code">Code </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Binary-Addition">Binary Addition </a></li>
-<li class="toc-entry toc-h3"><a href="#Primitive-Data-Types">Primitive Data Types </a></li>
+<li class="toc-entry toc-h3"><a href="#Primitive-Data-Types">Primitive Data Types </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#int">int </a></li>
+<li class="toc-entry toc-h4"><a href="#double">double </a></li>
+<li class="toc-entry toc-h4"><a href="#boolean">boolean </a></li>
+<li class="toc-entry toc-h4"><a href="#char">char </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -168,8 +175,9 @@ window.onload = wrap_img;
 <a class="anchor" href="#Small-Code-Excercises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Code Excercises<a class="anchor-link" href="#Small-Code-Excercises"> </a>
 </h3>
 <ul>
-<li>Write a Jupyter notebook code example on the following primitive types with a code example (4 to 5 lines)<ul>
-<li>preference would be using array and methods like substring and random as applicable: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>
+<li>Write a Jupyter notebook on the primitive data types
+Write a Jupyter notebook code example on the following primitive types with a code example (4 to 5 lines)<ul>
+<li>preference would be using <code>array</code> and methods like <code>substring</code> and <code>random</code> as applicable: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>
 </li>
 </ul>
 </li>
@@ -182,22 +190,27 @@ window.onload = wrap_img;
 <a class="anchor" href="#Key-Concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Concepts<a class="anchor-link" href="#Key-Concepts"> </a>
 </h3>
 <ul>
-<li>Make a Jupyter Notebook that goes over key concepts in Teacher code and uses background from ChatGPT and from AP Classroom.<ul>
-<li>Answer what are Methods and Control Structures</li>
-<li>Explore AP FRQ that teaches us about Methods and Control Structures FRQ</li>
-<li>Look at Diverse Arrays, Matrix in Teacher code and see if you think this is Methods and Control structures.</li>
-<li>Look at Diverse Arrays,Matrix in Teacher code an see if you thing this fits Data Types.</li>
+<li>
+<p>Make a Jupyter Notebook that goes over key concepts in Teacher code and uses background from ChatGPT and from AP Classroom.</p>
+<ul>
+<li>What are Methods and Control Structures? (See College Board)</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Look at <code>Diverse Arrays</code> and <code>Matrix</code> in Teacher's code. Do they have Methods and Control structures?</li>
+<li>Look at <code>Diverse Arrays</code> and <code>Matrix</code> in Teacher's code. Do they fit the data types?</li>
 <li>
 <code>Math.random</code> is covered in <code>Number</code>, this Teacher code associated with random is critical knowledge when taking the AP Exam. Random numbers in range like 7 to 9 is very important.</li>
-<li>Review <code>DoNothingByValue</code>, what is key knowledge here?</li>
-<li>Review <code>IntByReference</code>, what is key knowledge here?</li>
-<li>Review <code>Menu</code> code. Try, Catch, Runnable are used to control program execution. See if there is a way to get this to work in Jupyter Notebooks.</li>
-<li>Define "Method and Control Structures"<ul>
-<li>To the Teacher, the <code>Menu</code> Code has the most work of methodDataTypes files that is related to the "Methods and Control Structures" topic. Such exploration would begin by asking "describe Java Methods and Control structures". Are instances of MenuRow and Runnable data types, control structures? Does Driver have control structures? Enumerate them.</li>
+<li>What does <code>DoNothingByValue</code> do?</li>
+<li>What does <code>IntByReference</code> do?</li>
 </ul>
 </li>
 </ul>
-</li>
+<p><br></p>
+<ul>
+<li>Review <code>Menu</code> code. <code>Try</code>, <code>Catch</code>, and <code>Runnable</code> are used to control program execution. Find a way to make <code>Menu</code> work on a Jupyter Notebook.</li>
+<li>Are instances of <code>MenuRow</code> and <code>Runnable</code> data types, control structures?</li>
+<li>Does Driver have control structures? If so, list all the control Structures.</li>
 </ul>
 <hr>
 <h2 id="Code">
@@ -297,9 +310,215 @@ sum in binary: 10001</pre>
 <h3 id="Primitive-Data-Types">
 <a class="anchor" href="#Primitive-Data-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primitive Data Types<a class="anchor-link" href="#Primitive-Data-Types"> </a>
 </h3>
+<h4 id="int">
+<a class="anchor" href="#int" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>int</code><a class="anchor-link" href="#int"> </a>
+</h4>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
+
+<span class="c1">// regular</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\n"</span><span class="p">,</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+2
+4
+6
+8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="double">
+<a class="anchor" href="#double" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>double</code><a class="anchor-link" href="#double"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">casting1</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">casting2</span><span class="p">;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+<span class="n">casting1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">;</span>
+<span class="n">casting2</span> <span class="o">=</span> <span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"With casting: %.2f\nWithout casting: %.2f"</span><span class="p">,</span> <span class="n">casting1</span><span class="p">,</span> <span class="n">casting2</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>With casting: 1.50
+Without casting: 1.00</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@41ba5a40</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="boolean">
+<a class="anchor" href="#boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>boolean</code><a class="anchor-link" href="#boolean"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">d</span> <span class="o">=</span> <span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%b\n"</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%b"</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+false</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@41ba5a40</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="char">
+<a class="anchor" href="#char" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>char</code><a class="anchor-link" href="#char"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">char</span><span class="o">[]</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">{</span><span class="sc">'H'</span><span class="p">,</span> <span class="sc">'E'</span><span class="p">,</span> <span class="sc">'L'</span><span class="p">,</span> <span class="sc">'L'</span><span class="p">,</span> <span class="sc">'O'</span><span class="p">,</span> <span class="sc">' '</span><span class="p">,</span> <span class="sc">'W'</span><span class="p">,</span> <span class="sc">'O'</span><span class="p">,</span> <span class="sc">'R'</span><span class="p">,</span> <span class="sc">'L'</span><span class="p">,</span> <span class="sc">'D'</span><span class="p">};</span>
+
+<span class="c1">// regular</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">letters</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="n">letters</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HELLO WORLD</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
