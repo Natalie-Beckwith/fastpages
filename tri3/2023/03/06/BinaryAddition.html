@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -176,6 +176,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="#char-Practice">char Practice </a></li>
 <li class="toc-entry toc-h4"><a href="#String-Practice">String Practice </a></li>
 <li class="toc-entry toc-h4"><a href="#Math.random()-Practice">Math.random() Practice </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#FRQ-2018">FRQ 2018 </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Question-#1">Question #1 </a></li>
 </ul>
 </li>
 </ul>
@@ -815,6 +820,122 @@ After substring: 	World</pre>
 #2: 4
 #3: 3
 #4: 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="FRQ-2018">
+<a class="anchor" href="#FRQ-2018" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 2018<a class="anchor-link" href="#FRQ-2018"> </a>
+</h3>
+<h4 id="Question-#1">
+<a class="anchor" href="#Question-#1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question #1<a class="anchor-link" href="#Question-#1"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FrogSimulation</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalDistance</span><span class="p">;</span> <span class="c1">// distance in inches, from the starting position to the goal</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">maxHops</span><span class="p">;</span> <span class="c1">//  max number of hops allowed to reach the goal</span>
+
+    <span class="kd">private</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">hopDistances</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">FrogSimulation</span><span class="p">(</span><span class="kt">int</span> <span class="n">dist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numHops</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">goalDistance</span> <span class="o">=</span> <span class="n">dist</span><span class="p">;</span>
+        <span class="n">maxHops</span> <span class="o">=</span> <span class="n">numHops</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadHopDistance</span><span class="p">(</span><span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">hopDistances</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hopDistances</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">hopDistances</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hopDistance</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">hopDistances</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">hopDistance</span> <span class="o">=</span> <span class="n">hopDistances</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+            <span class="n">hopDistances</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">hopDistance</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">simulate</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">hops</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">currentPosition</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">while</span><span class="p">((</span><span class="n">currentPosition</span> <span class="o">&lt;</span> <span class="n">goalDistance</span><span class="p">)</span>
+            <span class="o">&amp;&amp;</span> <span class="p">((</span><span class="n">hops</span> <span class="o">!=</span> <span class="n">maxHops</span><span class="p">)</span>
+            <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">currentPosition</span> <span class="o">&lt;</span> <span class="n">goalDistance</span><span class="p">))</span>
+            <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">currentPosition</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">hops</span><span class="o">++</span><span class="p">;</span>
+
+            <span class="n">currentPosition</span> <span class="o">+=</span> <span class="n">hopDistance</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">currentPosition</span> <span class="o">&gt;=</span> <span class="n">goalDistance</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> 
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">runSimulations</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">FrogSimulation</span> <span class="n">sim</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+        <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">frogJumps1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+        <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">frogJumps2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+        <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">frogJumps3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">31</span><span class="p">));</span>
+        <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">frogJumps4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">));</span>
+        <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">frogJumps5</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+
+        <span class="n">sim</span><span class="p">.</span><span class="na">loadHopDistance</span><span class="p">(</span><span class="n">frogJumps1</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">goalReached</span> <span class="o">=</span> <span class="n">sim</span><span class="p">.</span><span class="na">simulate</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"𓆏 reached goal? %b.\n"</span><span class="p">,</span> <span class="n">goalReached</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">FrogSimulation</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>𓆏 reached goal? true.
 </pre>
 </div>
 </div>
