@@ -5,6 +5,28 @@ permalink: /notes/
 categories: notes
 ---
 
+
+## Week 26 - 3/13 Notes
+
+### Arrays, ArrayLists, and 2D Arrays
+* 2 reference data types
+  * Objects
+  * Arrays
+
+### Collection Framework
+* Overriding allows a subclass or a child class to provide a specific implementation of a method that is already provided by one of its super-classes/parent classes
+
+![img](https://www.geeksforgeeks.org/wp-content/uploads/overriding-in-java.png)
+
+* Static methods can be called without creating an object of the class
+  * EX: `public static void main(String[] Args)`
+* Instance methods are part of the **object** of the class
+  * They need an object to be created in order to be called
+
+
+
+---
+
 ## Week 25 - 3/6 Notes
 
 ### Data Types, Methods, Control Structures
