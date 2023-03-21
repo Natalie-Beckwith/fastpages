@@ -5,7 +5,32 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 27 - 3/20 Notes
 
+### Sorting
+* **Selection Sort** - a linear sort algorithm as it moves from index `[0]` to `[n-1]`. In the inner loop which is a second linear loop it compares two elements (like seen in the visual below) and notes which is smallest, after cycling to the end it swaps the smallest number to beginning position in the round.
+
+![img](https://www.w3resource.com/w3r_images/selection-short.png)
+
+* **Insertion Sort** - another linear algorithm that sorts elements from index `[0]` to index `[n-1]`. In the inner loop of this algorithm, it finds the gap, insertion point for the next item and inserts it. Each inner loop leave the list partially sorted according to outer loops index.
+
+![img](https://media.geeksforgeeks.org/wp-content/uploads/insertion_sort-recursion.png)
+
+* **Merge Sort** - uses a divide and conquer algorithm, versus linear algorithm of insertion or selection sort. Looking at it can be complicated, but it is more simple than it looks. It divides the array into two different groups recursively, until it gets only two to compare, swaps if necessary. Then it pops out of the recursion, observe the cascading and then the inverted assembly in illustration, after pop it puts each split group back together using a sorted comparison.
+
+![img](https://miro.medium.com/max/661/1*7Kox4Bll0Ddvb0td1tiXsg.png)
+
+* **Bubble Sort** - works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.
+
+![img](https://cdn.educba.com/academy/wp-content/uploads/2019/10/bubble-sort-in-java.png)
+
+### Hacks
+* Build into this Jupyter Notebook(s) for Bubble Sort, Selection Sort, Insertion Sort and Merge Sort.
+* Build into this Jupyter Notebooks Tester methods that runs each Sort
+* Commit to GitHub Repository often, try to use GitHub commits to show iterations on work
+* Note, build your sorts into Generic T Queue using toString and compareTo to compare keys.
+
+---
 ## Week 26 - 3/13 Notes
 
 ### Arrays, ArrayLists, and 2D Arrays
@@ -22,8 +47,6 @@ categories: notes
   * EX: `public static void main(String[] Args)`
 * Instance methods are part of the **object** of the class
   * They need an object to be created in order to be called
-
-
 
 ---
 
