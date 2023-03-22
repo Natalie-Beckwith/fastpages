@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -234,74 +234,146 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Generics.java</span>
-<span class="cm"> *</span>
-<span class="cm"> * Description</span>
+<span class="cm"> * Person.java</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
-
+ 
 <span class="cm">/**</span>
-<span class="cm"> * Main class for Generics.java</span>
+<span class="cm"> * Main class for Person.java</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">_username</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">_name</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">_schoolName</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">_email</span><span class="p">;</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param name</span>
+<span class="cm">     * @param schoolName</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Person</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">username</span><span class="p">,</span> <span class="n">String</span> <span class="n">schoolName</span><span class="p">,</span> <span class="n">String</span> <span class="n">email</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="n">_username</span> <span class="o">=</span> <span class="n">username</span><span class="p">;</span>
+        <span class="n">_schoolName</span> <span class="o">=</span> <span class="n">schoolName</span><span class="p">;</span>
+        <span class="n">_email</span> <span class="o">=</span> <span class="n">email</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getName </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return _name</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_name</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getYearOfBirth </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return _yearOfBirth</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">schoolName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_schoolName</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * getUsername</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return _username</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">username</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_username</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * getYearOfBirth </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return _yearOfBirth</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">email</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_email</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * toString</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return description</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">String</span> <span class="n">description</span> <span class="o">=</span> 
+            <span class="s">"Name: "</span> <span class="o">+</span> <span class="n">_name</span> <span class="o">+</span>
+            <span class="s">"\nUsername: "</span> <span class="o">+</span> <span class="n">_username</span> <span class="o">+</span>
+            <span class="s">"\nEmail: "</span> <span class="o">+</span> <span class="n">_email</span> <span class="o">+</span>
+            <span class="s">"\nSchool: "</span> <span class="o">+</span> <span class="n">_schoolName</span> <span class="o">+</span>
+            <span class="s">"\n"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">description</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Student.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+ 
+<span class="cm">/**</span>
+<span class="cm"> * Main class for Student.java</span>
 <span class="cm"> *</span>
 <span class="cm"> */</span>
-<span class="cm">/*</span>
-<span class="cm"> * This is wrapper class... Objective would be to push more functionality into</span>
-<span class="cm"> * this Class to enforce consistent definition</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Generics</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span>
 <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">masterType</span> <span class="o">=</span> <span class="s">"Generic"</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span> <span class="c1">// extender should define their data type</span>
-
-    <span class="c1">// generic enumerated interface</span>
-    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">KeyTypes</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">_grade</span><span class="p">;</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Student</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">username</span><span class="p">,</span> <span class="n">String</span> <span class="n">schoolName</span><span class="p">,</span> <span class="n">String</span> <span class="n">email</span><span class="p">,</span> <span class="n">String</span> <span class="n">grade</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">String</span> <span class="nf">name</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">schoolName</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
+        <span class="c1">// TODO Auto-generated constructor stub</span>
+        
+        <span class="n">_grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
     <span class="p">}</span>
-
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">();</span> <span class="c1">// this method helps force usage of KeyTypes</span>
-
-    <span class="c1">// getter</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMasterType</span><span class="p">()</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="k">return</span> <span class="n">masterType</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// getter</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">type</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// setter</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setType</span><span class="p">(</span><span class="n">String</span> <span class="n">type</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// this method is used to establish key order</span>
-    <span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
-
-    <span class="c1">// static print method used by extended classes</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">Generics</span><span class="o">[]</span> <span class="n">objs</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// print 'Object' properties</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">getClass</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">objs</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
-
-        <span class="c1">// print 'Generics' properties</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Generics</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">objs</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span> <span class="c1">// Look at properties of 1st element</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getMasterType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">obj</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">" listed by "</span> <span class="o">+</span> <span class="n">obj</span><span class="p">.</span><span class="na">getKey</span><span class="p">());</span>
-        <span class="p">}</span>
-
-        <span class="c1">// print "Generics: Objects'</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">o</span> <span class="p">:</span> <span class="n">objs</span><span class="p">)</span> <span class="c1">// observe that type is Opaque</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
-
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">description</span> <span class="o">=</span> 
+            <span class="s">"Name: "</span> <span class="o">+</span> <span class="n">_name</span> <span class="o">+</span>
+            <span class="s">"\nUsername: "</span> <span class="o">+</span> <span class="n">_username</span> <span class="o">+</span>
+            <span class="s">"\nEmail: "</span> <span class="o">+</span> <span class="n">_email</span> <span class="o">+</span>
+            <span class="s">"\nSchool: "</span> <span class="o">+</span> <span class="n">_schoolName</span> <span class="o">+</span>
+            <span class="s">"\nGrade: "</span> <span class="o">+</span> <span class="n">_grade</span> <span class="o">+</span>
+            <span class="s">"\n"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">description</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -321,106 +393,92 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Pi.java</span>
-<span class="cm"> *</span>
-<span class="cm"> * Displays first 10 numbers of Pi (For Pi Day)</span>
+<span class="cm"> * Teacher.java</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Natalie Beckwith</span>
 <span class="cm"> * @version 1</span>
 <span class="cm"> */</span>
-
+ 
 <span class="cm">/**</span>
-<span class="cm"> * Main class for Pi.java</span>
+<span class="cm"> * Main class for Teacher.java</span>
 <span class="cm"> *</span>
 <span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pi</span> <span class="kd">extends</span> <span class="n">Generics</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span>
 <span class="p">{</span>
-    <span class="c1">// Class data</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span> <span class="c1">// static initializer</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Pi</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span>
-    <span class="p">{</span>
-        <span class="n">title</span><span class="p">,</span> <span class="n">piSequence</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Instance data</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">piSequence</span><span class="p">;</span>
-
-    <span class="cm">/*</span>
-<span class="cm">     * single letter object</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">_className</span><span class="p">;</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
 <span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">Pi</span><span class="p">(</span><span class="n">String</span> <span class="n">piSequence</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="nf">Teacher</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">username</span><span class="p">,</span> <span class="n">String</span> <span class="n">schoolName</span><span class="p">,</span> <span class="n">String</span> <span class="n">email</span><span class="p">,</span> <span class="n">String</span> <span class="n">className</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Pi"</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">piSequence</span> <span class="o">=</span> <span class="n">piSequence</span><span class="p">;</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">schoolName</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
+        <span class="c1">// TODO Auto-generated constructor stub</span>
+        
+        <span class="n">_className</span> <span class="o">=</span> <span class="n">className</span><span class="p">;</span>
     <span class="p">}</span>
-
-    <span class="cm">/* 'Generics' requires getKey to help enforce KeyTypes usage */</span>
-    <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">Pi</span><span class="p">.</span><span class="na">key</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/*</span>
-<span class="cm">     * 'Generics' requires toString override toString provides data based off of</span>
-<span class="cm">     * Static Key setting</span>
-<span class="cm">     */</span>
+    
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">String</span> <span class="n">output</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">piSequence</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span>
-        <span class="p">{</span>
-            <span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">piSequence</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span>
-        <span class="p">{</span>
-            <span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">piSequence</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">description</span> <span class="o">=</span> 
+            <span class="s">"Name: "</span> <span class="o">+</span> <span class="n">_name</span> <span class="o">+</span>
+            <span class="s">"\nUsername: "</span> <span class="o">+</span> <span class="n">_username</span> <span class="o">+</span>
+            <span class="s">"\nEmail: "</span> <span class="o">+</span> <span class="n">_email</span> <span class="o">+</span>
+            <span class="s">"\nSchool: "</span> <span class="o">+</span> <span class="n">_schoolName</span> <span class="o">+</span>
+            <span class="s">"\nClass Name: "</span> <span class="o">+</span> <span class="n">_className</span> <span class="o">+</span>
+            <span class="s">"\n"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">description</span><span class="p">;</span>
     <span class="p">}</span>
-
-    <span class="c1">// Test data initializer for upper case Alphabet</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Pi</span><span class="o">[]</span> <span class="nf">piData</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">Pi</span><span class="o">[]</span>
-        <span class="p">{</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"3"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"."</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"1"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"4"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"1"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"5"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"9"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"2"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"6"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"5"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"3"</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Pi</span><span class="p">(</span><span class="s">"5"</span><span class="p">)</span>
-        <span class="p">};</span>
-    <span class="p">}</span>
-
-    <span class="cm">/*</span>
-<span class="cm">     * main to test Pi class</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// Inheritance Hierarchy</span>
-        <span class="n">Pi</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">piData</span><span class="p">();</span>
-
-        <span class="c1">// print letter only</span>
-        <span class="n">Pi</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">piSequence</span><span class="p">);</span>
-        <span class="n">Pi</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
-    <span class="p">}</span>
-
 <span class="p">}</span>
-<span class="n">Pi</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+ 
+<span class="cm">/**</span>
+<span class="cm"> * Main class for Main.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param Args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">Args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Person 1"</span><span class="p">,</span> <span class="s">"testUsername123"</span><span class="p">,</span> <span class="s">"Test High School"</span><span class="p">,</span> <span class="s">"email@gmail.com"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n"</span><span class="p">,</span> <span class="n">person</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+        <span class="n">Student</span> <span class="n">studnet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Natalie"</span><span class="p">,</span> <span class="s">"nbeckwith17"</span><span class="p">,</span> <span class="s">"Del Norte High School"</span><span class="p">,</span> <span class="s">"natalieb60251@stu.powayusd.com"</span><span class="p">,</span> <span class="s">"12"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n"</span><span class="p">,</span> <span class="n">studnet</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+        
+        <span class="n">Teacher</span> <span class="n">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"Teacher"</span><span class="p">,</span> <span class="s">"coding101"</span><span class="p">,</span> <span class="s">"Del Norte High School"</span><span class="p">,</span> <span class="s">"teacher@gmail.com"</span><span class="p">,</span> <span class="s">"Computer Science A"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s\n"</span><span class="p">,</span> <span class="n">teacher</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Main</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -433,20 +491,22 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$12$Pi; 12
-Generic: Pi listed by piSequence
-3
-.
-1
-4
-1
-5
-9
-2
-6
-5
-3
-5
+<pre>Name: Person 1
+Username: testUsername123
+Email: email@gmail.com
+School: Test High School
+
+Name: Natalie
+Username: nbeckwith17
+Email: natalieb60251@stu.powayusd.com
+School: Del Norte High School
+Grade: 12
+
+Name: Teacher
+Username: coding101
+Email: teacher@gmail.com
+School: Del Norte High School
+Class Name: Computer Science A
 
 </pre>
 </div>
