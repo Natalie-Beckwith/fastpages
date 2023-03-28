@@ -5,6 +5,18 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 28 - 3/27 Notes
+
+### Sorting
+* renamed type to `Collectable`
+* implements from Java
+   * some methods are: `filter()`, `map()`, `reduce()`, and `collect()`
+* implement a `compareTo()` --> find an object
+  * sort algorithms build into `LinkedList` data structures
+* `...` - takes multiple lists
+
+---
+
 ## Week 27 - 3/20 Notes
 
 ### Sorting
