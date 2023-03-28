@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -579,6 +579,25 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="n">ogArray</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">shuffle2</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">ogArray</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ogArray</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">String</span> <span class="n">temp</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+            <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">otherElement</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ogArray</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">ogArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+
+            <span class="n">ogArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">ogArray</span><span class="o">[</span><span class="n">otherElement</span><span class="o">]</span><span class="p">;</span>
+
+            <span class="n">ogArray</span><span class="o">[</span><span class="n">otherElement</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ogArray</span><span class="p">;</span>
+    
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="n">Integer</span><span class="o">[]</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">Integer</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">Integer</span><span class="o">[]</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
@@ -673,6 +692,25 @@ window.onload = wrap_img;
         <span class="n">qReverse</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span><span class="n">queue5</span><span class="p">);</span>
         <span class="n">qReverse</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n"</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"CHALLENGE #5\n\n"</span><span class="p">);</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">questions</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span>
+        <span class="p">{</span><span class="s">"All elements of an array are of the same type\n"</span><span class="p">,</span>
+        <span class="s">"Arrays cannot contain strings as elements\n"</span><span class="p">,</span>
+        <span class="s">"Two-dimensional arrays always have the same number of rows and columns\n"</span><span class="p">,</span>
+        <span class="s">"Elements of different columns in a 2D array can have different types\n"</span><span class="p">,</span>
+        <span class="s">"A method cannot return a 2D array\n"</span><span class="p">,</span>
+        <span class="s">"A method cannot change the length of an array argument\n"</span><span class="p">,</span>
+        <span class="s">"A method cannot change the number of columns of an argument that is a 2D array\n"</span><span class="p">};</span>
+        <span class="n">QueueManager</span> <span class="n">qOG2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Questions"</span><span class="p">);</span>
+        <span class="n">qOG2</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span><span class="n">questions</span><span class="p">);</span>
+        <span class="n">qOG2</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+        <span class="n">QueueManager</span> <span class="n">qShuffle2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Shuffled Questions"</span><span class="p">);</span>
+        <span class="n">questions</span> <span class="o">=</span> <span class="n">qShuffle2</span><span class="p">.</span><span class="na">shuffle2</span><span class="p">(</span><span class="n">questions</span><span class="p">);</span>
+        <span class="n">qShuffle2</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span><span class="n">questions</span><span class="p">);</span>
+        <span class="n">qShuffle2</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">QueueTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -736,7 +774,7 @@ CHALLENGE #3
 Queue4 count: 5
 Queue4 data: 1 2 3 4 5 
 Shuffle count: 5
-Shuffle data: 3 2 4 1 5 
+Shuffle data: 4 2 3 5 1 
 
 CHALLENGE #4
 
@@ -744,6 +782,27 @@ Queue5 count: 6
 Queue5 data: 3 6 9 12 15 17 
 Reverse count: 6
 Reverse data: 17 15 12 9 6 3 
+
+CHALLENGE #5
+
+Questions count: 7
+Questions data: All elements of an array are of the same type
+ Arrays cannot contain strings as elements
+ Two-dimensional arrays always have the same number of rows and columns
+ Elements of different columns in a 2D array can have different types
+ A method cannot return a 2D array
+ A method cannot change the length of an array argument
+ A method cannot change the number of columns of an argument that is a 2D array
+ 
+Shuffled Questions count: 7
+Shuffled Questions data: A method cannot change the length of an array argument
+ Two-dimensional arrays always have the same number of rows and columns
+ Elements of different columns in a 2D array can have different types
+ A method cannot return a 2D array
+ All elements of an array are of the same type
+ Arrays cannot contain strings as elements
+ A method cannot change the number of columns of an argument that is a 2D array
+ 
 </pre>
 </div>
 </div>
