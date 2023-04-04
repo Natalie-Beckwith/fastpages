@@ -5,6 +5,29 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 29 - 4/3 Notes
+
+### Hashmaps
+* Uses a hash function to map key functions
+* does not maintain insertion order either by key or by the order inserted
+* methods include: `get()` and `put()`
+* allows any non-null object as a key
+* 
+
+### Hacks
+* Analyze the Big O complexity on Sorts.
+  * Establish analytics including:time to sort, number of comparisons and number of swaps.
+  * Average the results for each each Sort, run each at least 12 times and 5000 elements. 
+  * You should throw out High and Low when doing analysis.
+  * Make your final/judgement on best sort: Number of Comparisons, Number of Swaps, Big O complexity, and Total Time.
+* Build your own Hashmap. Make a HashMap to correspond to a Data Structure using a Collection.
+  * Be sure to have 5000 records
+  * Perform analysis on Binary Search vs HashMap Lookup, try using random to search and find 100 keys in 5000 records. Perform 12 times and throw out high and low.
+* Extra, Practical learning
+  * Performing Iteration, Delete, and Add operations are another way to analyze Collection vs HashMap data structure.
+  * A HashMap and a Collection can be used in a Class, POJO and API.
+  * Make a Diagram on the Pros and Cons of Collection vs HashMap
+
 ## Week 28 - 3/27 Notes
 
 ### Sorting
