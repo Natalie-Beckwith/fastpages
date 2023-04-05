@@ -12,7 +12,6 @@ categories: notes
 * does not maintain insertion order either by key or by the order inserted
 * methods include: `get()` and `put()`
 * allows any non-null object as a key
-* 
 
 ### Hacks
 * Analyze the Big O complexity on Sorts.
