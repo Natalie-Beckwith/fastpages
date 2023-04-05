@@ -492,13 +492,17 @@ a { color: #E89C8F !important; transition: width .2s, height, .2s; }
 
 a:hover { color: #E2D699 !important; }
 
-.page-link { color: #97c192 !important; border-width: medium; border-radius: 30px; border-style: solid; border-color: #97c192; padding: 7px !important; margin-top: 5px; margin-bottom: 5px; }
+.page-link { color: #97c192 !important; border-width: medium; border-radius: 30px; border-style: solid; border-color: #97c192; padding: 7px !important; margin-top: 5px; margin-bottom: 5px; box-shadow: 0 3px #3e353577 !important; }
 
-.page-link:hover { background-color: #97c192 !important; color: #857568 !important; box-shadow: 3px 3px 3px #3e353577; }
+.page-link:hover { background-color: #97c192 !important; color: #857568 !important; }
 
-.site-title { font-family: 'Courier New' !important; font-size: 20px; text-align: center; color: #E2D699 !important; border-width: medium; border-color: #E2D699; border-radius: 30px; border-style: solid; margin-top: 3.5px; line-height: 40px; padding-left: 10px; padding-right: 10px; transition: width .2s, height, .2s; }
+.page-link:active { transform: translateY(2px) !important; box-shadow: 0 1px #3e353577 !important; }
 
-.site-title:hover { background-color: #E2D699; color: #857568 !important; box-shadow: 3px 3px 3px #3e353577; }
+.site-title { font-family: 'Courier New' !important; font-size: 20px; text-align: center; color: #E2D699 !important; border-width: medium; border-color: #E2D699; border-radius: 30px; border-style: solid; margin-top: 3.5px; line-height: 40px; padding-left: 10px; padding-right: 10px; transition: width .2s, height, .2s; margin-bottom: 9px; box-shadow: 0 3px #3e353577; }
+
+.site-title:hover { background-color: #E2D699; color: #857568 !important; }
+
+.site-title:active { transform: translateY(2px) !important; box-shadow: 0 1px #3e353577 !important; }
 
 .site-nav { color: #E89C8F !important; background-color: #857568; border-color: #97c192; }
 
@@ -512,15 +516,19 @@ pre, code { border-color: #E89C8F; background-color: #C1C1C9; color: #8a7d84; }
 
 .post-item { border-radius: 30px !important; padding: 15px !important; background-color: #857568; }
 
-.post-link { font-family: 'Courier'; text-align: center !important; color: #E89C8F !important; border-radius: 30px; border: #E89C8F medium solid !important; }
+.post-link { font-family: 'Courier'; text-align: center !important; color: #E89C8F !important; border-radius: 30px; border: #E89C8F medium solid !important; box-shadow: 0 3px #3e353577; }
 
-.post-link:hover { background-color: #E2D699 !important; color: #857568 !important; border-color: #E2D699 !important; box-shadow: 3px 3px 3px #3e353577; }
+.post-link:hover { background-color: #E2D699 !important; color: #857568 !important; border-color: #E2D699 !important; }
+
+.post-link:active { transform: translateY(2px) !important; box-shadow: 0 1px #3e353577 !important; }
 
 .post-content p, .post-content li { color: #857568; }
 
-.btn, button { padding: 5px !important; background-color: #C1C1C9 !important; color: #8a7d84 !important; border-width: medium !important; border-style: solid !important; border-radius: 30px !important; border-color: #8a7d84 !important; transition: width .2s, height, .2s; }
+.btn, button { padding: 5px !important; background-color: #C1C1C9 !important; color: #8a7d84 !important; border-width: medium !important; border-style: solid !important; border-radius: 30px !important; border-color: #8a7d84 !important; transition: width .2s, height, .2s; box-shadow: 0 3px #3e353577 !important; }
 
 .btn:hover, button:hover { background-color: #8a7d84 !important; color: #C1C1C9 !important; border-color: #C1C1C9 !important; }
+
+.btn:active, button:active { transform: translateY(2px) !important; box-shadow: 0 1px #3e353577 !important; }
 
 table th { background-color: #8a7d84; border-color: #E2D699; color: #C1C1C9; }
 
