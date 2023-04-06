@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      6 min read
     
 </span></p>
 
@@ -169,6 +169,347 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * BigOSorting.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for BigOSorting.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BigOSorting</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arrayExample</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
+    <span class="kd">final</span> <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">NUM_ARRAY</span> <span class="o">=</span> <span class="n">arrayExample</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * getArray</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param array</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">getArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// creates 5000 elements</span>
+        <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+        <span class="c1">// for every element in the array</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// randomly assigns an int to the current element</span>
+            <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5000</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">array</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * bubble from geeksforgeeks</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param n</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bubble</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">current</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">current</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">previous</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">previous</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="n">current</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">previous</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">previous</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">previous</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="c1">// swap arr[j+1] and arr[j]</span>
+                    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">previous</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">arr</span><span class="o">[</span><span class="n">previous</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">previous</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">arr</span><span class="o">[</span><span class="n">previous</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+                <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * swap elements from geeksforgeeks</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param num1</span>
+<span class="cm">     * @param num2</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">num1</span><span class="p">;</span>
+        <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span><span class="p">;</span>
+        <span class="n">num2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * merge from geeksforgeeks</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param l</span>
+<span class="cm">     * @param m</span>
+<span class="cm">     * @param r</span>
+<span class="cm">     */</span>
+    <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Find sizes of two subarrays to be merged</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
+
+        <span class="cm">/* Create temp arrays */</span>
+        <span class="kt">int</span> <span class="n">L</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">R</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="cm">/* Copy data to temp arrays */</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">m</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="cm">/* Merge the temp arrays */</span>
+
+        <span class="c1">// Initial indexes of first and second subarrays</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Initial index of merged subarray array</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Copy remaining elements of L[] if any */</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Copy remaining elements of R[] if any */</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Main function that sorts arr[l..r] using</span>
+    <span class="c1">// merge()</span>
+    <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Find the middle point</span>
+            <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// Sort first and second halves</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+
+            <span class="c1">// Merge the sorted halves</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * selection from geeksforgeeks</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     */</span>
+    <span class="kt">void</span> <span class="nf">selection</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+
+        <span class="c1">// One by one move boundary of unsorted subarray</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Find the minimum element in unsorted array</span>
+            <span class="kt">int</span> <span class="n">min_idx</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span><span class="p">)</span>
+                    <span class="n">min_idx</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+
+            <span class="c1">// Swap the found minimum element with the first</span>
+            <span class="c1">// element</span>
+            <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * insertion from geeksforgeeks</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     */</span>
+    <span class="kt">void</span> <span class="nf">insertion</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">key</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+ 
+            <span class="cm">/* Move elements of arr[0..i-1], that are</span>
+<span class="cm">               greater than key, to one position ahead</span>
+<span class="cm">               of their current position */</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * printArray </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     */</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printArray</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n\n"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * main</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">BigOSorting</span> <span class="n">bigOSorting</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BigOSorting</span><span class="p">();</span>
+        <span class="n">arrayExample</span> <span class="o">=</span> <span class="n">bigOSorting</span><span class="p">.</span><span class="na">getArray</span><span class="p">(</span><span class="n">arrayExample</span><span class="p">);</span>
+
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">binarySorted</span> <span class="o">=</span> <span class="n">arrayExample</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">mergeSorted</span> <span class="o">=</span> <span class="n">arrayExample</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">selectionSorted</span> <span class="o">=</span> <span class="n">arrayExample</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">insertionSorted</span> <span class="o">=</span> <span class="n">arrayExample</span><span class="p">;</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"NUM:\t\tBUBBLE:\t\tMERGE:\t\tSELECTION:\tINSERT:\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"----\t\t----------\t--------\t----------\t-------\n"</span><span class="p">);</span>
+        
+        <span class="kt">double</span> <span class="n">averageB</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">averageM</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">averageS</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">averageI</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">numIterations</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numIterations</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+         <span class="c1">// times binary</span>
+            <span class="kt">long</span> <span class="n">binaryStartTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="n">bigOSorting</span><span class="p">.</span><span class="na">bubble</span><span class="p">(</span><span class="n">binarySorted</span><span class="p">,</span> <span class="n">NUM_ARRAY</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">binaryEndTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            
+            <span class="kt">long</span> <span class="n">binaryDuration</span> <span class="o">=</span> <span class="p">(</span><span class="n">binaryEndTime</span> <span class="o">-</span> <span class="n">binaryStartTime</span><span class="p">);</span>
+            
+            <span class="c1">// times merge</span>
+            <span class="kt">long</span> <span class="n">mergeStartTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="n">bigOSorting</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="n">mergeSorted</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">NUM_ARRAY</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">NUM_ARRAY</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">mergeEndTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            
+            <span class="kt">long</span> <span class="n">mergeDuration</span> <span class="o">=</span> <span class="p">(</span><span class="n">mergeEndTime</span> <span class="o">-</span> <span class="n">mergeStartTime</span><span class="p">);</span>
+            
+            <span class="kt">long</span> <span class="n">selectionStartTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="n">bigOSorting</span><span class="p">.</span><span class="na">selection</span><span class="p">(</span><span class="n">selectionSorted</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">selectionEndTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            
+            <span class="kt">long</span> <span class="n">selectionDuration</span> <span class="o">=</span> <span class="p">(</span><span class="n">selectionEndTime</span> <span class="o">-</span> <span class="n">selectionStartTime</span><span class="p">);</span>
+            
+            <span class="kt">long</span> <span class="n">insertStartTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="n">bigOSorting</span><span class="p">.</span><span class="na">insertion</span><span class="p">(</span><span class="n">insertionSorted</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">insertEndTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            
+            <span class="kt">long</span> <span class="n">insertDuration</span> <span class="o">=</span> <span class="p">(</span><span class="n">insertEndTime</span> <span class="o">-</span> <span class="n">insertStartTime</span><span class="p">);</span>
+            
+            <span class="c1">// print</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d \t\t%dns \t%dns \t%dns \t%dns\n"</span><span class="p">,</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="n">binaryDuration</span><span class="p">,</span> <span class="n">mergeDuration</span><span class="p">,</span> <span class="n">selectionDuration</span><span class="p">,</span> <span class="n">insertDuration</span><span class="p">);</span>
+            
+            <span class="n">averageB</span> <span class="o">+=</span> <span class="n">binaryDuration</span><span class="p">;</span>
+            <span class="n">averageM</span> <span class="o">+=</span> <span class="n">mergeDuration</span><span class="p">;</span>
+            <span class="n">averageS</span> <span class="o">+=</span> <span class="n">selectionDuration</span><span class="p">;</span>
+            <span class="n">averageI</span> <span class="o">+=</span> <span class="n">insertDuration</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="n">averageB</span> <span class="o">/=</span> <span class="n">numIterations</span><span class="p">;</span>
+        <span class="n">averageM</span> <span class="o">/=</span> <span class="n">numIterations</span><span class="p">;</span>
+        <span class="n">averageS</span> <span class="o">/=</span> <span class="n">numIterations</span><span class="p">;</span>
+        <span class="n">averageI</span> <span class="o">/=</span> <span class="n">numIterations</span><span class="p">;</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nAVERAGE TIMES:"</span>
+                        <span class="o">+</span> <span class="s">"\t\n---------------------------------------------------------------------------\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t\t%.2fns\t%.2fns\t%.2fns\t%.2fns\t\n"</span><span class="p">,</span> <span class="n">averageB</span><span class="p">,</span> <span class="n">averageM</span><span class="p">,</span> <span class="n">averageS</span><span class="p">,</span> <span class="n">averageI</span><span class="p">);</span>
+
+        <span class="c1">//printArray(binarySorted);</span>
+        <span class="c1">//printArray(mergeSorted);</span>
+        <span class="c1">//printArray(selectionSorted);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">BigOSorting</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>NUM:		BUBBLE:		MERGE:		SELECTION:	INSERT:
+----		----------	--------	----------	-------
+0 		43677709ns 	272917ns 	30106000ns 	236000ns
+1 		16487625ns 	250792ns 	5638250ns 	211583ns
+2 		15577584ns 	262708ns 	2455708ns 	210542ns
+3 		4392416ns 	246500ns 	2572250ns 	226000ns
+4 		4484708ns 	238375ns 	2509875ns 	218917ns
+5 		4336833ns 	235416ns 	2469250ns 	212833ns
+6 		4455583ns 	285833ns 	2537125ns 	291917ns
+7 		4958958ns 	305625ns 	2423709ns 	227959ns
+8 		4688541ns 	191833ns 	2412792ns 	212666ns
+9 		4270708ns 	31750ns 	2287459ns 	203375ns
+10 		4313417ns 	67291ns 	2596167ns 	221792ns
+11 		4224667ns 	300709ns 	2420250ns 	215167ns
+
+AVERAGE TIMES:	
+---------------------------------------------------------------------------
+		9655729.08ns	224145.75ns	5035736.25ns	224062.58ns	
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
