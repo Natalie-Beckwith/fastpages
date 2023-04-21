@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -249,43 +249,10 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
         <span class="c1">// to be implemented in 2 subclasses .-.</span>
     <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * main tester method</span>
-<span class="cm">     * </span>
-<span class="cm">     * @param args</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// create 2 books, output title, and provide count of books in library</span>
-        <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Book1"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\n"</span><span class="p">,</span> <span class="n">book</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">book</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">book</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
-        <span class="n">Book</span> <span class="n">book2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Book2"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n%d\t%s\t%d\n"</span><span class="p">,</span> <span class="n">book2</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">book2</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">book2</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
-
-    <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">Book</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1	Book1	1893028642
-
-2	Book2	1591715628
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -384,74 +351,10 @@ window.onload = wrap_img;
         <span class="p">}</span>
         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * main</span>
-<span class="cm">     * </span>
-<span class="cm">     * @param args</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="p">{</span>
-            <span class="n">Novel</span> <span class="n">novel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Title4"</span><span class="p">,</span> <span class="mi">70000000</span><span class="p">);</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
-
-            <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\t%dns\n"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">checkOutTime</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Shelf like over? %s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="p">{</span>
-            <span class="n">Novel</span> <span class="n">novel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Title4"</span><span class="p">,</span> <span class="mi">70</span><span class="p">);</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-
-            <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
-
-            <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n\n%d\t%s\t%d\t%dns\n"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">checkOutTime</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Shelf like over? %s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">Novel</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3	Title4	1986307111	2000ns
-Shelf like over? false
-
-4	Title4	976805206	1000ns
-Shelf like over? true</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -537,40 +440,97 @@ Shelf like over? true</pre>
         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     * main</span>
-<span class="cm">     * </span>
-<span class="cm">     * @param args</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="p">{</span>
-            <span class="n">Textbook</span> <span class="n">textbook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Title4"</span><span class="p">,</span> <span class="mi">30000000</span><span class="p">);</span>
-
-            <span class="n">textbook</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">textbook</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-            <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
-
-            <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\t%dns\n"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span>
-                    <span class="n">checkOutTime</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Shelf like over? %s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="p">{</span>
-            <span class="n">Textbook</span> <span class="n">textbook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Title4"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-
-            <span class="n">textbook</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
-            <span class="n">textbook</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
-            <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
-
-            <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n\n%d\t%s\t%d\t%dns\n"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span>
-                    <span class="n">checkOutTime</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Shelf like over? %s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">Textbook</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"NUM\tTITLE\t\t\t\tBOOK KEY\tTIME\tSHELF LIFE OVER?\tAUTHOR\t\tPUBLISHING COMPANY\n\n"</span><span class="p">);</span>
+<span class="c1">// create 2 books, output title, and provide count of books in library</span>
+<span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Barron's Computer Science A"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\n"</span><span class="p">,</span> <span class="n">book</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">book</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">book</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="n">Book</span> <span class="n">book2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Angels and Demons"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t\t%d\n"</span><span class="p">,</span> <span class="n">book2</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">book2</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">book2</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+
+<span class="p">{</span>
+    <span class="n">Novel</span> <span class="n">novel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Lion, Witch, and the Wardrobe"</span><span class="p">,</span> <span class="mi">70000000</span><span class="p">);</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
+
+    <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\t%dns\t"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">checkOutTime</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t\t\t%s\n"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getAuthor</span><span class="p">(</span><span class="s">"C.S. Lewis"</span><span class="p">));</span>
+    
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="n">Novel</span> <span class="n">novel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"The Da Vincii Code"</span><span class="p">,</span> <span class="mi">70</span><span class="p">);</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">novel</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+
+    <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
+
+    <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">novel</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t\t%d\t%dns\t"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">novel</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">checkOutTime</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t\t\t%s\n"</span><span class="p">,</span> <span class="n">novel</span><span class="p">.</span><span class="na">getAuthor</span><span class="p">(</span><span class="s">"Dan Brown"</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+    <span class="n">Textbook</span> <span class="n">textbook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"The Practice of Programming"</span><span class="p">,</span> <span class="mi">30000000</span><span class="p">);</span>
+
+    <span class="n">textbook</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">textbook</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+    <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
+
+    <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t%d\t%dns"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span>
+            <span class="n">checkOutTime</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t%s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t\t\t\t\t%s\n"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getPublishingCompany</span><span class="p">(</span><span class="s">"Pan Books (January 1, 2001)"</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="n">Textbook</span> <span class="n">textbook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"e=MC^2 a Biography"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+    <span class="n">textbook</span><span class="p">.</span><span class="na">checkOutBook</span><span class="p">();</span>
+    <span class="n">textbook</span><span class="p">.</span><span class="na">checkInBook</span><span class="p">();</span>
+    <span class="n">Boolean</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">isShelflifeOver</span><span class="p">();</span>
+
+    <span class="kt">long</span> <span class="n">checkOutTime</span> <span class="o">=</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getCheckOutTime</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t%s\t\t%d\t%dns"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getBook</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span>
+            <span class="n">checkOutTime</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t%s"</span><span class="p">,</span> <span class="n">shelfLife</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\t\t\t\t\t%s\n"</span><span class="p">,</span> <span class="n">textbook</span><span class="p">.</span><span class="na">getPublishingCompany</span><span class="p">(</span><span class="s">"Addison-Wesley Professional Computing"</span><span class="p">));</span>
+
+<span class="p">}</span>
 </pre></div>
 
     </div>
@@ -583,11 +543,15 @@ Shelf like over? true</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>5	Title4	400673224	4000ns
-Shelf like over? false
+<pre>NUM	TITLE				BOOK KEY	TIME	SHELF LIFE OVER?	AUTHOR		PUBLISHING COMPANY
 
-6	Title4	11687840	3000ns
-Shelf like over? true</pre>
+255	Barron's Computer Science A	1128137754
+256	Angels and Demons		121673096
+257	Lion, Witch, and the Wardrobe	1061734432	1000ns	false			C.S. Lewis
+258	The Da Vincii Code		2079937397	0ns	true			Dan Brown
+259	The Practice of Programming	53477690	2000ns	false					Pan Books (January 1, 2001)
+260	e=MC^2 a Biography		1852403470	2000ns	true					Addison-Wesley Professional Computing
+</pre>
 </div>
 </div>
 
