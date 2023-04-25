@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -725,11 +725,27 @@ Average: 8
 <span class="cm">    */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">getColumn</span> <span class="p">(</span><span class="kt">int</span> <span class="o">[][]</span> <span class="n">arr2D</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">NUM_ROWS</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
 
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">NUM_ROWS</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr2D</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Returns an array containing the elements of row r of arr2D in the same order as</span>
+<span class="cm">    * they appear in arr2D.</span>
+<span class="cm">    * Precondition: c is a valid column index in arr2D.</span>
+<span class="cm">    * Postcondition: arr2D is unchanged.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">getRow</span> <span class="p">(</span><span class="kt">int</span> <span class="o">[][]</span> <span class="n">arr2D</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">col</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr2D</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
     <span class="p">}</span>
@@ -741,7 +757,7 @@ Average: 8
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">hasAllValues</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="cm">/* implementation not shown */</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
 
    <span class="cm">/** Returns true if arr contains any duplicate values;</span>
@@ -750,7 +766,7 @@ Average: 8
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">containsDuplicates</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="cm">/* implementation not shown */</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
 
    <span class="cm">/** Returns true if square is a Latin square as described in part (b);</span>
@@ -761,6 +777,18 @@ Average: 8
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLatin</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">square</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="cm">/* to be implemented in part (b) */</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">square</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">square</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">square</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arr1</span> <span class="o">=</span> <span class="n">ArrayTester</span><span class="p">.</span><span class="na">getColumn</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">arr2</span> <span class="o">=</span> <span class="n">ArrayTester</span><span class="p">.</span><span class="na">getRow</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">((</span><span class="n">hasAllValues</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">containsDuplicates</span><span class="p">(</span><span class="n">arr1</span><span class="p">)))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -777,6 +805,15 @@ Average: 8
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
         <span class="p">}</span>
+
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">square</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
+                           <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
+                           <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}};</span>
+
+        <span class="kt">boolean</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">ArrayTester</span><span class="p">.</span><span class="na">isLatin</span><span class="p">(</span><span class="n">square</span><span class="p">);</span> 
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n"</span> <span class="o">+</span> <span class="n">result1</span><span class="p">);</span>
+
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -797,6 +834,8 @@ Average: 8
 4
 7
 5
+
+true
 </pre>
 </div>
 </div>
