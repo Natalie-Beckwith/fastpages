@@ -209,66 +209,128 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeSortPractice</span>
 <span class="p">{</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Ford"</span><span class="p">,</span> <span class="s">"Mazda"</span><span class="p">};</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span>
+    <span class="p">{</span> <span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Ford"</span><span class="p">,</span> <span class="s">"Mazda"</span> <span class="p">};</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">merge</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">cars</span><span class="p">,</span> <span class="kt">int</span> <span class="n">last</span><span class="p">,</span> <span class="kt">int</span> <span class="n">middle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">range</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">cars</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">middle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// finds sizes of 2 subarrays</span>
-        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="p">(</span><span class="n">last</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// lower</span>
-        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">range</span> <span class="o">-</span> <span class="n">middle</span><span class="p">;</span> <span class="c1">// upper</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// lower</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">middle</span><span class="p">;</span> <span class="c1">// upper</span>
 
         <span class="n">String</span><span class="o">[]</span> <span class="n">lower</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
         <span class="n">String</span><span class="o">[]</span> <span class="n">upper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
 
-        <span class="c1">// copys data from first array to lower array</span>
+        <span class="c1">// copies data from first array to lower array</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">Lloop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">Lloop</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="n">Lloop</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">lower</span><span class="o">[</span><span class="n">Lloop</span><span class="o">]</span> <span class="o">=</span> <span class="n">cars</span><span class="o">[</span><span class="n">last</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">lower</span><span class="o">[</span><span class="n">Lloop</span><span class="o">]</span> <span class="o">=</span> <span class="n">cars</span><span class="o">[</span><span class="n">left</span> <span class="o">+</span> <span class="n">Lloop</span><span class="o">]</span><span class="p">;</span>
         <span class="p">}</span>
 
-        <span class="c1">// copys data from first array to upper array</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">Rloop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">Rloop</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="n">Lloop</span><span class="o">++</span><span class="p">)</span>
+        <span class="c1">// copies data from first array to upper array</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">Rloop</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">Rloop</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="n">Rloop</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">lower</span><span class="o">[</span><span class="n">Rloop</span><span class="o">]</span> <span class="o">=</span> <span class="n">cars</span><span class="o">[</span><span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">Rloop</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">upper</span><span class="o">[</span><span class="n">Rloop</span><span class="o">]</span> <span class="o">=</span> <span class="n">cars</span><span class="o">[</span><span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">Rloop</span><span class="o">]</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">last</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">left</span><span class="p">;</span>
 
         <span class="k">while</span> <span class="p">((</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">))</span>
         <span class="p">{</span>
-            <span class="k">if</span> <span class="p">((</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">lower</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">upper</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">+</span> <span class="n">L</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
-                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">cars</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">upper</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="k">else</span>
             <span class="p">{</span>
-                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">+</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
-                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">cars</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">lower</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
 
+        <span class="cm">/* Copy remaining elements of L[] if any */</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cars</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">lower</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Copy remaining elements of R[] if any */</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">cars</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">upper</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
             <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
+
     <span class="p">}</span>
-    
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="n">String</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// COMMENT A</span>
+            <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// COMMENT B</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+
+            <span class="c1">// COMMENT C</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">merge</span><span class="p">(</span><span class="n">cars</span><span class="p">,</span> <span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">cars</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cars</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+        <span class="n">sort</span><span class="p">(</span><span class="n">cars</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cars</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">cars</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cars</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+
     <span class="p">}</span>
 <span class="p">}</span>
+
 <span class="n">MergeSortPractice</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Volvo
+BMW
+Ford
+Mazda
+
+BMW
+Ford
+Mazda
+Volvo
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
