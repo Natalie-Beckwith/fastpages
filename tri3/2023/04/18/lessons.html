@@ -158,6 +158,9 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="##1">#1 </a></li>
 <li class="toc-entry toc-h4"><a href="##2">#2 </a></li>
 <li class="toc-entry toc-h4"><a href="##3">#3 </a></li>
+<li class="toc-entry toc-h4"><a href="#FRQ-2018-Question-#4">FRQ 2018 Question #4 </a></li>
+<li class="toc-entry toc-h4"><a href="#FRQ-2017-Question-#4">FRQ 2017 Question #4 </a></li>
+<li class="toc-entry toc-h4"><a href="#FRQ-2016-Question-#4">FRQ 2016 Question #4 </a></li>
 </ul>
 </li>
 </ul>
@@ -650,8 +653,15 @@ num has been found.
     <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">numCols</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
-           
+            <span class="k">if</span><span class="p">(</span><span class="n">row</span> <span class="o">==</span> <span class="n">col</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"[%d]\t"</span><span class="p">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t"</span><span class="p">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+                
             
 
         <span class="p">}</span>
@@ -671,11 +681,11 @@ num has been found.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1	2	3	4	5	6	
-7	8	9	10	11	12	
-0	1	2	3	4	5	
-10	11	12	13	14	15	
-15	16	17	18	19	20	
+<pre>[1]	2	3	4	5	6	
+7	[8]	9	10	11	12	
+0	1	[2]	3	4	5	
+10	11	12	[13]	14	15	
+15	16	17	18	[19]	20	
 
 Average: 8
 </pre>
@@ -688,6 +698,33 @@ Average: 8
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="FRQ-2018-Question-#4">
+<a class="anchor" href="#FRQ-2018-Question-#4" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 2018 Question #4<a class="anchor-link" href="#FRQ-2018-Question-#4"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="FRQ-2017-Question-#4">
+<a class="anchor" href="#FRQ-2017-Question-#4" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 2017 Question #4<a class="anchor-link" href="#FRQ-2017-Question-#4"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="FRQ-2016-Question-#4">
+<a class="anchor" href="#FRQ-2016-Question-#4" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 2016 Question #4<a class="anchor-link" href="#FRQ-2016-Question-#4"> </a>
+</h4>
+</div>
+</div>
+</div>
 </div>
 
 
