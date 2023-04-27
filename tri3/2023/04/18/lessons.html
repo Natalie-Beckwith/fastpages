@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -162,6 +162,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="#FRQ-2018-Question-#4">FRQ 2018 Question #4 </a></li>
 <li class="toc-entry toc-h4"><a href="#FRQ-2017-Question-#4">FRQ 2017 Question #4 </a></li>
 <li class="toc-entry toc-h4"><a href="#FRQ-2016-Question-#4">FRQ 2016 Question #4 </a></li>
+<li class="toc-entry toc-h4"><a href="#Extra-Credit">Extra Credit </a></li>
 </ul>
 </li>
 </ul>
@@ -1002,6 +1003,17 @@ Average: 8
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">square</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
                            <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
                            <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}};</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\nSquare:\n"</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">square</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">square</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%d\t"</span><span class="p">,</span> <span class="n">square</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+    
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\n"</span><span class="p">);</span>
+        <span class="p">}</span>
 
         <span class="kt">boolean</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">ArrayTester</span><span class="p">.</span><span class="na">isLatin</span><span class="p">(</span><span class="n">square</span><span class="p">);</span> 
 
@@ -1027,6 +1039,11 @@ Average: 8
 4
 7
 5
+
+Square:
+1	2	3	
+2	3	1	
+3	1	2	
 
 true
 </pre>
@@ -1238,6 +1255,92 @@ true
 14
 APCOMPSCIROCKS
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Extra-Credit">
+<a class="anchor" href="#Extra-Credit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra Credit<a class="anchor-link" href="#Extra-Credit"> </a>
+</h4>
+<ul>
+<li>Create a method that returns the highest sum of any row or column in a 2d array. For example, if the highest sum of a row was 26 but the highest sum of a column was 30, the method would return 30.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LargestSum</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">highestSum</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">sums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr2D</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="c1">// number of columns</span>
+        <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        
+        <span class="c1">// iterates through each column of 2D array and adds each value together</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">sum</span> <span class="o">+=</span> <span class="n">arr2D</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
+                <span class="c1">// adds sum into an array w/ collection of the sums from each column</span>
+                <span class="n">sums</span><span class="o">[</span><span class="n">row</span><span class="o">]</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    
+        <span class="c1">// compares each element in the column sums array</span>
+        <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">sums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">sums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">max</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">max</span> <span class="o">=</span> <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// returns max sum</span>
+        <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">arr2D</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
+                         <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span>
+                         <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Largest column sum: %d"</span><span class="p">,</span> <span class="n">highestSum</span><span class="p">(</span><span class="n">arr2D</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">LargestSum</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Largest column sum: 18</pre>
 </div>
 </div>
 
