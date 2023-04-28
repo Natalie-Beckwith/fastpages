@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      14 min read
     
 </span></p>
 
@@ -249,11 +249,23 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeSortPractice</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main class for MergeSortPractice.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeSortPractice</span>
 <span class="p">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span>
     <span class="p">{</span> <span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Ford"</span><span class="p">,</span> <span class="s">"Mazda"</span> <span class="p">};</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * merge </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param cars</span>
+<span class="cm">     * @param left</span>
+<span class="cm">     * @param middle</span>
+<span class="cm">     * @param right</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">cars</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">middle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// finds sizes of 2 subarrays</span>
@@ -313,6 +325,13 @@ window.onload = wrap_img;
 
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * sort </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param left</span>
+<span class="cm">     * @param right</span>
+<span class="cm">     */</span>
     <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="n">String</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span>
@@ -329,6 +348,11 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">cars</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -411,8 +435,21 @@ Volvo
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinarySearchPractice</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main class for BinarySearchPractice.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinarySearchPractice</span>
 <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * sort </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param left</span>
+<span class="cm">     * @param right</span>
+<span class="cm">     * @param num</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="n">left</span><span class="p">)</span>
@@ -436,6 +473,11 @@ Volvo
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">BinarySearchPractice</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BinarySearchPractice</span><span class="p">();</span>
@@ -507,10 +549,22 @@ Volvo
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExtraPractice</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main class for ExtraPractice.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExtraPractice</span>
 <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
     
+    <span class="cm">/**</span>
+<span class="cm">     * merge </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param l</span>
+<span class="cm">     * @param m</span>
+<span class="cm">     * @param r</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// Find the sizes of two subarrays to be merged</span>
@@ -561,6 +615,13 @@ Volvo
         <span class="p">}</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * sort </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param l</span>
+<span class="cm">     * @param r</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
@@ -576,6 +637,11 @@ Volvo
         <span class="p">}</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Before Sort:"</span><span class="p">);</span>
@@ -685,22 +751,28 @@ Binary Search for 7:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="c1">// your code here</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm">     * setArray </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @param n</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="c1">// your code here</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
-<span class="n">setArray</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">setArray</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 
-<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+    <span class="p">}</span>
 </pre></div>
 
     </div>
@@ -814,7 +886,13 @@ Binary Search for 7:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">averageDiagonal</span> <span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array2D</span><span class="p">)</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * averageDiagonal </span>
+<span class="cm"> * </span>
+<span class="cm"> * @param array2D</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">averageDiagonal</span> <span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array2D</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -1074,7 +1152,11 @@ true
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Position</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main class for Position.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Position</span>
 <span class="p">{</span>
     <span class="cm">/** Constructs a Position object with row r and column c. */</span>
     <span class="kd">public</span> <span class="nf">Position</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
@@ -1083,6 +1165,13 @@ true
     <span class="p">}</span>
     <span class="c1">// There may be instance variables, constructors, and methods that are not shown.</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * findPosition </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param num</span>
+<span class="cm">     * @param intArr</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">Position</span> <span class="nf">findPosition</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">intArr</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">intArr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
@@ -1098,6 +1187,12 @@ true
         <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * getSuccessorArray </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param intArr</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">Position</span><span class="o">[][]</span> <span class="nf">getSuccessorArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">intArr</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">Position</span><span class="o">[][]</span> <span class="n">newArr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Position</span><span class="o">[</span><span class="n">intArr</span><span class="p">.</span><span class="na">length</span><span class="o">][</span><span class="n">intArr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
@@ -1112,6 +1207,11 @@ true
         <span class="k">return</span> <span class="n">newArr</span><span class="p">;</span>
     <span class="p">}</span> 
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">arr2D</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">},</span>
@@ -1166,8 +1266,20 @@ true
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringFormatter</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for StringFormatter.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringFormatter</span>
 <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * totalLetters </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param wordList</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">totalLetters</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wordList</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -1178,6 +1290,13 @@ true
         <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
     <span class="p">}</span>
     
+    <span class="cm">/**</span>
+<span class="cm">     * basicGapWidth </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param wordList</span>
+<span class="cm">     * @param formattedLen</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">basicGapWidth</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wordList</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formattedLen</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">totalLetters</span><span class="p">(</span><span class="n">wordList</span><span class="p">);</span>
@@ -1187,11 +1306,25 @@ true
         <span class="k">return</span> <span class="n">gapWidth</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * leftoverSpaces </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param wordList</span>
+<span class="cm">     * @param formattedLen</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">leftoverSpaces</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wordList</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formattedLen</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * format </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param wordList</span>
+<span class="cm">     * @param formattedLen</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">format</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wordList</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formattedLen</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">String</span> <span class="n">formatted</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
@@ -1222,6 +1355,11 @@ true
         <span class="k">return</span> <span class="n">formatted</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wordList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
@@ -1286,8 +1424,18 @@ APCOMPSCIROCKS
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LargestSum</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Main class for LargestSum.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LargestSum</span>
 <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * highestSum </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param arr</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">highestSum</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">sums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr2D</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
@@ -1320,6 +1468,11 @@ APCOMPSCIROCKS
         <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="kt">int</span><span class="o">[][]</span> <span class="n">arr2D</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
