@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      8 min read
     
 </span></p>
 
@@ -134,6 +134,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="##1">#1 </a></li>
 <li class="toc-entry toc-h3"><a href="##2">#2 </a></li>
 <li class="toc-entry toc-h3"><a href="##3">#3 </a></li>
+<li class="toc-entry toc-h3"><a href="##4">#4 </a></li>
 </ul>
 </li>
 </ul><!--
@@ -704,6 +705,248 @@ Current run: 1
 # of reviews: 1
 # of reviews: 1
 # of reviews: 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="#4">
+<a class="anchor" href="##4" aria-hidden="true"><span class="octicon octicon-link"></span></a>#4<a class="anchor-link" href="##4"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Seat.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for Seat.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Seat</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">available</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tier</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param isAvail</span>
+<span class="cm">     * @param tierNum</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Seat</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">isAvail</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tierNum</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">available</span> <span class="o">=</span> <span class="n">isAvail</span><span class="p">;</span>
+
+        <span class="n">tier</span> <span class="o">=</span> <span class="n">tierNum</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * isAvailable </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isAvailable</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">available</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * getTier </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTier</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">tier</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * setAvailability </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param isAvail</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAvailability</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">isAvail</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">available</span> <span class="o">=</span> <span class="n">isAvail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Theater.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for Theater.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Theater</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">Seat</span><span class="o">[][]</span> <span class="n">_theaterSeats</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_seatsPerRow</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_tier1Rows</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_tier2Rows</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructs a Theater object, as described in part (a).</span>
+<span class="cm">     * </span>
+<span class="cm">     * Precondition: seatsPerRow &gt; 0; tier1Rows &gt; 0; tier2Rows &gt;= 0</span>
+<span class="cm">     * </span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Theater</span><span class="p">(</span><span class="kt">int</span> <span class="n">seatsPerRow</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tier1Rows</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tier2Rows</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_seatsPerRow</span> <span class="o">=</span> <span class="n">seatsPerRow</span><span class="p">;</span>
+        <span class="n">_tier1Rows</span> <span class="o">=</span> <span class="n">tier1Rows</span><span class="p">;</span>
+        <span class="n">_tier2Rows</span> <span class="o">=</span> <span class="n">tier2Rows</span><span class="p">;</span>
+        
+        <span class="n">_theaterSeats</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Seat</span><span class="o">[</span><span class="n">_tier1Rows</span> <span class="o">+</span> <span class="n">_tier2Rows</span><span class="o">][</span><span class="n">_seatsPerRow</span><span class="o">]</span><span class="p">;</span>
+        
+        
+            <span class="c1">// t1</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">t1</span> <span class="o">&lt;</span> <span class="n">_tier1Rows</span><span class="p">;</span> <span class="n">t1</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">_seatsPerRow</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">Seat</span> <span class="n">tempSeat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Seat</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+                    <span class="n">_theaterSeats</span><span class="o">[</span><span class="n">t1</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">=</span> <span class="n">tempSeat</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            
+            <span class="c1">//t2</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">t2</span> <span class="o">&lt;</span> <span class="n">_tier2Rows</span><span class="p">;</span> <span class="n">t2</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">_seatsPerRow</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">Seat</span> <span class="n">tempSeat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Seat</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+                    <span class="n">_theaterSeats</span><span class="o">[</span><span class="n">t2</span><span class="o">+</span><span class="n">_tier1Rows</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">=</span> <span class="n">tempSeat</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            
+        <span class="cm">/* to be implemented in part (a) */</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Returns true if a seat holder was reassigned from the seat at fromRow,</span>
+<span class="cm">     * fromCol to the seat at toRow, toCol; otherwise it returns false, as</span>
+<span class="cm">     * described in part (b).</span>
+<span class="cm">     * </span>
+<span class="cm">     * Precondition: fromRow, fromCol, toRow, and toCol represent valid row and</span>
+<span class="cm">     * column positions in the theater.</span>
+<span class="cm">     * </span>
+<span class="cm">     * The seat at fromRow, fromCol is not available.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">reassignSeat</span><span class="p">(</span><span class="kt">int</span> <span class="n">fromRow</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fromCol</span><span class="p">,</span> <span class="kt">int</span> <span class="n">toRow</span><span class="p">,</span> <span class="kt">int</span> <span class="n">toCol</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Seat</span> <span class="n">oldSeat</span> <span class="o">=</span> <span class="n">_theaterSeats</span><span class="o">[</span><span class="n">fromRow</span><span class="o">][</span><span class="n">fromCol</span><span class="o">]</span><span class="p">;</span>
+        
+        <span class="n">Seat</span> <span class="n">newSeat</span> <span class="o">=</span> <span class="n">_theaterSeats</span><span class="o">[</span><span class="n">toRow</span><span class="o">][</span><span class="n">toCol</span><span class="o">]</span><span class="p">;</span>
+        
+        <span class="k">if</span><span class="p">((</span><span class="n">newSeat</span><span class="p">.</span><span class="na">isAvailable</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">oldSeat</span><span class="p">.</span><span class="na">getTier</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">newSeat</span><span class="p">.</span><span class="na">getTier</span><span class="p">()))</span>
+        <span class="p">{</span>
+            <span class="n">newSeat</span><span class="p">.</span><span class="na">setAvailability</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Theater</span> <span class="n">theatre</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Theater</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">theatre</span><span class="p">.</span><span class="na">_tier1Rows</span> <span class="o">+</span> <span class="n">theatre</span><span class="p">.</span><span class="na">_tier2Rows</span><span class="p">);</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">theatre</span><span class="p">.</span><span class="na">_seatsPerRow</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">theatre</span><span class="p">.</span><span class="na">_theaterSeats</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">.</span><span class="na">getTier</span><span class="p">()</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">theatre</span><span class="p">.</span><span class="na">_theaterSeats</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">.</span><span class="na">isAvailable</span><span class="p">()</span><span class="o">+</span> <span class="s">"\t"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span>
+        
+        <span class="kt">boolean</span> <span class="n">seatChange1</span> <span class="o">=</span> <span class="n">theatre</span><span class="p">.</span><span class="na">reassignSeat</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// should succeed</span>
+        <span class="kt">boolean</span> <span class="n">seatChange2</span> <span class="o">=</span> <span class="n">theatre</span><span class="p">.</span><span class="na">reassignSeat</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// should fail</span>
+        <span class="kt">boolean</span> <span class="n">seatChange3</span> <span class="o">=</span> <span class="n">theatre</span><span class="p">.</span><span class="na">reassignSeat</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// should fail</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n"</span> <span class="o">+</span> <span class="n">seatChange1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">seatChange2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">seatChange3</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Theater</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	
+1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	
+1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	
+1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	1-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	2-true	
+
+true
+false
+false
 </pre>
 </div>
 </div>
