@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -133,6 +133,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="##1">#1 </a></li>
 <li class="toc-entry toc-h3"><a href="##2">#2 </a></li>
+<li class="toc-entry toc-h3"><a href="##3">#3 </a></li>
 </ul>
 </li>
 </ul><!--
@@ -494,6 +495,215 @@ Current run: 1
 Spin: 2
 Current run: 1
 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="#3">
+<a class="anchor" href="##3" aria-hidden="true"><span class="octicon octicon-link"></span></a>#3<a class="anchor-link" href="##3"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * ProductReview.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for ProductReview.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProductReview</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">review</span><span class="p">;</span>
+    
+   <span class="cm">/**</span>
+<span class="cm">    * Constructs a ProductReview object and initializes the instance variables.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="nf">ProductReview</span><span class="p">(</span><span class="n">String</span> <span class="n">pName</span><span class="p">,</span> <span class="n">String</span> <span class="n">pReview</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">pName</span><span class="p">;</span>
+        <span class="n">review</span> <span class="o">=</span> <span class="n">pReview</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+   <span class="cm">/**</span>
+<span class="cm">    * Returns the name of the product.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+   <span class="cm">/**</span>
+<span class="cm">    * Returns the review of the product.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getReview</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">review</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * ReviewCollector.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for ReviewCollector.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReviewCollector</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ProductReview</span><span class="o">&gt;</span> <span class="n">_reviewList</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">_productList</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructs a ReviewCollector object and initializes the instance variables.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">ReviewCollector</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">_reviewList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ProductReview</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">_productList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Adds a new review to the collection of reviews, as described in part (a).</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addReview</span><span class="p">(</span><span class="n">ProductReview</span> <span class="n">prodReview</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* to be implemented in part (a) */</span>
+
+        <span class="n">_reviewList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">prodReview</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_productList</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">prodReview</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span>
+        <span class="p">{</span>
+            <span class="n">_productList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">prodReview</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Returns the number of good reviews for a given product name, as described in</span>
+<span class="cm">     * part (b).</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumGoodReviews</span><span class="p">(</span><span class="n">String</span> <span class="n">prodName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">numGood</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_reviewList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ProductReview</span> <span class="n">review</span> <span class="o">=</span> <span class="n">_reviewList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">review</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">prodName</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">String</span> <span class="n">tempReview</span> <span class="o">=</span> <span class="n">review</span><span class="p">.</span><span class="na">getReview</span><span class="p">();</span>
+                
+                <span class="k">if</span><span class="p">(</span><span class="n">tempReview</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"good"</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="n">numGood</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="cm">/* to be implemented in part (b) */</span>
+        <span class="k">return</span> <span class="n">numGood</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ProductReview</span> <span class="n">product1Review1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product1"</span><span class="p">,</span> <span class="s">"this is a good review"</span><span class="p">);</span>
+        
+        <span class="n">ProductReview</span> <span class="n">product1Review2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product1"</span><span class="p">,</span> <span class="s">"this is a Good review 2"</span><span class="p">);</span>
+        
+        <span class="n">ProductReview</span> <span class="n">product1Review3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product1"</span><span class="p">,</span> <span class="s">"this is a GOOD review 3"</span><span class="p">);</span>
+        
+        <span class="n">ProductReview</span> <span class="n">product2Review1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product2"</span><span class="p">,</span> <span class="s">"this is a good review 3"</span><span class="p">);</span>
+        
+        <span class="n">ProductReview</span> <span class="n">product3Review1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product3"</span><span class="p">,</span> <span class="s">"this is a good review 3"</span><span class="p">);</span>
+        <span class="n">ProductReview</span> <span class="n">product3Review2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductReview</span><span class="p">(</span><span class="s">"product3"</span><span class="p">,</span> <span class="s">"this is another good review 3"</span><span class="p">);</span>
+        
+        <span class="n">ReviewCollector</span> <span class="n">review</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ReviewCollector</span><span class="p">();</span>
+        
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product1Review1</span><span class="p">);</span>
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product1Review2</span><span class="p">);</span>
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product1Review3</span><span class="p">);</span>
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product2Review1</span><span class="p">);</span>
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product3Review1</span><span class="p">);</span>
+        <span class="n">review</span><span class="p">.</span><span class="na">addReview</span><span class="p">(</span><span class="n">product3Review2</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"product list: "</span> <span class="o">+</span> <span class="n">review</span><span class="p">.</span><span class="na">_productList</span><span class="p">);</span>
+        
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"# of reviews: "</span> <span class="o">+</span> <span class="n">review</span><span class="p">.</span><span class="na">getNumGoodReviews</span><span class="p">(</span><span class="n">product1Review1</span><span class="p">.</span><span class="na">getName</span><span class="p">()));</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"# of reviews: "</span> <span class="o">+</span> <span class="n">review</span><span class="p">.</span><span class="na">getNumGoodReviews</span><span class="p">(</span><span class="n">product2Review1</span><span class="p">.</span><span class="na">getName</span><span class="p">()));</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"# of reviews: "</span> <span class="o">+</span> <span class="n">review</span><span class="p">.</span><span class="na">getNumGoodReviews</span><span class="p">(</span><span class="n">product3Review1</span><span class="p">.</span><span class="na">getName</span><span class="p">()));</span>
+                
+        
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">ReviewCollector</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>product list: [product1, product2, product3]
+# of reviews: 1
+# of reviews: 1
+# of reviews: 2
 </pre>
 </div>
 </div>
