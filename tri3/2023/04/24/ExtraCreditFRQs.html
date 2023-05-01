@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      14 min read
     
 </span></p>
 
@@ -142,6 +142,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="##1">#1 </a></li>
 <li class="toc-entry toc-h3"><a href="##2">#2 </a></li>
 <li class="toc-entry toc-h3"><a href="##3">#3 </a></li>
+<li class="toc-entry toc-h3"><a href="##4">#4 </a></li>
 </ul>
 </li>
 </ul><!--
@@ -1474,6 +1475,150 @@ HARPS
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="#4">
+<a class="anchor" href="##4" aria-hidden="true"><span class="octicon octicon-link"></span></a>#4<a class="anchor-link" href="##4"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * NumberGroup.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for NumberGroup.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">NumberGroup</span>
+<span class="p">{</span>
+    <span class="kt">boolean</span> <span class="nf">contains</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Range.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for Range.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Range</span> <span class="kd">implements</span> <span class="n">NumberGroup</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">NumberGroup</span><span class="o">&gt;</span> <span class="n">groupList</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_min</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_max</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param min</span>
+<span class="cm">     * @param max</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Range</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_min</span> <span class="o">=</span> <span class="n">min</span><span class="p">;</span>
+        <span class="n">_max</span> <span class="o">=</span> <span class="n">max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="n">_min</span> <span class="o">&amp;&amp;</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="n">_max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * contains2 </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param num</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains2</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">NumberGroup</span> <span class="n">group</span> <span class="p">:</span> <span class="n">groupList</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">group</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">NumberGroup</span> <span class="n">range1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">range1</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Range</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
 </pre>
 </div>
 </div>
