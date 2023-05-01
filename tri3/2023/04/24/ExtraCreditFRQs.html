@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      12 min read
     
 </span></p>
 
@@ -140,6 +140,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#2015-Practice-Exam-FRQ">2015 Practice Exam FRQ </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="##1">#1 </a></li>
+<li class="toc-entry toc-h3"><a href="##2">#2 </a></li>
+<li class="toc-entry toc-h3"><a href="##3">#3 </a></li>
 </ul>
 </li>
 </ul><!--
@@ -1082,7 +1084,6 @@ false
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr2D</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum of 2D array: "</span> <span class="o">+</span> <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-
         <span class="p">}</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -1122,6 +1123,250 @@ Sum of 2D array: 36
 Sum of 2D array: 14
 Diverse array?: true
 Diverse array?: false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="#2">
+<a class="anchor" href="##2" aria-hidden="true"><span class="octicon octicon-link"></span></a>#2<a class="anchor-link" href="##2"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="#3">
+<a class="anchor" href="##3" aria-hidden="true"><span class="octicon octicon-link"></span></a>#3<a class="anchor-link" href="##3"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * SparseArrayEntry.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for SparseArrayEntry.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SparseArrayEntry</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_row</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_col</span><span class="p">;</span>
+    
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_value</span><span class="p">;</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param row</span>
+<span class="cm">     * @param col</span>
+<span class="cm">     * @param value</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">SparseArrayEntry</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_row</span> <span class="o">=</span> <span class="n">row</span><span class="p">;</span>
+        <span class="n">_col</span> <span class="o">=</span> <span class="n">col</span><span class="p">;</span>
+        <span class="n">_value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getRow </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getRow</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_row</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getCol </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCol</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_col</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getValue </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getValue</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_value</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * SparseArray.java</span>
+<span class="cm"> *</span>
+<span class="cm"> * Description</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author Natalie Beckwith</span>
+<span class="cm"> * @version 1</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Main class for SparseArray.java</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SparseArray</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numRows</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numCols</span><span class="p">;</span>
+    
+    <span class="kd">private</span> <span class="n">List</span> <span class="o">&lt;</span><span class="n">SparseArrayEntry</span><span class="o">&gt;</span> <span class="n">entries</span><span class="p">;</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor for class</span>
+<span class="cm">     *</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">SparseArray</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span> <span class="o">&lt;</span><span class="n">SparseArrayEntry</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getNumRows </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumRows</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">numRows</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getNumCols </span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumCols</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">numCols</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * getValueAt </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param row</span>
+<span class="cm">     * @param col</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getValueAt</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">SparseArrayEntry</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">entries</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getRow</span><span class="p">()</span> <span class="o">==</span> <span class="n">row</span> <span class="o">&amp;&amp;</span> <span class="n">entry</span><span class="p">.</span><span class="na">getCol</span><span class="p">()</span> <span class="o">==</span> <span class="n">col</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * removeColumn </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param col</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeColumn</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">entries</span><span class="p">.</span><span class="na">size</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">SparseArrayEntry</span> <span class="n">entry</span> <span class="o">=</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getCol</span><span class="p">()</span> <span class="o">==</span> <span class="n">col</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">entries</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getCol</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">col</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">entries</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="k">new</span> <span class="n">SparseArrayEntry</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getRow</span><span class="p">(),</span>
+                                                    <span class="n">entry</span><span class="p">.</span><span class="na">getCol</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                                                    <span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">()));</span>
+                
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">numCols</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/**</span>
+<span class="cm">     * main </span>
+<span class="cm">     * </span>
+<span class="cm">     * @param args</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">SparseArray</span> <span class="n">sparse</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SparseArray</span><span class="p">();</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sparse</span><span class="p">.</span><span class="na">getValueAt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">SparseArray</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
 </pre>
 </div>
 </div>
