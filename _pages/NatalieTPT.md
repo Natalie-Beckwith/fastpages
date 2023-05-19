@@ -20,7 +20,6 @@ categories: notes
 * real world example: plane flight routes
 * readFirst search
 * data structures in nodes
-* 
 
 ---
 
