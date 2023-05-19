@@ -5,6 +5,25 @@ permalink: /notes/
 categories: notes
 ---
 
+## Week 32 - 5/19 Notes
+
+### Graph Theory
+* **Vertice** - point on the graph
+* **Edge** - line that connects two vertices
+* Create a graph and make different points
+* DepthFirst search - input vertix, finds point from `for loop` in array of vertices
+  * checks if there are attached vertices
+  * marks next vertice we will visit
+* start from `a` --> `b` --> `f` --> `a` --> `c`
+* `d` --> `b` --> `a` --> `c`
+* `f` --> `b` --> `a` --> `c` --> `b` --> `d` --> `e`
+* real world example: plane flight routes
+* readFirst search
+* data structures in nodes
+* 
+
+---
+
 ## Week 29 - 4/3 Notes
 
 ### Hashmaps
@@ -26,6 +45,8 @@ categories: notes
   * Performing Iteration, Delete, and Add operations are another way to analyze Collection vs HashMap data structure.
   * A HashMap and a Collection can be used in a Class, POJO and API.
   * Make a Diagram on the Pros and Cons of Collection vs HashMap
+
+---
 
 ## Week 28 - 3/27 Notes
 
